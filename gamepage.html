@@ -10,7 +10,7 @@
     <title>Suspects</title>
     
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/album/">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/product/">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -100,18 +100,16 @@
         <a id="header-anchor"></a>
       </div>
   
-  <body>
-    <!-- top anchor head for navigation -->
-    <div>
-        <a id="header-anchor"></a>
-    </div>
+<!-- Universal blackboard background for the theme -->
+<body background="assets/images/black-board background.jpg">
 
     <div class="laptop-nav-bar">
       <nav class="site-header sticky-top py-1 navbar" style="background-color: #ece8f8;">
         <div class="container-fluid d-flex flex-column flex-md-row justify-content-between">
-          <a href="frontpage.html" class="py-2 d-none d-md-inline-block"><h2>Rules&nbsp;<i class="fas fa-book"></i></h2></a>
-          <a href="cards.html" class="active py-2 d-none d-md-inline-block"><h2>Suspects&nbsp;<i class="fa-solid fa-person"></i></h2></a>
-          <a href="paintings.html" class="py-2 d-none d-md-inline-block"><h2>Clues&nbsp;<i class="fa-solid fa-magnifying-glass"></i></i></h2></a>
+          <a href="intropage.html" class="py-2 d-none d-md-inline-block"><h2>Rules&nbsp;<i class="fas fa-book"></i></h2></a>
+          <a href="gamepage.html" class="active py-2 d-none d-md-inline-block"><h2>Suspects&nbsp;<i class="fa-solid fa-person"></i></h2></a>
+          <a href="clues.html" class="py-2 d-none d-md-inline-block"><h2>Clues&nbsp;<i class="fa-solid fa-magnifying-glass"></i></i></h2></a>
+          <div><h3>Countdown Timer</h3><button>15:00</button></div>
         </div>
       </nav>
     </div>
@@ -119,18 +117,7 @@
 
 <!-- Painting gallery with interactive hover effects, including alt text -->
 <main>
-  <section class="jumbotron text-center" style="background-color:floralwhite">
-    <div class="container">
-      <div class="lead text-muted">
-          <br>
-          <br>
-          <h2 style="text-decoration:underline; font-size: xx-large;">Suspects<i class="fa-solid fa-arrow-pointer"></i></h2>
-          <p style="padding-top: 15px;">Here are my Cards, they are available for all occasions and also for Christmas. They can be posted to you.</p>
-      </div>
-  </div>
-  </section>   
-  
-  <div class="album py-5 bg-light">
+    <!-- Suspect cards -->
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -173,12 +160,12 @@
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="gray-fade-effect">
-                  <img src="assets/images/Matilda Harper.jpeg" alt="Matilda Harper" class="bd-placeholder-img card-img-top" width="100" height="400">
+                  <img src="assets/images/Mark Henderson.jpeg" alt="Mark Henderson" class="bd-placeholder-img card-img-top" width="100" height="400">
             </div>
-                  <div><span class="img-text">Matilda Harper</span>
+                  <div><span class="img-text">Mark Henderson</span>
                   </div>
                   <div class="card-body">
-                      <p class="card-text">Suspect 1</p>
+                      <p class="card-text">Suspect 4</p>
                   </div>
           </div>
       </div>
@@ -186,11 +173,11 @@
       <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="gray-fade-effect">
-                  <img src="assets/images/Eleanor Plumb.jpeg" alt="Eleanor Plumb" class="bd-placeholder-img card-img-top" width="100" height="400">
+                  <img src="assets/images/Rosamund vicar.jpeg" alt="Rosamund Pike" class="bd-placeholder-img card-img-top" width="100" height="400">
             </div>
-                  <div><span class="img-text">Eleanor Plumb</span></div>
+                  <div><span class="img-text">Rosamund Pike</span></div>
                   <div class="card-body">
-                      <p class="card-text">Suspect 2</p>
+                      <p class="card-text">Suspect 5</p>
                   </div>
           </div>
       </div>            
@@ -198,11 +185,11 @@
       <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="gray-fade-effect">
-                  <img src="assets/images/Bobby Lane.jpeg" alt="Bobby Lane" class="bd-placeholder-img card-img-top" width="100" height="400">
+                  <img src="assets/images/The Butcher.jpeg" alt="Anthony Ward" class="bd-placeholder-img card-img-top" width="100" height="400">
             </div>
-                  <div><span class="img-text">Boby Lane</span></div>
+                  <div><span class="img-text">Anthony Ward</span></div>
                   <div class="card-body">
-                      <p class="card-text">Suspect 3</p>
+                      <p class="card-text">Suspect 6</p>
                   </div>
           </div>
       </div>      
@@ -210,22 +197,14 @@
 
       </div>
     </div>
-  </div>
 </main>
 
 <footer>
   <div class="container">
     <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
-      <hr>
-        <h2>
-          <b>Contact Me <i class="fa-regular fa-comment"></i></b> <i class="fa-solid fa-message-middle"></i>
-        </h2>
-        <h5>
-          Please email me any painting or card items you are interested in and wish to purchase. Any feedback and comments would also be appreciated. <br><b style="color:#4A9DDD;font-style: italic; padding-top: 20px;">Valerie.Turner@gmail.com</b>
-        </h5>
         <div class="centered">
             <!-- css anchor tag to return to top of page for easier navigation -->
-            <a href="#header-anchor" style="color:blueviolet;"><p style="text-align:center;"> Click here to return to top of the page <i class="fa-solid fa-arrow-pointer" style="color:blueviolet;" ></i> </p></a>
+            <a href="#header-anchor"><p style="text-align:center;"> Click here to return to top of the page <i class="fa-solid fa-arrow-pointer"></i> </p></a>
         </div>
     </div>
   </div>

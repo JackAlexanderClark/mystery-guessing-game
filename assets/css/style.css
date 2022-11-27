@@ -1,0 +1,30 @@
+/* */
+.gray-fade-effect img{
+    opacity:1.0;
+    filter: grayscale(0%);
+    transition: 1.5s ease;
+  }
+
+  .gray-fade-effect img:hover{
+    opacity:0.5;
+    filter: grayscale(20%);
+    transition: 1.5s ease;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+
+
+
+  /* source: https://codepen.io/ishanbakshi/pen/pgzNMv */
+  body{
+    background-color:#2D3047;
+  }
+  
+  div{
+    background-color:azure;
+    color:#EFD0CA;
+    font-size:20px;
+    text-align:center;
+  }
