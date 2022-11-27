@@ -2,6 +2,20 @@
 *   script.js contains scripting for effects and interactions outside of the game loop
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// countdown
 // source: https://codepen.io/ishanbakshi/pen/pgzNMv
 document.getElementById('timer').innerHTML =
   01 + ":" + 11;

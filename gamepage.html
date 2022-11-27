@@ -109,6 +109,7 @@
           <a href="intropage.html" class="py-2 d-none d-md-inline-block"><h2>Rules&nbsp;<i class="fas fa-book"></i></h2></a>
           <a href="gamepage.html" class="active py-2 d-none d-md-inline-block"><h2>Suspects&nbsp;<i class="fa-solid fa-person"></i></h2></a>
           <a href="clues.html" class="py-2 d-none d-md-inline-block"><h2>Clues&nbsp;<i class="fa-solid fa-magnifying-glass"></i></i></h2></a>
+          <a href="submitanswer.html" class="py-2 d-none d-md-inline-block"><h2>Submit Answer&nbsp;<i class="fa-solid fa-check"></i></h2></a>
           <div><h3>Countdown Timer</h3><button>15:00</button></div>
         </div>
       </nav>
@@ -117,8 +118,10 @@
 
 <!-- Painting gallery with interactive hover effects, including alt text -->
 <main>
+    <!-- click to start game and reveal suspects -->
+    <button onclick="hideGameSuspects()">Click Me</button>
     <!-- Suspect cards -->
-    <div class="container">
+    <div class="container" id="hidegame">
       <div class="row">
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
@@ -129,6 +132,10 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text">Suspect 1</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#suspect1modal">
+                        Matilda Harper Fact Sheet
+                      </button>
                     </div>
             </div>
         </div>
@@ -141,6 +148,10 @@
                     <div><span class="img-text">Eleanor Plumb</span></div>
                     <div class="card-body">
                         <p class="card-text">Suspect 2</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#suspect2modal">
+                        Eleanor Plumb Fact Sheet
+                      </button>
                     </div>
             </div>
         </div>            
@@ -153,6 +164,10 @@
                     <div><span class="img-text">Boby Lane</span></div>
                     <div class="card-body">
                         <p class="card-text">Suspect 3</p>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#suspect3modal">
+                        Bobby Lane Fact Sheet
+                      </button>
                     </div>
             </div>
         </div>             
@@ -195,8 +210,102 @@
       </div>      
 
 
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+<!-- Modal 1 for matilda #1 -->
+<div class="modal fade" id="suspect1modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Matilda Harper Fact Sheet:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        - Facts about matilda
+        - Ex-wife
+        - Age: 41
+        - 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Modal 2 for eleanor #2 -->
+<div class="modal fade" id="suspect2modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eleanor Plumb Fact Sheet:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        - Facts about Eleanor Plumb
+        - Age: 78
+        - Ex-School teacher
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 for eleanor #3 -->
+<div class="modal fade" id="suspect3modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Bobby Lane Fact Sheet:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        - Facts about Bobby Lane
+        - Age: 14
+        - School Bully
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </main>
 
 <footer>
@@ -209,6 +318,7 @@
     </div>
   </div>
 </footer>
+    <script src="assets/js/game.js"></script>
     <!-- CDN links and bootstrap -->
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
