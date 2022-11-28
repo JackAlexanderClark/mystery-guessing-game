@@ -1,18 +1,21 @@
-/* */
+/* suspect card enlarge effects */
 .gray-fade-effect img{
     opacity:1.0;
     filter: grayscale(0%);
     transition: 1.5s ease;
-  }
+}
 
-  .gray-fade-effect img:hover{
+.gray-fade-effect img:hover{
     opacity:0.5;
     filter: grayscale(20%);
     transition: 1.5s ease;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-  }
+}
+
+/* universal font family and styles */
+;
 
 
 
