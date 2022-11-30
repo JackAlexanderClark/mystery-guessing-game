@@ -8,7 +8,7 @@
     <!-- Credit and source from Getbootstrap-->
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
-    <title>Suspects</title>
+    <title>Rules</title>
     
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
@@ -27,6 +27,26 @@
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- jquery CDN link -->
+    <script src="jquery-3.6.1.min.js" defer></script>
+
+    <style>
+
+        .addButtonColour {
+            color: white;
+            background-color: green;
+            cursor: hand;
+        }
+
+        .removeButtonColour {
+            color: whitesmoke;
+            background-color: red;
+            cursor: not-allowed;
+        }
+
+    </style>
+
+
     </head>
 <body>
     <div class="laptop-nav-bar">
@@ -40,11 +60,35 @@
         </div>
         </nav>
       </div>
+
+    <!-- localstorage save user details on first visit -->
+    <section id="localstorage">
+        <div class="container">
+            <fieldset>
+            <div class="row">
+                <legend ><b>What is your name and username?</b></legend>
+                <div class="col-md-6">
+                    <span style="float:left;"><small>Your session username must be a minimum of 4 characters and a maximum of 12 characters.</small></span>
+                </div>
+                <div class="col-md-6">
+                    <input id="input" type="text" placeholder="Enter Username..." maxlength="12" onkeyup="checkUserInput();"/>
+                    <button style="float:right;" type="button" class="removeButtonColour" id="buttonSubmit" disabled="disabled">Submit User Information</button>
+                </div>
+            </fieldset>
+            </div>
+        </div>
+    </section>
+
+
     
+    <hr>
+
     <!-- Introduction panel with rundown of the game rules for newcomers -->
-    <section>
-        <h1>Instructions and Rulebook</h1>
-        <p>By clicking you understand the rules and are ready to start the game countdown timer</p>
+    <section id="rulebook">
+        <div class="container">
+            <h1>Instructions and Rulebook</h1>
+            <p>By clicking you understand the rules and are ready to start the game countdown timer</p>
+        </div>
     </section>
 
 
@@ -70,8 +114,8 @@
         </div>
     </div>
     </footer>
-        <script src="assets/js/script.js"></script>
-
+        <script src="assets/js/script.js" defer></script>
+        <script src="assets/js/localstorage.js" defer></script>
           <!-- CDN links and bootstrap -->
         <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
