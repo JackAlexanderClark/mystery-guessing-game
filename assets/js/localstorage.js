@@ -1,6 +1,4 @@
 // Store users name and age input 
-// use method getItem to retrieve data from 
-//document.getElementById('buttonSubmit').disabled = true;
 
 function checkUserInput() {
     var username = document.getElementById("inputkey").value;
@@ -12,7 +10,7 @@ function checkUserInput() {
     if (cansubmit) {
        $("#buttonSubmit").removeClass("removeButtonColour").addClass("addButtonColour");    // change button colour for visual confirmation
     }
-};
+}
 
 
 // capture user input to localstorage
@@ -48,7 +46,7 @@ for (let i = 0; i < localStorage.length; i++ ) {
 
 // enter password to submit your answer
 function checkPassword() {
-
+    console.log("test");
 }
 
 // take name from localstorage to display in winning message if game won

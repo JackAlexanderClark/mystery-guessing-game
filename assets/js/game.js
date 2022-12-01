@@ -6,62 +6,44 @@
 *   and thirdly the location.
 */
 // create array with answers for the 3 elements of the game; person, weapon and location
-let suspect1;
-let knife;
-let school;
+// let suspect1;
+// let knife;
+// let school;
 
-let correctAnswer = [suspect1, knife, school];
-let playersAnswer = [];
+let correctAnswer = 4;
 
-var gamestart = 0;
+let guesses;
 
-// Create a toggle to hide the suspect cards until they have started the game countdown timer
-function hideGameSuspects() {
+guesses = 2;
+document.getElementById("guessesLeft").innerHTML = guesses;
 
-    var revealSuspects = document.getElementById("hidegame");
+function checkAnswer() {
 
-    if (revealSuspects.style.display === "none") {
+    let playersAnswer = document.getElementById("playerAnswer").value;
 
-        revealSuspects.style.display = "block";
-
+    if ( playersAnswer == 4 ) {
+        document.getElementById("guessesLeft").innerHTML = 0;
+        console.log("game WON!");
+        won = true;
+    } else if ( playersAnswer != correctAnswer ) {
+        document.getElementById("guessesLeft").innerHTML = guesses - 1;
+        console.log("game LOST!");
+    } else if (playersAnswer.length == null ) {
+        alert("Empty answer try again.");
     } else {
-
-        revealSuspects.style.display = "none";
-
+        console.log("Error");
     }
 
-    gamestart = 1;
-    
-  }
+    return guesses;
+};
 
-
-
-
-// compare array of correct answer to player input answer
-function compareAnswers(correctAnswer, playersAnswer) {
-    if ( playersAnswer === correctAnswer )
-        return true;
-    if ( playersAnswer == null )    // incase of incorrect data
-        return false;
-    if ( playersAnswer.length !== correctAnswer.length )
-        return false;
-
-    for (var i = 0; i < correctAnswer.length; ++i) {        // check elements
-            if (correctAnswer[i] !== playersAnswer[i]) 
-            return false;
-        }
-        return true;
+if (won) {
+    gameWon();
+    console.log("game won!");
 }
 
-function gameLoop(gamestart) {
-    if ( gamestart == 1 ) {
-        console.log("Testing that game starts when button is pressed");
-    } else if ( gamestart == 0 ) {
-        console.log("Game has not yet begun");
-    } else {
-        console.log("GAME LKASHFKJASHKJS");
-    }
-
-    compareAnswers();
+function gameWon() {
+    console.log("AWEIWQJEIWJEILKJ");
 }
+
 

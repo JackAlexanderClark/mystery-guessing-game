@@ -26,7 +26,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="assets/js/localstorage.js" defer></script>
+    <!--<script src="assets/js/localstorage.js" defer></script>-->
+	<script src="assets/js/game.js" defer></script>
 
     </head>
 
@@ -47,9 +48,18 @@
 
 <!-- input your guess and use your password to enter -->
 <section>
-    <input type="text" onkeyup="checkPassword();">
+    <input type="text" placeholder="Enter your password..." onkeyup="checkPassword();">
+	<small>Use the corresponding number</small>
+	&nbsp;
+	<input id="playerAnswer" type="number" min=1 max=9 placeholder="Enter the suspect number...">
+	<button id="answerButton" onclick="checkAnswer();">Click to Submit Answer</button>
+
 </section>
 
+<!-- display how many guesses remain -->
+<section>
+	<div><h1>Number of Guesses Remaining: <span id="guessesLeft"></span></h1></div>
+</section>
 
 
 
