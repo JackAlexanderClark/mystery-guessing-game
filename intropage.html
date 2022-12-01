@@ -71,11 +71,18 @@
                     <span style="float:left;"><small>Your session username must be a minimum of 4 characters and a maximum of 12 characters.</small></span>
                 </div>
                 <div class="col-md-6">
-                    <input id="input" type="text" placeholder="Enter Username..." maxlength="12" onkeyup="checkUserInput();"/>
+                    <input id="inputkey" type="text" placeholder="Enter Username..." maxlength="12" onkeyup="checkUserInput();"/>
+                    <input id="inputvalue" type="password" placeholder="Enter Password..." maxlength="12" onkeyup="checkUserInput();"/>
                     <button style="float:right;" type="button" class="removeButtonColour" id="buttonSubmit" disabled="disabled">Submit User Information</button>
                 </div>
-            </fieldset>
             </div>
+            </fieldset>
+            <fieldset>
+                <legend>Local Storage Output</legend>
+                <div> Your username is:
+                    <div id="isOutput"></div>
+                </div>
+            </fieldset>
         </div>
     </section>
 

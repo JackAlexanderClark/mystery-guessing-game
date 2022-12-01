@@ -8,7 +8,7 @@
     <!-- Credit and source from Getbootstrap-->
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
-    <title>Suspects</title>
+    <title>Submit Answer</title>
     
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
@@ -26,24 +26,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/localstorage.js" defer></script>
 
     </head>
 
-<!-- source: https://www.w3schools.com/html/html5_draganddrop.asp -->
-<script>
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
 </script>
 </head>
 <div class="laptop-nav-bar">
@@ -59,15 +45,13 @@ function drop(ev) {
   </div>
 <body>
 
-<div>
-    <p>1) Drag and drop the small image boxes of the suspect who did the crime.</p>
-    <p>2) Drag and drop the small image for the crime location.</p>
-    <p>3) Drag and drop the image of the weapon used.</p>
-</div>
+<!-- input your guess and use your password to enter -->
+<section>
+    <input type="text" onkeyup="checkPassword();">
+</section>
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
 
 </body>
 
