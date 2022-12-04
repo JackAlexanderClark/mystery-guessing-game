@@ -86,6 +86,12 @@ function checkSecond(sec) {
   return sec;
 }
 
-if (sec == 0) {
-  alert("HEY YOU HAVE RUN OUT OF TIME LMAO");
+// change class colour depending on time left - traffic light system
+// need to fix
+if ( sec < 30 ) {
+  $("#timer").addClass("red-countdown");
+} else if ( sec == 30 ) {
+  $("#timer").removeClass("red-countdown").addClass("yellow-countdown");
+} else {
+  $("#timer").removeClass("yellow-countdown").addClass("green-countdown");
 }
