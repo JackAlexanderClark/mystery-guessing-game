@@ -24,10 +24,12 @@ function checkAnswer() {
     if ( playersAnswer == 4 ) {
         document.getElementById("guessesLeft").innerHTML = 0;
         console.log("game WON!");
-        won = true;
-    } else if ( playersAnswer != correctAnswer ) {
-        document.getElementById("guessesLeft").innerHTML = guesses - 1;
+        gameWon();
+    } else if ( (playersAnswer != correctAnswer) && ( guesses == 0 ) ) {
+        gameLost();
         console.log("game LOST!");
+    } else if (playersAnswer.length != correctAnswer ) {    
+        guesses = guesses - 1;
     } else if (playersAnswer.length == null ) {
         alert("Empty answer try again.");
     } else {
@@ -37,13 +39,12 @@ function checkAnswer() {
     return guesses;
 };
 
-if (won) {
-    gameWon();
-    console.log("game won!");
+function gameWon() {
+    console.log("Winer");
 }
 
-function gameWon() {
-    console.log("AWEIWQJEIWJEILKJ");
+function gameLost() {
+    console.log("Loser");
 }
 
 
