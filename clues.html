@@ -137,8 +137,7 @@
                     <img src="assets/images/clue-torch.jpg" onclick="enlargeClue()" alt="Torch Clue" class="bd-placeholder-img card-img-top" width="100" height="400">
               </div>
                     <div class="card-body">
-                        <p class="card-text"><b>Clue</b>&nbsp;<i class="fa-solid fa-1"></i></p>
-                        <div><span class="img-text">Torch found at the scene</span></div>
+                        <p class="card-text" id="torch"><b>Clue</b>&nbsp;<i class="fa-solid fa-1"></i></p>
                         <button id="buttonToggle-1">Click me to reveal more information</button>
                         <hr>
                         <div id="infoToggle-1">
@@ -231,4 +230,6 @@ var sticky = navbar.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
+  }
+}
