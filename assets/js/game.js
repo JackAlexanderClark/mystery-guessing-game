@@ -5,16 +5,9 @@
 *   secondly, the weapon used
 *   and thirdly the location.
 */
-// create array with answers for the 3 elements of the game; person, weapon and location
-// let suspect1;
-// let knife;
-// let school;
-
 let correctAnswer = 4;
+let guesses = 1;
 
-let guesses;
-
-guesses = 2;
 document.getElementById("guessesLeft").innerHTML = guesses;
 
 function checkAnswer() {
@@ -23,24 +16,29 @@ function checkAnswer() {
 
     if ( playersAnswer == 4 ) {
         document.getElementById("guessesLeft").innerHTML = 0;
-        console.log("game WON!");
+        guesses = 0;
         gameWon();
-    } else if ( (playersAnswer != correctAnswer) && ( guesses == 0 ) ) {
+    } else if ( (playersAnswer != 4 ) ) {
+        document.getElementById("guessesLeft").innerHTML = 0;
+        guesses = 0;
         gameLost();
-        console.log("game LOST!");
-    } else if (playersAnswer.length != correctAnswer ) {    
-        guesses = guesses - 1;
     } else if (playersAnswer.length == null ) {
         alert("Empty answer try again.");
     } else {
         console.log("Error");
     }
+}
 
-    return guesses;
-};
+// prevent multiple guesses using jquery .one() method
+$('#answerButton').one('click', function() {
+    $(this).css({'cursor':'not-allowed', 'color': 'white', 'background-color': 'red'}).attr('disabled','disabled');
+});
+
+
+
 
 function gameWon() {
-    console.log("Winer");
+    console.log("Winner");
 }
 
 function gameLost() {
