@@ -9,20 +9,25 @@ let correctAnswer = 4;
 let guesses = 1;
 
 document.getElementById("guessesLeft").innerHTML = guesses;
+    let playersAnswer = document.getElementById("playerAnswer").value;
 
 function checkAnswer() {
 
-    let playersAnswer = document.getElementById("playerAnswer").value;
+
 
     if ( playersAnswer == 4 ) {
         document.getElementById("guessesLeft").innerHTML = 0;
         guesses = 0;
+        let playerNumber = $('#playerAnswer').val();
+        document.getElementById("userChoice").innerHTML = "You chose suspect&nbsp;" + playerNumber;
         gameWon();
     } else if ( (playersAnswer != 4 ) ) {
         document.getElementById("guessesLeft").innerHTML = 0;
         guesses = 0;
+        let playerNumber = $('#playerAnswer').val();
+        document.getElementById("userChoice").innerHTML = "You chose suspect&nbsp;" + playerNumber;
         gameLost();
-    } else if (playersAnswer.length == null ) {
+    } else if (playersAnswer.length == null  ) {
         alert("Empty answer try again.");
     } else {
         console.log("Error");
@@ -33,6 +38,7 @@ function checkAnswer() {
 $('#answerButton').one('click', function() {
     $(this).css({'cursor':'not-allowed', 'color': 'white', 'background-color': 'red'}).attr('disabled','disabled');
 });
+
 
 
 
