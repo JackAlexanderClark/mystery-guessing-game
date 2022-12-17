@@ -7,4 +7,7 @@
 
 ## Website Device Mockup
 
-# **I) Introduction and Project Goals**
+# **I) Project Goals
+
+1. For this project I decided upon a guessing game as a foundation, that would allow user inputs and ability to interact with different areas of the project. However, I wanted to expand upon this with added complexity and a more in-depth story. The game is inspired by the board game Cluedo and to get an aesthetically pleasing layout I commision some artwork to be produced for the characters in the game.
+ 
