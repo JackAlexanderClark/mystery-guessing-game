@@ -113,6 +113,8 @@
         <div class="container">
             <h1>Instructions and Rulebook</h1>
             <p>By clicking you understand the rules and are ready to start the game countdown timer</p>
+            <p><strong>Some unknown individual commited an arson attack against Character X, by throwing a petrol can at their home.</strong></p>
+            <p>Who has the motive? Can you solve this case?</p> 
             <ol>
                 <li>There are nine suspects for you to chose from.</li>
                 <li>You have 10 minutes to read the evidence and clues.</li>
@@ -120,6 +122,17 @@
             </ol>
         </div>
     </section>
+
+    <!-- google map API call for location of fictional crime scene -->
+    <section>
+        <div class="container">
+            <div id="map" style="width: 70%;"></div>
+        </div> 
+    </section>
+
+
+
+
 
     <!-- click here to reveal start button-->
     <section>
@@ -158,5 +171,19 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous"></script>
 
+        <script>
+            function initialiseMap() {
+                var arsonLocation = {lat: -25.30, lng: 131.044};
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 4,
+                    center: location
+                });
+                var marker = new google.maps.marker({
+                    position: location,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=SECRET_API_KEY_GOOGLE_MAP&callback=initMap"></script>
 </body>
 </html>

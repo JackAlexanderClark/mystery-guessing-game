@@ -19,13 +19,13 @@ function checkAnswer() {
         document.getElementById("guessesLeft").innerHTML = 0;
         guesses = 0;
         let playerNumber = $('#playerAnswer').val();
-        document.getElementById("userChoice").innerHTML = "You chose suspect $`{playerNumber}`xxxx Well done this was correct!";
+        document.getElementById("userChoice").innerHTML = "You chose suspect `${playerNumber}`xxxx Well done this was correct!";
         gameWon();
     } else if ( (playersAnswer !== 4 ) ) {
         document.getElementById("guessesLeft").innerHTML = 0;
         guesses = 0;
         let playerNumber = $('#playerAnswer').val();
-        document.getElementById("userChoice").innerHTML = "You chose suspect $`{playerNumber}`... Unfortunately this was incorrect!";
+        document.getElementById("userChoice").innerHTML = "You chose suspect `${playerNumber}`... Unfortunately this was incorrect!";
         gameLost();
     } else if (playersAnswer.length == null  ) {
         alert("Empty answer try again.");
