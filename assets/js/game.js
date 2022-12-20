@@ -15,17 +15,17 @@ function checkAnswer() {
 
 
 
-    if ( playersAnswer == 4 ) {
+    if ( playersAnswer === 4 ) {
         document.getElementById("guessesLeft").innerHTML = 0;
         guesses = 0;
         let playerNumber = $('#playerAnswer').val();
-        document.getElementById("userChoice").innerHTML = "You chose suspect&nbsp;" + playerNumber;
+        document.getElementById("userChoice").innerHTML = "You chose suspect ${playerNumber} Well done this was correct!";
         gameWon();
-    } else if ( (playersAnswer != 4 ) ) {
+    } else if ( (playersAnswer !== 4 ) ) {
         document.getElementById("guessesLeft").innerHTML = 0;
         guesses = 0;
         let playerNumber = $('#playerAnswer').val();
-        document.getElementById("userChoice").innerHTML = "You chose suspect&nbsp;" + playerNumber;
+        document.getElementById("userChoice").innerHTML = "You chose suspect ${playerNumber}... Unfortunately this was incorrect!";
         gameLost();
     } else if (playersAnswer.length == null  ) {
         alert("Empty answer try again.");

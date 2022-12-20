@@ -29,6 +29,8 @@
     <!--<script src="assets/js/localstorage.js" defer></script>-->
 	  <script src="assets/js/game.js" defer></script>
     <script src="assets/js/effects.js" defer></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     </head>
 
@@ -62,6 +64,44 @@
 	<div><h1>Number of Guesses Remaining: <div id="guessesLeft"></span></h1></div>
 </section>
 
+<button id="timerButton">10</button>
+<script>
+   // Select the button element
+const button = document.querySelector('#timerButton');
+
+// Set the starting countdown time
+let time = 10;
+
+// Declare the countdown function
+function countdown() {
+  // Decrement the time by 1
+  time--;
+
+  // Update the button text with the current time
+  button.textContent = time;
+
+  // If the time has reached 0, stop the countdown
+  if (time === 0) {
+    clearInterval(interval);
+    button.textContent = 'Time\'s up!';
+    console.log("Timer is up game has finished.");
+  }
+  if(hours <= 0 && minutes == 0 && seconds == 0){
+         // if you want to delete it on local storage
+         localStorage.removeItem('timer');
+         console.log('Transaction Cancelled')
+     }
+     else{
+         $('#remainingTime').html(timer2);
+         // if you want to save it on local storage
+         localStorage.setItem('timer', timer2.toString());
+     }
+}
+
+
+// Run the countdown function every 1000 milliseconds (1 second)
+const interval = setInterval(countdown, 1000);
+</script>
 <hr>
 
 <!-- target inner html -->
