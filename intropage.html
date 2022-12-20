@@ -126,7 +126,8 @@
     <!-- google map API call for location of fictional crime scene -->
     <section>
         <div class="container">
-            <div id="map" style="width: 70%;"></div>
+            <p>google map here</p>
+            <div id="map"></div>
         </div> 
     </section>
 
@@ -172,8 +173,8 @@
         <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous"></script>
 
         <script>
-            function initialiseMap() {
-                var arsonLocation = {lat: -25.30, lng: 131.044};
+            function initMap() {
+                var location = {lat: -25.30, lng: 131.044};
                 var map = new google.maps.Map(document.getElementById("map"), {
                     zoom: 4,
                     center: location
@@ -184,6 +185,6 @@
                 });
             }
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=SECRET_API_KEY_GOOGLE_MAP&callback=initMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX3OFY84EvzekWB1YI71BnZ4sNlyx49-Acallback=initMap"></script>
 </body>
 </html>
