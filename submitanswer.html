@@ -64,7 +64,9 @@
 	<div><h1>Number of Guesses Remaining: <div id="guessesLeft"></span></h1></div>
 </section>
 
-<button id="timerButton">10</button>
+<h3>
+  <span id="countdown"></span>
+</h3>
 <script>
    // Select the button element
 const button = document.querySelector('#timerButton');
@@ -73,34 +75,25 @@ const button = document.querySelector('#timerButton');
 let time = 10;
 
 // Declare the countdown function
-function countdown() {
-  // Decrement the time by 1
-  time--;
+const span = document.getElementById('countdown')
 
-  // Update the button text with the current time
-  button.textContent = time;
+const deadline = new Date
+deadline.setHours(0)
+deadline.setMinutes(0)
+deadline.setSeconds(0)
 
-  // If the time has reached 0, stop the countdown
-  if (time === 0) {
-    clearInterval(interval);
-    button.textContent = 'Time\'s up!';
-    console.log("Timer is up game has finished.");
-  }
-  if(hours <= 0 && minutes == 0 && seconds == 0){
-         // if you want to delete it on local storage
-         localStorage.removeItem('timer');
-         console.log('Transaction Cancelled')
-     }
-     else{
-         $('#remainingTime').html(timer2);
-         // if you want to save it on local storage
-         localStorage.setItem('timer', timer2.toString());
-     }
+function displayRemainingTime() {
+  if (deadline < new Date) deadline.setDate(deadline.getDate() + 1)
+  const remainingTime = deadline - new Date
+  const extract = (maximum, factor) => Math.floor((remainingTime % maximum) / factor)
+  const seconds = extract(   60000, 1000   ) 
+  const minutes = extract( 3600000, 60000  ) 
+  const hours   = extract(86400000, 3600000)
+  const string = `${hours} hours ${minutes} minutes ${seconds} seconds remaining`
+  span.innerText = `${hours} hours ${minutes} minutes ${seconds} seconds remaining`
 }
-
-
-// Run the countdown function every 1000 milliseconds (1 second)
-const interval = setInterval(countdown, 1000);
+window.setInterval(displayRemainingTime, 1000)
+displayRemainingTime()
 </script>
 <hr>
 

@@ -9,29 +9,40 @@ let correctAnswer = 4;
 let guesses = 1;
 
 document.getElementById("guessesLeft").innerHTML = guesses;
-    let playersAnswer = document.getElementById("playerAnswer").value;
+let playersAnswer = document.getElementById("playerAnswer").value;
 
 function checkAnswer() {
 
+    // handle if user's guess is empty
 
 
-    if ( playersAnswer === 4 ) {
+    if ( playersAnswer != 4 ) {
         document.getElementById("guessesLeft").innerHTML = 0;
         guesses = 0;
         let playerNumber = $('#playerAnswer').val();
-        document.getElementById("userChoice").innerHTML = "You chose suspect `${playerNumber}`xxxx Well done this was correct!";
-        gameWon();
-    } else if ( (playersAnswer !== 4 ) ) {
-        document.getElementById("guessesLeft").innerHTML = 0;
-        guesses = 0;
-        let playerNumber = $('#playerAnswer').val();
-        document.getElementById("userChoice").innerHTML = "You chose suspect `${playerNumber}`... Unfortunately this was incorrect!";
-        gameLost();
-    } else if (playersAnswer.length == null  ) {
+        document.getElementById("userChoice").innerHTML = `You chose suspect ${playerNumber} xxx Well done this was correct!`;
+        gameWon(); 
         alert("Empty answer try again.");
-    } else {
-        console.log("Error");
+        return false;
     }
+
+    if (playersAnswer == 4 ) {
+        document.getElementById("guessesLeft").innerHTML = 0;
+        guesses = 0;
+        let playerNumber = $('#playerAnswer').val();
+        document.getElementById("userChoice").innerHTML = `You chose suspect ${playerNumber}........s was incorrect!`;
+        gameLost();
+        return false;
+    }
+
+    // if (playersAnswer === "") {
+    //     alert("Please enter a guess.");
+    //     return false;
+    // } 
+
+    // stop form being submitted CHAT GPT
+    return false;
+
 }
 
 // prevent multiple guesses using jquery .one() method
