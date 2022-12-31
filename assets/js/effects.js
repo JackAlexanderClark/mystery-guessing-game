@@ -26,6 +26,11 @@ $("#buttonToggle-5").click(function(){
     $("#infoToggle-5").slideToggle("slow");
 });
 
+$("#infoToggle-6").hide();
+$("#buttonToggle-6").click(function(){
+    $("#infoToggle-6").slideToggle("slow");
+});
+
 
 
 function getSubmission() {
