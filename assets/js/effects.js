@@ -16,6 +16,17 @@ $("#buttonToggle-3").click(function(){
     $("#infoToggle-3").slideToggle("slow");
 });
 
+$("#infoToggle-4").hide();
+$("#buttonToggle-4").click(function(){
+    $("#infoToggle-4").slideToggle("slow");
+});
+
+$("#infoToggle-5").hide();
+$("#buttonToggle-5").click(function(){
+    $("#infoToggle-5").slideToggle("slow");
+});
+
+
 
 function getSubmission() {
     console.log("hello");
