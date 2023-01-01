@@ -128,6 +128,11 @@
 <hr>
 
 <main>
+  <!-- interactive clue cards -->
+  <section>
+    <div>
+        <h1 style="text-align:center;"><strong>Evidence</strong></h1>
+    </div>
     <!-- Evidence cards that can reveal more information -->
     <div class="container" id="hidegame">
       <div class="row">
@@ -257,10 +262,50 @@
                 </div>
         </div>
     </div> 
+  </section>
 
+<hr>
+<!-- talk to witness, text rpg clickable teck speechmarks and responses -->
+<!-- make interactive dialogue trees to learn information -->
+<!-- USE AJAX TO MAKE DIALOGUE TREE CHANGES INSTANTLY -->
+<section style="text-align:center;">
+  <div>
+  <h1><strong>Witnesses</strong></h1>
+  <i class="fa-solid fa-person"></i>
+  <h3>Witness 1 - Jackie Parker (Local Hairdresser)</h3>
+  <p>Click me to ask me a question.</p>
+  <i class="fa-solid fa-comment"></i>
+  <ul>
+    <li>Question 1: Have you heard any rumours?</li>
+  </ul>
 
-   
+  <i class="fa-solid fa-person"></i>
+  <h3>Witness 2 - Micheal Symonds (Neighbour)</h3>
+  <p>Click me to ask me a question.</p>
+  <i class="fa-solid fa-comment"></i>
+  <ul>
+    <li>Question 1: What did you see?</li>
+    <li>Question 2: How long have you known character?</li>
+  </ul>
+</div>
+</section>
+  
+<!-- practice using AJAX TO TAKE DATA FROM OTHER STATIC GITHUB PAGE WITH HARDCODE INFORMATION -->
+<div id="demo">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
 
+<script>
+      function loadDoc() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("demo").innerHTML = this.responseText;
+        }
+      xhttp.open("GET", "ajax_info.txt", true);
+      xhttp.send();
+    }
+</script>
 
 
 <hr>
