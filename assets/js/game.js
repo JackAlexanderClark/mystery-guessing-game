@@ -65,6 +65,9 @@ let playerNumber = $('#playerAnswer').val();
         guessField.focus();
       }
 
+      // SET GUESSES AND LIVES TO LOCAL STORAGE
+localstorage.setItem(“item to be store”);
+let data = localstorage.getItem(“items to be retrieved”);
 
 
     // if (playersAnswer === "") {
