@@ -43,6 +43,8 @@ let playerNumber = $('#playerAnswer').val();
       
         if (userGuess === playerNumber) {
           lastResult.textContent = 'Congratulations! You got it right!';
+          let win = "congratulations";
+          localstorage.setItem();                                     // set win to local storage
           lastResult.style.backgroundColor = 'green';
           lowOrHi.textContent = '';
           setGameOver();
@@ -64,10 +66,9 @@ let playerNumber = $('#playerAnswer').val();
         guessField.value = '';
         guessField.focus();
       }
-
+      // EVERYTHING CAN BE SENT TO LOCAL STORAGE AS STRING OR OBJECT
       // SET GUESSES AND LIVES TO LOCAL STORAGE
-localstorage.setItem(“item to be store”);
-let data = localstorage.getItem(“items to be retrieved”);
+
 
 
     // if (playersAnswer === "") {

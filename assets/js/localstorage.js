@@ -1,8 +1,18 @@
 // Store users name and age input 
 
 function checkUserInput() {
-    var username = document.getElementById("inputkey").value;
+    var username = document.getElementById("inputkey").value;                  
     var password = document.getElementById("inputvalue").value;
+
+    username = username.toLowerCase();
+    username = username.replace(/ /g, '');
+    username = username.trim();
+    password = password.toLowerCase();
+    password = password.replace(/ /g, '');    
+    password = password.trim();
+
+    console.log(password, username);
+
     var cansubmit = ((username.length >= 4) && (password.length >=4));
 
     document.getElementById("buttonSubmit").disabled = !cansubmit;

@@ -46,6 +46,42 @@
             cursor: not-allowed;
         }
 
+        #tooltip {
+            position: relative;
+            cursor: pointer;
+            border-bottom: 2px dotted;
+            padding: 4 px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #tooltipText {
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            transform: translateX(-50%);
+            background-color: #000;
+            color: #fff;
+            white-space: nowrap;
+            padding: 10px 15px;
+            border-radius: 7px;
+            opacity: 0.5s ease;
+        }
+        #tooltiptext::before {
+            content: " ";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            border: 15px 10px;
+            border-color: #000 #0000 #0000 #0000;
+        }
+        #tooltip::hover #tooltipText{
+            top: -130%;
+            visibility: visible;
+            opacity: 1;
+        }
+
     </style>
 
 
@@ -107,6 +143,10 @@
                     <input id="inputkey" type="text" placeholder="Enter Username..." maxlength="12" onkeyup="checkUserInput();"/>
                     <input id="inputvalue" type="password" placeholder="Enter Password..." maxlength="12" onkeyup="checkUserInput();"/>
                     <button style="float:right;" type="button" class="removeButtonColour" id="buttonSubmit" disabled="disabled">Submit User Information</button>
+                    <div id="tooltip">
+                        <span id="tooltipText">Tooltip Text</span>
+                        <span>Hover Over Me</span>
+                    </div>
                 </div>
             </div>
             </fieldset>
