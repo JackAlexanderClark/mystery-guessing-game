@@ -49,6 +49,15 @@
             background-color: red;
             cursor: not-allowed;
         }
+
+        p, li, h1, h2, h3, .img-text, button {
+            font-family: "Bookman Old Style", Georgia, serif;
+            color:rgb(194, 191, 191);
+        } 
+
+        h1 {
+            text-decoration: underline;
+        }
     </style>
 
 
@@ -79,100 +88,62 @@
         </div>
       </nav>
 
-      <script>
-                    // title effect on page ready
-            $(document).load(function() {
-                $("#titleshow").slideDown(1000);
-            });
-
-
-      </script>
-
     <!-- game title fade in -->
     <section>
         <div>
-            <h1 id="titleshow">Mystery Guessing Game!</h1>
+            <h1>Mystery Guessing Game!</h1>
         </div>
     </section>
-
-
-
-
 
     <!-- localstorage save user details on first visit -->
-    <section id="localstorage">
-        <div class="container-fluid">
-            <fieldset>
-            <div class="row">
-                <legend ><b>What is your name and username?</b></legend>
-                <div class="col-md-6">
-                    <span style="float:left;"><small>Your session username must be a minimum of 4 characters and a maximum of 12 characters.</small></span>
-                </div>
-                <div class="col-md-6">
-                    <input id="inputkey" type="text" placeholder="Enter Username..." maxlength="12" onkeyup="checkUserInput();"/>
-                    <input id="inputvalue" type="password" placeholder="Enter Password..." maxlength="12" onkeyup="checkUserInput();"/>
-                    <button style="float:right;" type="button" class="removeButtonColour" id="buttonSubmit" disabled="disabled">Submit User Information</button>
-                    <div id="tooltip">
-                    </div>
-                </div>
-            </div>
-            </fieldset>
-            <fieldset>
-                <legend>Local Storage Output</legend>
-                <div> Your username is:
-                    <div id="isOutput"></div>
-                </div>
-            </fieldset>
-        </div>
-    </section>
-    
-    <hr>
+
+      <hr>
 
     <!-- Introduction panel with rundown of the game rules for newcomers -->
     <section id="rulebook">
         <div class="container">
+            <section id="localstorage">
+                <div class="container-fluid">
+                    <fieldset>
+                    <div class="row">
+                        <legend ><b>What is your name and username?</b></legend>
+                        <div class="col-md-6">
+                            <span style="float:left;"><small>Your session username must be a minimum of 4 characters and a maximum of 12 characters.</small></span>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="inputkey" type="text" placeholder="Enter Username..." maxlength="12" onkeyup="checkUserInput();"/>
+                            <input id="inputvalue" type="password" placeholder="Enter Password..." maxlength="12" onkeyup="checkUserInput();"/>
+                            <button style="float:right;" type="button" class="removeButtonColour" id="buttonSubmit" disabled="disabled">Submit User Information</button>
+                            <div id="tooltip">
+                            </div>
+                        </div>
+                    </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Local Storage Output</legend>
+                        <div> Your username is:
+                            <div id="isOutput"></div>
+                        </div>
+                    </fieldset>
+                </div>
+            </section>
             <h1>Instructions and Rulebook</h1>
-            <p>By clicking you understand the rules and are ready to start the game countdown timer</p>
-            <p><strong>Some unknown individual commited an arson attack against Character X, by throwing a petrol can at their home.</strong></p>
             <p>Who has the motive? Can you solve this case?</p> 
-            <ol>
+            <ol style="text-align:center;">
                 <li>There are nine suspects for you to chose from.</li>
                 <li>You have 10 minutes to read the evidence and clues.</li>
                 <li>You are allowed 2 guesses to chose from.</li>
             </ol>
-        </div>
-    </section>
-
-    <!-- Biography and Story context for game-->
-    <section>
-        <p>Character X is 46 years old. A retired business man.</p>
-    </section>
-
-    <!-- TOOLTIP POP UP https://stackoverflow.com/questions/33000298/creating-a-clickable-tooltip-in-javascript-or-bootstrap-->
-    <div class="container">
-        <h3>Popover Example</h3>
-        <a href="#" role="button" class="btn popovers" data-toggle="popover" title="" data-content="test content <a href='hints.html' title='test add link' onclick="incrementHints()">link on content</a>" data-original-title="test title">Here is a Hint hover over me!</a>
-        </div>
-      
-
-    <!-- google map API call for location of fictional crime scene -->
-    <section>
-        <div class="container">
-            <p>Here is the location of the arson attack here.</p>
-            <div id="map"></div>
-        </div> 
-    </section>
-
-    <a href="" data-toggle="tooltip" title="Please enter your name here">Hover Over Me</a>
-
-    <!-- Timeline of Arson for context -->
-    <section>
-        <div class="row">
-            <div class="col-md-12">
-                <h2><strong>Timeline of the Arson Attack upon Character X:</strong></h2>
-                <p>Here is a birds eye view of the scene of the Arson Attack.</p>
-                <p>It took place at 2:30am.</p>
-            </div>
+            <!-- Biography and Story context for game-->
+            <h1>The Story</h1>
+            <img src="assets/images/house on fire .jpg" class="img-fluid" alt="Arson Attack on the house">
+            <hr>
+            <ol style="text-align:center;">
+                <li>You are a police detective, investigating an arson attack.</li>
+                <li>At 2:35am a phone call reported a loud explosion.</li>
+                <li>Nick Draper is the home-owner, he is a 43 year old Business man, originally from London.</li>
+                <li>He was a local figure of much ire from the community.</li>
+            </ol>
         </div>
     </section>
 
@@ -199,18 +170,21 @@
         <script src="https://unpkg.com/tippy.js@6"></script>
 
         <script>
-            function initMap() {
-                var location = {lat: -25.30, lng: 131.044};
-                var map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 4,
-                    center: location
-                });
-                var marker = new google.maps.marker({
-                    position: location,
-                    map: map
-                });
+
+            function resetLocalStorage() 
+            {
+                window.localStorage.clear();
+                return false;
             }
 
+            // chat gpt tooltip
+            $(document).ready(function() {
+                $('input[type="text"]').hover(function() {
+                    $(this).after('<span class="tooltip">This is a tooltip</span>');
+                    }, function() {
+                $(this).next().remove();
+                });
+            });
 
 // CODE FROM https://stackoverflow.com/questions/33000298/creating-a-clickable-tooltip-in-javascript-or-bootstrap
 
@@ -229,8 +203,6 @@
                     }
             }, 300);
 });
-
-
 
     </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX3OFY84EvzekWB1YI71BnZ4sNlyx49-Acallback=initMap"></script>

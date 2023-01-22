@@ -1,14 +1,18 @@
 /* universal font family and styles */
 p, h2, h3, .img-text, button {
-	font-family:'Times New Roman', Times, serif;
+	font-family: "Bookman Old Style", Georgia, serif;
 	color:rgb(194, 191, 191);
 } 
+
+h3 {
+  text-decoration: underline;
+}
 
 /* style for clue information */
 li, ol {
   font-style: italic;
   text-align: left;
-  font-family:'Times New Roman', Times, serif;
+  font-family:"Bookman Old Style", Georgia, serif;
   	color:rgb(194, 191, 191);
 }
 

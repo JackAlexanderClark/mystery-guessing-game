@@ -14,3 +14,6 @@
 2. One of the main javascript features I wanted to use was exploring and interacting with elements to learn more information and details towards the game. Clicking to expand paragraphs and navigate was a key goal.
 
 3
+
+##III) Style and Themes
+1. I used "Bookman Old Style" as the primary font family.

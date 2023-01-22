@@ -54,6 +54,8 @@ for (let i = 0; i < localStorage.length; i++ ) {
 
 }
 
+
+
 // enter password to submit your answer
 function checkPassword() {
     console.log("test");

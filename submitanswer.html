@@ -110,32 +110,7 @@
 
 <!------------------------------------------------------------------------------->
 <script>
-   // Select the button element
-const button = document.querySelector('#timerButton');
 
-// Set the starting countdown time
-let time = 10;
-
-// Declare the countdown function
-const span = document.getElementById('countdown')
-
-const deadline = new Date
-deadline.setHours(0)
-deadline.setMinutes(0)
-deadline.setSeconds(0)
-
-function displayRemainingTime() {
-  if (deadline < new Date) deadline.setDate(deadline.getDate() + 1)
-  const remainingTime = deadline - new Date
-  const extract = (maximum, factor) => Math.floor((remainingTime % maximum) / factor)
-  const seconds = extract(   60000, 1000   ) 
-  const minutes = extract( 3600000, 60000  ) 
-  const hours   = extract(86400000, 3600000)
-  const string = `${hours} hours ${minutes} minutes ${seconds} seconds remaining`
-  span.innerText = `${hours} hours ${minutes} minutes ${seconds} seconds remaining`
-}
-window.setInterval(displayRemainingTime, 1000)
-displayRemainingTime()
 </script>
 <hr>
 
