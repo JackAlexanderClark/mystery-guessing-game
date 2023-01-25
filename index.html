@@ -24,7 +24,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  
+
     <!-- Custom golden question mark as favicon for browser -->
     <link rel="icon" type="image/x-icon" href="assets/images/golden question mark logo.jpg" alt="mystery logo favicon">
 
@@ -77,13 +77,10 @@
                 <a class="nav-link active" aria-current="page" href="index.html" style="color:yellow;">Rules&nbsp;<i class="fas fa-book"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="gamepage.html" style="color:yellow;">Suspects&nbsp;<i class="fa-solid fa-person"></i></a>
+                <a class="nav-link" href="gamepage.html" style="color:yellow;">Characters&nbsp;<i class="fa-solid fa-person"></i></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="clues.html" style="color:yellow;">Clues&nbsp;<i class="fa-solid fa-magnifying-glass"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="submitanswer.html" style="color:yellow;">Submit&nbsp;<i class="fa-solid fa-check"></i></a>
               </li>
             </ul>
           </div>
@@ -129,7 +126,7 @@
                     </fieldset>
                 </div>
             </section>
-            <h1>Instructions and Rulebook</h1>
+            <h1>Rules</h1>
             <p>Who has the motive? Can you solve this case?</p> 
             <ol style="text-align:center;">
                 <li>There are nine suspects for you to chose from.</li>
@@ -146,6 +143,15 @@
                 <li>Nick Draper is the home-owner, he is a 43 year old Business man, originally from London.</li>
                 <li>He was a local figure of much ire from the community.</li>
             </ol>
+            <h1>Submit your Guess</h1>
+            <img src="assets/images/Police station.jpg" class="img-fluid" alt="Police Station">
+            <hr>
+            <!-- change code FIX -->
+            <h3>Choose your character.</h3>
+            <input type="text" id="guess-input" placeholder="Enter your guess">
+            <br><br>
+            <button onclick="checkGuess()">Submit</button>
+            <p id="result"></p>
         </div>
     </section>
 
@@ -179,7 +185,7 @@
                 return false;
             }
 
-            // chat gpt tooltip
+            // chat tooltip
             $(document).ready(function() {
                 $('input[type="text"]').hover(function() {
                     $(this).after('<span class="tooltip">This is a tooltip</span>');
@@ -188,23 +194,14 @@
                 });
             });
 
-// CODE FROM https://stackoverflow.com/questions/33000298/creating-a-clickable-tooltip-in-javascript-or-bootstrap
 
-        $('[data-toggle="popover"]').popover({ trigger: "manual" , html: true, animation:false})
-            .on("mouseenter", function () {
-                var _this = this;
-                $(this).popover("show");
-                $(".popover").on("mouseleave", function () {
-                    $(_this).popover('hide');
-                });
-            }).on("mouseleave", function () {
-                var _this = this;
-                setTimeout(function () {
-                    if (!$(".popover:hover").length) {
-                        $(_this).popover("hide");
-                    }
-            }, 300);
-});
+// Setting x = 5 to local storage
+let x = 5;
+localStorage.setItem("x", x);
+
+// Retrieving x from local storage and displaying it in HTML
+let retrievedX = localStorage.getItem("x");
+document.getElementById("result").innerHTML = retrievedX;
 
     </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX3OFY84EvzekWB1YI71BnZ4sNlyx49-Acallback=initMap"></script>
