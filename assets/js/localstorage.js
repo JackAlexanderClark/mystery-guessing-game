@@ -55,6 +55,10 @@ for (let i = 0; i < localStorage.length; i++ ) {
 }
 
 
+// let retrievedDump = localStorage.getItem("x");
+// document.getElementById("dumpResult").innerHTML = retrievedDump;
+
+
 
 // enter password to submit your answer
 function checkPassword() {

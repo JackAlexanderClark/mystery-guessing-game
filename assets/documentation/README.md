@@ -41,4 +41,4 @@
 ## VI) Credits
 1. Jack Clark - Code 
 2. Jamie Preston - Commisioned art work of the nine suspects drawings.
-3. DALLE-2 - Artworkb
+3. DALLE-2 - Artwork
