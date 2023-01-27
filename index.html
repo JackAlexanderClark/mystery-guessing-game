@@ -211,18 +211,20 @@
                 <li>You have 10 minutes to read the evidence and clues.</li>
                 <li>You are allowed 2 guesses to chose from.</li>
             </ol>
+            <hr>
             <!-- Biography and Story context for game-->
             <h1>The Story</h1>
-            <img src="assets/images/house on fire .jpg" class="img-fluid" alt="Arson Attack on the house">
-            <hr>
             <ol style="text-align:center;">
                 <li>You are a police detective, investigating an arson attack.</li>
                 <li>At 2:35am a phone call reported a loud explosion.</li>
                 <li>Nick Draper is the home-owner, he is a 43 year old Business man, originally from London.</li>
                 <li>He was a local figure of much ire from the community.</li>
             </ol>
+            <img src="assets/images/house on fire .jpg" class="img-fluid" alt="Arson Attack on the house" style="max-width: 50%; max-height: 50%;">
+            <hr>
             <h1>Submit your Guess</h1>
-            <img src="assets/images/Police station.jpg" class="img-fluid" alt="Police Station">
+            <p>Once you are satisfied with your investigation, please submit below.</p>
+            <img src="assets/images/Police station.jpg" class="img-fluid" alt="Police Station" style="max-width: 50%; max-height: 50%;">
             <hr>
             <!-- change code FIX -->
             <h3>Choose your character.</h3>
@@ -257,10 +259,11 @@
 
         <script>
 
-        // check if the browser support local storage
+        // check broswer storage type, check if the browser supports local storage, if not then clear local storage 
         if(typeof(Storage) !== "undefined") {
             document.getElementById("clear-button").addEventListener("click", function() {
                 localStorage.clear();
+                document.getElementById("isOutput").innerHTML = "";
             });
         }
 
