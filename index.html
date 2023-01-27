@@ -60,6 +60,81 @@
         h1 {
             text-decoration: underline;
         }
+
+        /* Adding a border to all image tags, except the nav logo using :not css selector */
+        img:not(.weblogo) {
+            border: 2px solid rgb(194, 191, 191);
+        }
+
+        .navbar {
+          overflow: hidden;
+        }
+
+        /* Navbar links */
+        .navbar a {
+          float: left;
+          display: block;
+          text-align: center;
+          padding: 14px;
+          text-decoration: none;
+        }
+
+        /* Page content */
+        .content {
+          padding: 16px;
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+          position: fixed;
+          top: 0;
+          width: 100%;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky + .content {
+          padding-top: 60px;
+        }
+
+        /* end of w3schools code */
+
+      /* Credit and Source to GetBootstrap: https://getbootstrap.com/docs/4.6/examples/album/" */
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+
+    .heading-style {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    li, ol {
+        font-style: italic;
+        text-align: left;
+        font-family:'Times New Roman', Times, serif;
+        color:rgb(194, 191, 191);
+    }
+
+    button {
+        color:#572dd3b3;
+    }
+
+    img {
+        cursor: hand;
+    }
     </style>
 
 
@@ -67,7 +142,7 @@
 <body background="assets/images/black-board background.jpg">
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#"><img src="assets/images/golden question mark logo.jpg" alt="game logo" height="40px" width="40px"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -204,6 +279,5 @@ let retrievedX = localStorage.getItem("x");
 document.getElementById("result").innerHTML = retrievedX;
 
     </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX3OFY84EvzekWB1YI71BnZ4sNlyx49-Acallback=initMap"></script>
 </body>
 </html>
