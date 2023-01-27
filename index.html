@@ -199,8 +199,11 @@
                             <div id="isOutput"></div>
                         </div>
                     </fieldset>
+                    <p>Wish to reset local storage?</p>
+                    <button id="clear-button">Clear Local Storage</button>
                 </div>
             </section>
+            <hr>
             <h1>Rules</h1>
             <p>Who has the motive? Can you solve this case?</p> 
             <ol style="text-align:center;">
@@ -254,20 +257,27 @@
 
         <script>
 
-            function resetLocalStorage() 
-            {
-                window.localStorage.clear();
-                return false;
-            }
-
-            // chat tooltip
-            $(document).ready(function() {
-                $('input[type="text"]').hover(function() {
-                    $(this).after('<span class="tooltip">This is a tooltip</span>');
-                    }, function() {
-                $(this).next().remove();
-                });
+        // check if the browser support local storage
+        if(typeof(Storage) !== "undefined") {
+            document.getElementById("clear-button").addEventListener("click", function() {
+                localStorage.clear();
             });
+        }
+
+        // clear local storage and the inner html
+        document.getElementById("clear-button").addEventListener("click", function() {
+            localStorage.clear();
+            document.getElementById("isOutput").innerHTML = "";
+        });
+
+        // chat tooltip
+        $(document).ready(function() {
+            $('input[type="text"]').hover(function() {
+                $(this).after('<span class="tooltip">This is a tooltip</span>');
+                }, function() {
+            $(this).next().remove();
+            });
+        });
 
 
 // Setting x = 5 to local storage

@@ -8,6 +8,11 @@ h3 {
   text-decoration: underline;
 }
 
+/* hint information italics */
+small {
+  font-style: italic;
+}
+
 /* style for clue information */
 li, ol {
   font-style: italic;

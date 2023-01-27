@@ -280,6 +280,8 @@
 <section style="text-align:center;">
   <div>
   <h1><strong>Witnesses</strong></h1>
+  <small>Ask them Questions to learn more information</small>
+  <br>
   <i class="fa-solid fa-person"></i>
   <h3>Witness 1 - Jackie Parker (Local Hairdresser)</h3>
   <p>Click me to ask me a question.</p>
@@ -307,7 +309,9 @@
   <i class="fa-solid fa-comment"></i>
   <ul>
     <li>Question 1: What did you see?</li>
-    <li>Question 2: How long have you known character?</li>
+    <li>Question 2: Do you think he would be involved?</li>
+    <button type="button" onclick="loadWitnessesAjax4()">Answer</button>
+    <div id="ajaxResponse4"></div>
   </ul>
 </div>
 <img src="assets/images/detective.jpg" alt="Detective looking at a clue">
@@ -322,9 +326,6 @@
         }
       xhttp.open("GET", "ajax_info.txt", true);
       xhttp.send();
-
-      // add new class to reveal second speech bubble
-      //$('#speechBubble1').addClass
     }
 
     // load ajax text file question reponse
@@ -353,9 +354,16 @@
       xhttp.open("GET", "assets/text_files/ajax_jackie_witness3.txt", true);
       xhttp.send();
     }
+    function loadWitnessesAjax4() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("ajaxResponse4").innerHTML = this.responseText;
+        }
+      xhttp.open("GET", "assets/text_files/ajax_jackie_witness4.txt", true);
+      xhttp.send();
+    }
   
 </script>
-
 
 <hr>
 <br>
