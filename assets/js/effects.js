@@ -1,3 +1,7 @@
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+import confetti from 'https://cdn.skypack.dev/pin/canvas-confetti@v1.6.0-t438JJTXIbBReqvLtDua/mode=imports/optimized/canvas-confetti.js';
+
+
 // toggle individual buttons for unique info
 $(document).ready(function(){
     $("#infoToggle-1").hide();
@@ -31,56 +35,10 @@ $("#buttonToggle-6").click(function(){
     $("#infoToggle-6").slideToggle("slow");
 });
 
-
-
-function getSubmission() {
-    console.log("hello");
-    getTime.textContent = "Yo wagwan";
+// confetti game won effect
+function Party() {
+    confetti();
+    console.log("error");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var seconds = 200;
-function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds;  
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
-    } else {
-        seconds--;
-    }
-}
-var countdownTimer = setInterval('secondPassed()', 1000);
-
-
-// get time you submitted answer to display
-// source --> https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/ 
-var span = document.getElementsByTagName('span')[0];
-span.textContent = 'ooo';                                           // change DOM text content
-span.style.display = 'inline';                                                  // change CSSOM property
-                                                            // create a new element, style it, and append it to the DOM
-var getTime = document.createElement('div');
-getTime.textContent = 'Congratulations! You submitted your answer at: ' + new Date() + '.   Your guess was: ' + getSubmission();
-getTime.style.color = 'red';
-document.body.appendChild(getTime);
-
-
+document.getElementById('confetti').addEventListener('click', Party());

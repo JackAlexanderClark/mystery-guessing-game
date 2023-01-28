@@ -62,7 +62,6 @@ for (let i = 0; i < localStorage.length; i++ ) {
     sessionNumber++;
     // template literal to populate html
     outputDiv.innerHTML += `${key}: ${value}<br> Date: ${today} Session: ${sessionNumber}`;
-
 }
 
 
