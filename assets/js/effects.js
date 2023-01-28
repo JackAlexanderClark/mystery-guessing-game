@@ -38,7 +38,7 @@ $("#buttonToggle-6").click(function(){
 // confetti game won effect
 function Party() {
     confetti();
-    console.log("error");
+    console.log("error")
 }
 
 document.getElementById('confetti').addEventListener('click', Party());

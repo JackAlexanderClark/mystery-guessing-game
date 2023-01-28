@@ -35,6 +35,8 @@
     <script src="jquery-3.6.1.min.js" defer></script>
     <script src="assets/js/effects.js" defer></script>
     <script src="assets/js/localstorage.js" defer></script>
+    <script src="assets/js/effects.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
     <style>
 
@@ -231,7 +233,6 @@
             <!-- confetti game won effect -->
             <div class="container">
               <button id="confetti">Party!</button>
-              <script src="assets/js/effects.js" type="module" defer></script>
             </div>
             <footer>
               <div class="container">
@@ -243,6 +244,7 @@
                   </div>
               </div>
               </footer>
+
         </div>
     </section>
 
@@ -293,6 +295,7 @@
       } else {
         result.innerHTML = "Sorry, that's not the correct number. Please try again.";
         incorrectGuess();
+        initConfetti();
       }
     }
 
@@ -304,8 +307,6 @@
       display.innerHTML = "Guesses:&nbsp;" + count;
       localStorage.setItem('numberGuesses', count);
     }
-
-    console.log(count);
 
     // game over
     if (count === 2) {
