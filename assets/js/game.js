@@ -1,38 +1,23 @@
-/*
-*   game.js contains the primary game loop used for calculating score.
-*   There are 3 things to guess in this game;
-*   firstly, the person who did the crime,
-*   secondly, the weapon used
-*   and thirdly the location.
-// */
-// let correctAnswer = 4;
-// let guesses = 1;
 
-// document.getElementById("guessesLeft").innerHTML = guesses;
-// let playersAnswer = document.getElementById("playerAnswer").value;
 
-// function checkAnswer() {
+// how many guesses it took to get it correct
+let Counter
+if (game == "won") {
 
-//     // handle if user's guess is empty
-//     let playerNumber = $('#playerAnswer').val();
-//     if ( playerNumber == 4 ) {
-//         document.getElementById("guessesLeft").innerHTML = 0;
-//         guesses = 0;
-//         let playerNumber = $('#playerAnswer').val();
-//         document.getElementById("userChoice").innerHTML = `You chose suspect ${playerNumber} OH NO!!! this was <strong>incorrect</strong>!`;
-//         gameWon(); 
-//         return false;
-//     } else if (playersAnswer != 4 ) {
-//         document.getElementById("guessesLeft").innerHTML = 0;
-//         guesses = 0;
-//         let playerNumber = $('#playerAnswer').val();
-//         document.getElementById("userChoice").innerHTML = `You chose suspect ${playerNumber}........this was <strong>correct</strong>!`;
-//         gameLost();
-//         return false;
-//     } else {
-//         console.log("asdasd");
-//         return false;
-//     }
+}
+
+// if game is lost, guesses++ 
+gameLost();
+
+// if game is won, ignore
+
+// if guesses = 5,
+if (guesses = 5) {
+  GameOver();
+}
+
+
+
 let playerNumber = $('#playerAnswer').val();
     function checkAnswer() {
         const userGuess = Number(guessField.value);

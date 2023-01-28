@@ -37,6 +37,10 @@
     <script src="jquery-3.6.1.min.js" defer></script>
     <script src="assets/js/effects.js" defer></script>
 
+    <!-- https://www.cssscript.com/side-navigation-easy-scroll-dots/ -->
+    <link href="dist/easyScrollDots.css" rel="stylesheet">
+    <script src="dist/easyScrollDots.js"></script>
+
 
     <style>
 
@@ -161,14 +165,6 @@
           </div>
         </div>
       </nav>
-
-    <!-- game title fade in -->
-    <section>
-        <div>
-            <h1>Mystery Guessing Game!</h1>
-        </div>
-    </section>
-
     <!-- localstorage save user details on first visit -->
 
       <hr>
@@ -180,6 +176,9 @@
                 <div class="container-fluid">
                     <fieldset>
                     <div class="row">
+                      <div>
+                        <h1>Mystery Guessing Game!</h1>
+                      </div>
                         <legend ><b>What is your name and username?</b></legend>
                         <div class="col-md-6">
                             <span style="float:left;"><small>Your session username must be a minimum of 4 characters and a maximum of 12 characters.</small></span>
@@ -220,11 +219,11 @@
                 <li>Nick Draper is the home-owner, he is a 43 year old Business man, originally from London.</li>
                 <li>He was a local figure of much ire from the community.</li>
             </ol>
-            <img src="assets/images/house on fire .jpg" class="img-fluid" alt="Arson Attack on the house" style="max-width: 50%; max-height: 50%;">
+            <img src="assets/images/house on fire .jpg" class="img-fluid img-thumbnail" alt="Arson Attack on the house" style="max-width: 50%; max-height: 50%;">
             <hr>
             <h1>Submit your Guess</h1>
             <p>Once you are satisfied with your investigation, please submit below.</p>
-            <img src="assets/images/Police station.jpg" class="img-fluid" alt="Police Station" style="max-width: 50%; max-height: 50%;">
+            <img src="assets/images/Police station.jpg" class="img-fluid img-thumbnail" alt="Police Station" style="max-width: 50%; max-height: 50%;">
             <hr>
             <!-- change code FIX -->
             <h3>Choose your character.</h3>
@@ -232,19 +231,21 @@
             <br><br>
             <button onclick="checkGuess()">Submit</button>
             <p id="result"></p>
+            <p id="guesses"></p>
+            <footer>
+              <div class="container">
+                  <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
+                      <div class="centered">
+                          <!-- css anchor tag to return to top of page for easier navigation -->
+                          <a href="#header-anchor"><p style="text-align:center;"> Click here to return to top of the page <i class="fa-solid fa-arrow-pointer"></i> </p></a>
+                      </div>
+                  </div>
+              </div>
+              </footer>
         </div>
     </section>
 
-    <footer>
-    <div class="container">
-        <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
-            <div class="centered">
-                <!-- css anchor tag to return to top of page for easier navigation -->
-                <a href="#header-anchor"><p style="text-align:center;"> Click here to return to top of the page <i class="fa-solid fa-arrow-pointer"></i> </p></a>
-            </div>
-        </div>
-    </div>
-    </footer>
+
 
           <!-- CDN links and bootstrap -->
         <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
@@ -283,14 +284,22 @@
         });
 
 
-// Setting x = 5 to local storage
-let x = 5;
-localStorage.setItem("x", x);
+    function incorrectGuess() {
+      document.getElementById("guesses").innerHTML = "-1";
+    }
 
-// Retrieving x from local storage and displaying it in HTML
-let retrievedX = localStorage.getItem("x");
-document.getElementById("result").innerHTML = retrievedX;
+    let correctNumber = 4;      // character 4
 
+    function checkGuess() {
+      let guess = document.getElementById("guess-input").value;
+      let result = document.getElementById("result");
+      if (guess == correctNumber) {
+        result.innerHTML = "Congratulations! You guessed the correct number!";
+      } else {
+        result.innerHTML = "Sorry, that's not the correct number. Please try again.";
+        incorrectGuess();
+      }
+    }
     </script>
 </body>
 </html>
