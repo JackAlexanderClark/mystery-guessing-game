@@ -38,58 +38,6 @@ function getSubmission() {
     getTime.textContent = "Yo wagwan";
 }
 
-// CHATGPT code//////////////////////////////////////////////////////
-const form = document.getElementById('form');
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  // Get the user's name from the form
-  const name = document.getElementById('name').value;
-
-  // Store the user's name in local storage
-  localStorage.setItem('name', name);
-});
-
-// Retrieve the user's name from local storage
-const storedName = localStorage.getItem('name');
-
-// Display the user's name in the console
-console.log(storedName);
-
-
-// CHATGPT code//////////////////////////////////////////////////////
-
-
-
-
-
-
-
-// FIX LATER
-
-// tooltip hover effect
-let answer = $("#playerAnswer").val();
-if (answer = '') {
-    // check for spaces 
-        $("#playerAnswer").tooltip({
-            disabled: true,
-            content: 'Chose a number between 1 and 9 that corresponds to the suspect cards and submit.',
-            show: {
-                effect: "slideDown",
-                delay: 200
-            }
-        }).mouseover();
-        setTimeout(() => {
-            $("#playerAnswer").tooltip({
-                disabled: false
-            });
-        }, 3000);
-}
-
-
-
-
 
 
 
