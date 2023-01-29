@@ -1,6 +1,7 @@
 # README DOCUMENTATION
 
-# **Milestone Project 2 - Interactive Frontend Development (HTML/CSS/javaScript)**
+# **Milestone Project 2 - Interactive Frontend Development**
+###  (HTML/CSS/javaScript)
 # Author: Jack Clark (Contact Me - jackalexanderclark@protonmail.com)
 
 # Project website link (GitHub Pages): https://jackalexanderclark.github.io/mystery-guessing-game/index.html
