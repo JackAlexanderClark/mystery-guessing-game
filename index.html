@@ -213,7 +213,8 @@
             <ol style="text-align:center;">
                 <li>You are a police detective, investigating an arson attack.</li>
                 <li>At 2:35am a phone call reported a loud explosion.</li>
-                <li>Nick Draper is the home-owner, he is a 43 year old Business man, originally from London.</li>
+                <li>Nick Draper is the home-owner, he is a 43 year old teacher at Water Hope High School.</li>
+                <li>In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.</li>
                 <li>He was a local figure of much ire from the community.</li>
             </ol>
             <img src="assets/images/house on fire .jpg" class="img-fluid img-thumbnail" alt="Arson Attack on the house" style="max-width: 50%; max-height: 50%;">
@@ -223,7 +224,7 @@
             <img src="assets/images/Police station.jpg" class="img-fluid img-thumbnail" alt="Police Station" style="max-width: 50%; max-height: 50%;">
             <hr>
             <h3>Choose your character.</h3>
-            <input type="text" id="guess-input" placeholder="Enter your guess">
+            <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1">
             <br>
             <button onclick="checkGuess()" id="submitButton">Submit</button>
             <p id="result"></p>
@@ -295,18 +296,22 @@
       } else {
         result.innerHTML = "Sorry, that's not the correct number. Please try again.";
         incorrectGuess();
-        initConfetti();
       }
     }
 
     let count = 0;
     const display = document.getElementById("display");
+    const storageDisplay = document.getElementById("storageDisplay");
   
     function incorrectGuess() {
       count++;
       display.innerHTML = "Guesses:&nbsp;" + count;
-      localStorage.setItem('numberGuesses', count);
+      localStorage.setItem("count", count);
     }
+
+    storageDisplay.innerHTML = localStorage.getItem("count");
+    console.log(storageDisplay);
+
 
     // game over
     if (count === 2) {

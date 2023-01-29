@@ -26,7 +26,7 @@
 
 ![image](https://user-images.githubusercontent.com/97599832/214308815-8f1801be-2d3e-47d7-a2d1-394ee34d6ec9.png)
 
-2. Secondly, I made use of Bootstrap as a template to handle responsiveness for all devices such as mobiles, ipads as well as desktop. Bootstrap classes such as "img-fluid" and "containers" help to keep a consistent flow and design philosophy throughout the project.
+2. Secondly, I made use of Bootstrap as a template to handle responsiveness for all devices such as mobiles, ipads as well as desktop. Bootstrap classes such as "img-fluid" and "containers" help to keep a consistent flow and design philosophy throughout the project. I also used bootstrap modal popups for interactivity, 
 
 ![image](https://user-images.githubusercontent.com/97599832/214308690-cb8c9eec-51de-425d-9d3e-dbaa3266a2d5.png)
 
