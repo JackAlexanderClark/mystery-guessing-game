@@ -304,8 +304,8 @@
 
       function createSolutionLink() {
         document.getElementById("solution").innerHTML = `
-          <a href="https://jackalexanderclark.github.io/mystery-guessing-game/solution.html">
-            Click here for the solution
+          <a href="solution.html" style="color: red;">
+            Click here for the solution breakdown and story conclusion.
           </a>
         `;
       }
@@ -329,7 +329,7 @@
         let solutionLink = document.getElementById("solution");
         if (guess == correctNumber && count < 3) {
           result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
-          explanation.innerHTML = "<strong>Explanation: </strong><em>The reason for Mark Henderson was the unpaid loan.</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
+          explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
           createSolutionLink();
         } else {
           result.innerHTML = "Sorry, that's not the correct number. Please try again.";
