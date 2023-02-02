@@ -1,7 +1,3 @@
-import confetti from 'https://cdn.skypack.dev/canvas-confetti';
-import confetti from 'https://cdn.skypack.dev/pin/canvas-confetti@v1.6.0-t438JJTXIbBReqvLtDua/mode=imports/optimized/canvas-confetti.js';
-
-
 // toggle individual buttons for unique info
 $(document).ready(function(){
     $("#infoToggle-1").hide();
@@ -35,10 +31,3 @@ $("#buttonToggle-6").click(function(){
     $("#infoToggle-6").slideToggle("slow");
 });
 
-// confetti game won effect
-function Party() {
-    confetti();
-    console.log("error")
-}
-
-document.getElementById('confetti').addEventListener('click', Party());

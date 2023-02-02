@@ -135,6 +135,15 @@
     img {
         cursor: hand;
     }
+
+      /* chat css styling for tooltip */
+      .tooltip{
+          position: absolute;
+          background-color: #eee;
+          padding: 5px;
+          border-radius: 3px;
+          display: none;
+      }
     </style>
 
 
@@ -232,10 +241,11 @@
             <p id="guesses"></p>
             <!-- display amount of guesses -->
             <div id="display"></div>
-            <!-- confetti game won effect -->
-            <div class="container">
-              <button id="confetti">Party!</button>
-            </div>
+            <br>
+            <!-- Explanation -->
+            <div id="explanation"></div>
+            <br>
+
             <footer>
               <div class="container">
                   <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
@@ -250,17 +260,9 @@
         </div>
     </section>
 
-
-
-          <!-- CDN links and bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <!-- CDN links and bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous"></script>
-        
-        <!-- tippy.js CDN links-->
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
 
         <script>
 
@@ -278,46 +280,46 @@
             document.getElementById("isOutput").innerHTML = "";
         });
 
-        // chat tooltip
+        // chat tooltip for input submission
         $(document).ready(function() {
-            $('input[type="text"]').hover(function() {
-                $(this).after('<span class="tooltip">This is a tooltip</span>');
+            $('#guess-input').hover(function() {
+                $(this).after('<span class="tooltip">Please use the number corresponding to the character.</span>');
                 }, function() {
             $(this).next().remove();
             });
         });
+
+    let count = 0;
+    const display = document.getElementById("display");
+    const storageDisplay = document.getElementById("storageDisplay");
+  
+    function Guesses() {
+      count++;
+      display.innerHTML = "Guesses:&nbsp;" + count;
+      localStorage.setItem("count", count);
+      return count;
+    }
 
     let correctNumber = 4;      // character 4
 
     function checkGuess() {
       let guess = document.getElementById("guess-input").value;
       let result = document.getElementById("result");
+      let explanation = document.getElementById("explanation");
       if (guess == correctNumber) {
-        result.innerHTML = "Congratulations! You guessed the correct number!";
+        result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
+        // maybe make an interactive button that will appear when you are correct to then click for an explanation.
+        explanation.innerHTML = "<strong>Explanation: </strong><em>The reason for Mark Henderson was the unpaid loan.</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
+        Guesses();
       } else {
         result.innerHTML = "Sorry, that's not the correct number. Please try again.";
-        incorrectGuess();
+        Guesses();
       }
-    }
-
-    let count = 0;
-    const display = document.getElementById("display");
-    const storageDisplay = document.getElementById("storageDisplay");
-  
-    function incorrectGuess() {
-      count++;
-      display.innerHTML = "Guesses:&nbsp;" + count;
-      localStorage.setItem("count", count);
     }
 
     storageDisplay.innerHTML = localStorage.getItem("count");
     console.log(storageDisplay);
 
-
-    // game over
-    if (count === 2) {
-      console.log("game over you lost");
-    }
     </script>
 </body>
 </html>

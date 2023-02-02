@@ -38,6 +38,10 @@
 
 ![image](https://user-images.githubusercontent.com/97599832/214308934-2e2cc5f3-5ba2-4fb0-8359-e2f02304f197.png)
 
+## IV) Testing
+1. To help develop and test the app, I used the javaScript testing framework - jest.
+![image](https://user-images.githubusercontent.com/97599832/216416741-59a3ed6b-326c-4751-a633-384082398b9c.png)
+
 ## VI) Credits
 1. Jack Clark - Code 
 2. Jamie Preston - Commisioned art work of the nine suspects drawings.

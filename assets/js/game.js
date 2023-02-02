@@ -1,86 +1,31 @@
+let count = 0;
+const display = document.getElementById("display");
+const storageDisplay = document.getElementById("storageDisplay");
 
-
-// how many guesses it took to get it correct
-let Counter
-if (game == "won") {
-
+function Guesses() {
+  count++;
+  display.innerHTML = "Guesses:&nbsp;" + count;
+  localStorage.setItem("count", count);
+  return count;
 }
 
-// if game is lost, guesses++ 
-gameLost();
+let correctNumber = 4;      // character 4
 
-// if game is won, ignore
-
-// if guesses = 5,
-if (guesses = 5) {
-  GameOver();
+function checkGuess(correctNumber) {
+  let guess = document.getElementById("guess-input").value;
+  let result = document.getElementById("result");
+  let explanation = document.getElementById("explanation");
+  if (guess == correctNumber) {
+    result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
+    // maybe make an interactive button that will appear when you are correct to then click for an explanation.
+    explanation.innerHTML = "<strong>Explanation: </strong><em>The reason for Mark Henderson was the unpaid loan.</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
+    Guesses();
+    return true;
+  } else {
+    result.innerHTML = "Sorry, that's not the correct number. Please try again.";
+    Guesses();
+    return false;
+  }
 }
 
-
-
-let playerNumber = $('#playerAnswer').val();
-    function checkAnswer() {
-        const userGuess = Number(guessField.value);
-        if (guessCount === 1) {
-          guesses.textContent = 'Previous guesses: ';
-        }
-        guesses.textContent += `${userGuess} `;
-      
-        if (userGuess === playerNumber) {
-          lastResult.textContent = 'Congratulations! You got it right!';
-          let win = "congratulations";
-          localstorage.setItem();                                     // set win to local storage
-          lastResult.style.backgroundColor = 'green';
-          lowOrHi.textContent = '';
-          setGameOver();
-        } else if (guessCount === 10) {
-          lastResult.textContent = '!!!GAME OVER!!!';
-          lowOrHi.textContent = '';
-          setGameOver();
-        } else {
-          lastResult.textContent = 'Wrong!';
-          lastResult.style.backgroundColor = 'red';
-          if (userGuess < randomNumber) {
-            lowOrHi.textContent = 'Last guess was too low!';
-          } else if (userGuess > randomNumber) {
-            lowOrHi.textContent = 'Last guess was too high!';
-          }
-        }
-      
-        guessCount++;
-        guessField.value = '';
-        guessField.focus();
-      }
-      // EVERYTHING CAN BE SENT TO LOCAL STORAGE AS STRING OR OBJECT
-      // SET GUESSES AND LIVES TO LOCAL STORAGE
-
-
-
-    // if (playersAnswer === "") {
-    //     alert("Please enter a guess.");
-    //     return false;
-    // } 
-
-    // stop form being submitted CHAT GPT
-//     return false;
-
-// }
-
-// // prevent multiple guesses using jquery .one() method
-$('#answerButton').one('click', function() {
-    $(this).css({'cursor':'not-allowed', 'color': 'white', 'background-color': 'red'}).attr('disabled','disabled');
-});
-
-
-
-
-
-function gameWon() {
-    console.log("Winner");
-}
-
-function gameLost() {
-    console.log("Loser");
-}
-
-
+module.exports = checkGuess;
