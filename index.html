@@ -144,8 +144,16 @@
           border-radius: 3px;
           display: none;
       }
+
+          /* witness text styling */ 
+        .ajaxStyling {
+            font-style: italic;
+            color: pink;
+        }
     </style>
 
+    <!-- return to top of page anchor -->
+    <div id='header-anchor'></div>
 
     </head>
 <body background="assets/images/black-board background.jpg">
@@ -246,6 +254,8 @@
             <div id="gameOver"></div>
             <!-- Explanation -->
             <div id="explanation"></div>
+            <!-- clue if 2 incorrect guesses -->
+            <div id="hint" class="ajaxStyling"></div>
             <!-- link to solution -->
             <div id="solution"></div>
             <br>
@@ -293,13 +303,10 @@
             });
         });
 
+
       function disableSubmit() {
-          console.log("disable");
-          count = 2;
-          $("#submit-button").click(function() {
-              $(this).prop("disabled", true).removeClass("removeButtonColour").addClass("addButtonColour");
-            });
-          document.getElementById("guess-input").disabled;
+        let StopSubmit = document.getElementById("submitButton");
+        StopSubmit.disabled = true;
       }
 
       function createSolutionLink() {
@@ -328,6 +335,7 @@
         let explanation = document.getElementById("explanation");
         let solutionLink = document.getElementById("solution");
         if (guess == correctNumber && count < 3) {
+          disableSubmit();
           result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
           explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
           createSolutionLink();
@@ -336,7 +344,13 @@
           Guesses();
         }
 
+        let hint = document.getElementById("hint");
+        if ( count === 2 ) {
+          hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
+        }
+
         let gameOverDiv = document.getElementById("gameOver");
+
         if ( count === 3 ) {
           console.log("game over");
           gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
@@ -347,7 +361,13 @@
       }
       
       // need to make sure can't type in 4 after 3 guesses
-
+      $(document).ready(function(){
+        $("#inputkey").hover(function(){
+          $(this).after("<span class='tooltip'>Tooltip text</span>");
+        }, function(){
+          $(".tooltip").remove();
+        });
+      });
 
 
     </script>
