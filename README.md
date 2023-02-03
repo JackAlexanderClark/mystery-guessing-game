@@ -6,6 +6,7 @@
 # Project website link (GitHub Pages): https://jackalexanderclark.github.io/mystery-guessing-game/index.html
 
 ## Website Device Mockup
+![3-devices-black](https://user-images.githubusercontent.com/97599832/216617427-a2814925-0c9e-4459-a972-7d0ab0215c42.png)
 
 # I) Project Goals and Planning
 
