@@ -6,6 +6,7 @@
 # Project website link (GitHub Pages): https://jackalexanderclark.github.io/mystery-guessing-game/index.html
 
 ## Website Device Mockup
+![3-devices-black](https://user-images.githubusercontent.com/97599832/216617427-a2814925-0c9e-4459-a972-7d0ab0215c42.png)
 
 # I) Project Goals and Planning
 
@@ -16,13 +17,17 @@
 
 3. One of the main javascript features I wanted to use was exploring and interacting with elements to learn more information and details towards the game. Clicking to expand paragraphs and navigate was a key goal.
 
-4.
-
-# II) Style, Themes and Planning.
-1. My first plan as can be seen in this basic wireframe (Using Figma) to broadly display my webpage layout, with distinct character cards stacked up as if the user were playing a cardgame.
+4. My first plan as can be seen in this basic wireframe (Using Figma) to broadly display my webpage layout, with distinct character cards stacked up as if the user were playing a cardgame.
 ![image](https://user-images.githubusercontent.com/97599832/214305597-e1ce96c0-da73-454e-98bb-a566f293bab5.png)
 
-2. I used "Bookman Old Style" as the primary font family.
+
+# II) (UX) User Experience
+<ol>Goals</ol>
+<ul>
+    <li>To immediately understand the premise of the game and website.</li>
+    <li>To be able to play the game and easily navigate between the 3 page sections.</li>
+    <li>To be able to navigate between the bottom and top of pages and to the other areas without getting confused or lost.</li>
+</ul>
 
 # III) Development
 1. To add interactivity to my game, the user is encourage to navigate and explore the web app by using the navigation bar to explore the other web pages, such as the clues page. From here users can click to learn more about each individual piece of information, utilising jQuery to expand and close text information pertaining to said piece of evidence.
@@ -41,7 +46,13 @@
 
 ![image](https://user-images.githubusercontent.com/97599832/214308934-2e2cc5f3-5ba2-4fb0-8359-e2f02304f197.png)
 
-## IV) Testing
+<ul>Stylings:
+    <li>I used "Bookman Old Style" as the primary font family.</li>
+    <li>Colours: Black/Grey.</li>
+</ul>
+
+
+## IV) Testing and User Experience Stories
 1. To help develop and test the app, I used the javaScript testing framework - jest.
 ![image](https://user-images.githubusercontent.com/97599832/216416741-59a3ed6b-326c-4751-a633-384082398b9c.png)
 

@@ -43,6 +43,36 @@ li, ol {
     color:greenyellow;
   }
 
+/* My original navbar would break at certain pixel widths on small devices such as phones and tablets
+*  therefore, I have used media queries to hide the larger pixel width devices (i.e. laptops) as hidden,
+*  when a certain pixel width is reached and vice versa.
+*/
+.mobile-nav-bar{
+  display: none;
+}
+.laptop-nav-bar{
+  display: inline;
+}
+@media only screen 
+  and (max-device-width : 667px) 
+  and (orientation : portrait) 
+  and (-webkit-min-device-pixel-ratio : 2)
+{
+  .mobile-nav-bar{
+    display: inline;
+  }
+
+  .laptop-nav-bar{
+    display: none;
+  }
+
+  /* Show aqua underline for mobile nav bar to show which page you are on */
+    #show-page > small  {
+    text-decoration-line: underline;
+    text-decoration-color: aqua;
+  }
+}
+
 
 
 

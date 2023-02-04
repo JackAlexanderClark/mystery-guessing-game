@@ -31,7 +31,7 @@ const inputValue = document.getElementById("inputvalue");
 const inputButton = document.getElementById("buttonSubmit");
 const outputDiv = document.getElementById("isOutput");
 
-inputButton.onclick = function() {
+function setLocalStorage() {
 
     const key = inputKey.value;
     const value = inputValue.value;
@@ -42,7 +42,7 @@ inputButton.onclick = function() {
         location.reload();
     }
 
-};
+}
 // credit to:"https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript#:~:text=Use%20new%20Date()%20to,the%20current%20date%20and%20time.&text=This%20will%20give%20you%20today's,to%20whatever%20format%20you%20wish."
 // try get date to append to session local information
 var today = new Date();
