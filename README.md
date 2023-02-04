@@ -5,8 +5,6 @@
 
 # Project website link (GitHub Pages): https://jackalexanderclark.github.io/mystery-guessing-game/index.html
 
-### HTML/CSS/JavaScript
-
 ## Website Device Mockup
 ![3-devices-black](https://user-images.githubusercontent.com/97599832/216617427-a2814925-0c9e-4459-a972-7d0ab0215c42.png)
 
@@ -15,19 +13,23 @@
 ![image](https://user-images.githubusercontent.com/97599832/216454104-be44cc1b-f261-412f-a7bc-b091f2cc3cf2.png)
 1. In designing this web app project, I was inspired by classical text RPG games that originated from the 1970's and 80's, with titles such as 1976 Cave Adventurer and Zork I: The Great Underground Empire in 1980. These games utilised text based mechanics and player interactions with their computers to tell a story and allow the user to input meaningful choices - before the days of 3D rendered graphics we have today. This game will be a user input experience where they can explore different areas of the website, with the added interactive elements created with javaScript.
 
-2. For this project I decided upon a guessing game as a foundation, that would allow user inputs and ability to interact with different areas of the project. However, I wanted to expand upon this with added complexity and a more in-depth story. The game is inspired by the board game Cluedo and to get an aesthetically pleasing layout I commision some artwork to be produced for the characters in the game. I wanted the players to look like a playing card to brinbg that trading card game/board game to life, as seen below; ![image](https://user-images.githubusercontent.com/97599832/212542303-b60b7be1-4f68-4a37-becc-c9d197ef0983.png)
+2. For this project I decided upon a guessing game as a foundation, that would allow user inputs and ability to interact with different areas of the project. However, I wanted to expand upon this with added complexity and a more in-depth story. The game is inspired by the board game Cluedo and to get an aesthetically pleasing layout I commision some artwork to be produced for the characters in the game (Artist: Jamie Preston). I wanted the players to look like a playing card to bring that trading card game/board game to life, as seen below; ![image](https://user-images.githubusercontent.com/97599832/212542303-b60b7be1-4f68-4a37-becc-c9d197ef0983.png)
 
 3. One of the main javascript features I wanted to use was exploring and interacting with elements to learn more information and details towards the game. Clicking to expand paragraphs and navigate was a key goal.
 
-4.
-
-# II) Style, Themes and Planning.
-1. My first plan as can be seen in this basic wireframe (Using Figma) to broadly display my webpage layout, with distinct character cards stacked up as if the user were playing a cardgame.
+4. My first plan as can be seen in this basic wireframe (Using Figma) to broadly display my webpage layout, with distinct character cards stacked up as if the user were playing a cardgame.
 ![image](https://user-images.githubusercontent.com/97599832/214305597-e1ce96c0-da73-454e-98bb-a566f293bab5.png)
 
-2. I used "Bookman Old Style" as the primary font family.
 
-# III) Development
+# II) (UX) User Experience
+<ol>Goals</ol>
+<ul>
+    <li>To immediately understand the premise of the game and website.</li>
+    <li>To be able to play the game and easily navigate between the 3 page sections.</li>
+    <li>To be able to navigate between the bottom and top of pages and to the other areas without getting confused or lost.</li>
+</ul>
+
+# III) Development and Features
 1. To add interactivity to my game, the user is encourage to navigate and explore the web app by using the navigation bar to explore the other web pages, such as the clues page. From here users can click to learn more about each individual piece of information, utilising jQuery to expand and close text information pertaining to said piece of evidence.
 
 ![image](https://user-images.githubusercontent.com/97599832/214308815-8f1801be-2d3e-47d7-a2d1-394ee34d6ec9.png)
@@ -44,7 +46,29 @@
 
 ![image](https://user-images.githubusercontent.com/97599832/214308934-2e2cc5f3-5ba2-4fb0-8359-e2f02304f197.png)
 
-## IV) Testing
+<ul>
+<li>(Main Page) Rules and Game page</li>
+    ![image](https://user-images.githubusercontent.com/97599832/216768559-0b54d65d-9750-42fc-a0a4-ab4f307bf9d0.png)
+    <li>The function of this page is to introduce the guessing game and ruleset.</li>
+    <li>Playes can choose a number between 1 to 9 that will represent the character and press submit to use guess and choose to see if they were correct or not.</li>
+
+<li>Character Card Page</li>
+    ![image](https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png)
+    <li>Here there are nine character cards that have a fact sheet button, when the user presses it will create a bootstrap modal popup.</li>
+    <li>
+
+<li>Clues Page</li>
+![image](https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png)
+    <li>Each clue has a button that will toggle to reveal information that can be shown or hidden whenever the user wishes to interact with it.</li>
+</ul>
+
+<ul>Stylings:
+    <li>I used "Bookman Old Style" as the primary font family.</li>
+    <li>Colours: Black/Grey.</li>
+</ul>
+
+
+## IV) Testing and User Experience Stories
 1. To help develop and test the app, I used the javaScript testing framework - jest.
 ![image](https://user-images.githubusercontent.com/97599832/216416741-59a3ed6b-326c-4751-a633-384082398b9c.png)
 
