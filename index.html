@@ -23,7 +23,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- Custom golden question mark as favicon for browser -->
     <link rel="icon" type="image/x-icon" href="assets/images/golden question mark logo.jpg" alt="mystery logo favicon">
@@ -262,7 +262,9 @@
             <!-- link to solution -->
             <div id="solution"></div>
             <br>
-
+            <h2>Leaderboard</h2>
+            <table id="leaderboard">
+            </table>
             <footer>
               <div class="container">
                   <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
@@ -340,29 +342,35 @@
       }
 
       let correctNumber = 4;      // character 4
+      let leaderboard = document.getElementById("leaderboard");
+      let attempts = 0;
+
+      function addToLeaderboard(guess) {
+          attempts++;
+          let row = leaderboard.insertRow(-1);
+          let cell1 = row.insertCell(0);
+          let cell2 = row.insertCell(1);
+          cell1.innerHTML = attempts;
+          cell2.innerHTML = guess;
+      }
 
       function checkGuess() {
         let guess = document.getElementById("guess-input").value;
         let result = document.getElementById("result");
         let explanation = document.getElementById("explanation");
         let solutionLink = document.getElementById("solution");
-        if (guess == correctNumber && count < 3) {
+        if (guess == correctNumber) {
           disableSubmit();
           result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
           explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
           createSolutionLink();
+          addToLeaderboard(guess);
           // get username from local storage
           let div = document.getElementById('usernameDiv');
-            for (let i = 0; i < localStorage.length; i++ ) {
-              const key = localStorage.key(i);
-              const value = localStorage.getItem(key);
-              sessionNumber++;
-              // template literal to populate html
-              div.innerHTML += `${key}: ${value} Date: ${today}`;
-            }
         } else {
           result.innerHTML = "Sorry, that's not the correct number. Please try again.";
           Guesses();
+          addToLeaderboard(guess);
         }
 
         let hint = document.getElementById("hint");
