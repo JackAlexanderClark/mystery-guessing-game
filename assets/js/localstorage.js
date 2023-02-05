@@ -1,28 +1,21 @@
 // Store users name and age input 
-
 function checkUserInput() {
+
     var username = document.getElementById("inputkey").value;                  
-    var password = document.getElementById("inputvalue").value;
 
     username = username.toLowerCase();
     username = username.replace(/ /g, '');
     username = username.trim();
-    password = password.toLowerCase();
-    password = password.replace(/ /g, '');    
-    password = password.trim();
 
-    console.log(password, username);
-
-    var cansubmit = ((username.length >= 4) && (password.length >=4));
-
-    document.getElementById("buttonSubmit").disabled = !cansubmit;
+    // var cansubmit = ();
+    if (!username.length >= 4) {
+        document.getElementById("buttonSubmit").disabled;
+    }
 
     if (cansubmit) {
        $("#buttonSubmit").removeClass("removeButtonColour").addClass("addButtonColour");    // change button colour for visual confirmation
     }
 }
-
-
 // capture user input to localstorage
 //buttonSubmit.onclick = function() {
 
@@ -34,7 +27,7 @@ const outputDiv = document.getElementById("isOutput");
 function setLocalStorage() {
 
     const key = inputKey.value;
-    const value = inputValue.value;
+    const value = "username";
 
     // set to local storage
     if (key && value) {
@@ -63,13 +56,3 @@ for (let i = 0; i < localStorage.length; i++ ) {
     // template literal to populate html
     outputDiv.innerHTML += `${key}: ${value}<br> Date: ${today} Session: ${sessionNumber}`;
 }
-
-
-// let retrievedDump = localStorage.getItem("x");
-// document.getElementById("dumpResult").innerHTML = retrievedDump;
-
-
-
-
-
-module.exports = checkUserInput;

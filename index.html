@@ -116,8 +116,6 @@
         }
       }
 
-
-
     .heading-style {
       font-weight: bold;
       font-style: italic;
@@ -151,6 +149,10 @@
         .ajaxStyling {
             font-style: italic;
             color: pink;
+        }
+
+        #leaderboard {
+          text-align: center;
         }
     </style>
 
@@ -193,14 +195,14 @@
                     <div class="row">
                       <div>
                         <h1>Mystery Guessing Game!</h1>
+                        <img src="assets/images/Dective Homepage Photo.png" alt="detective looking at clue" width="250px" height="250px">
                       </div>
-                        <legend ><b>What is your name and username?</b></legend>
+                        <legend ><b>What is your username?</b></legend>
                         <div class="col-md-6">
                             <span style="float:left;"><small>Your session username must be a minimum of 4 characters and a maximum of 12 characters.</small></span>
                         </div>
                         <div class="col-md-6">
                             <input id="inputkey" type="text" placeholder="Enter Username..." maxlength="12" onkeyup="checkUserInput();"/>
-                            <input id="inputvalue" type="password" placeholder="Enter Password..." maxlength="12" onkeyup="checkUserInput();"/>
                             <button style="float:right;" type="button" class="removeButtonColour" id="buttonSubmit" disabled="disabled" onclick="setLocalStorage()">Submit User Information</button>
                             <div id="tooltip">
                             </div>
@@ -237,7 +239,7 @@
                 <li>In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.</li>
                 <li>He was a local figure of much ire from the community.</li>
             </ol>
-            <img src="assets/images/house on fire .jpg" class="img-fluid img-thumbnail" alt="Arson Attack on the house" style="max-width: 50%; max-height: 50%;">
+            <img src="assets/images/house on fire .jpg" class="img-fluid img-thumbnail" alt="Arson Attack on the house" style="max-width: 50%; max-height: 50%; text-align: center;">
             <hr>
             <h1>Submit your Guess</h1>
             <p>Once you are satisfied with your investigation, please submit below.</p>
@@ -262,7 +264,8 @@
             <!-- link to solution -->
             <div id="solution"></div>
             <br>
-            <h2>Leaderboard</h2>
+            <!-- append a table for guesses leaderboard -->
+            <h2>Guesses Leaderboard</h2>
             <table id="leaderboard">
             </table>
             <footer>
@@ -345,13 +348,13 @@
       let leaderboard = document.getElementById("leaderboard");
       let attempts = 0;
 
-      function addToLeaderboard(guess) {
+      function addGuessToLeaderboard(guess) {
           attempts++;
           let row = leaderboard.insertRow(-1);
           let cell1 = row.insertCell(0);
           let cell2 = row.insertCell(1);
-          cell1.innerHTML = attempts;
-          cell2.innerHTML = guess;
+          cell1.innerHTML = "Guess Number: " + attempts + "&nbsp;";
+          cell2.innerHTML = "Your chosen suspect was: " + guess + "&nbsp;";
       }
 
       function checkGuess() {
@@ -364,13 +367,13 @@
           result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
           explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
           createSolutionLink();
-          addToLeaderboard(guess);
+          addGuessToLeaderboard(guess);
           // get username from local storage
           let div = document.getElementById('usernameDiv');
         } else {
           result.innerHTML = "Sorry, that's not the correct number. Please try again.";
           Guesses();
-          addToLeaderboard(guess);
+          addGuessToLeaderboard(guess);
         }
 
         let hint = document.getElementById("hint");
@@ -385,7 +388,6 @@
           gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
           disableSubmit();
         }
-
         return;
       }
       
@@ -398,8 +400,7 @@
         });
       });
 
-      
-
+    
 
     </script>
 </body>
