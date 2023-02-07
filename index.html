@@ -36,6 +36,7 @@
     <!-- jquery CDN links -->
     <script src="jquery-3.6.1.min.js" defer></script>
     <script src="assets/js/effects.js" defer></script>
+    <script src="assets/js/game.js" defer></script>
     <script src="assets/js/localstorage.js" defer></script>
     <script src="assets/js/effects.js" type="module" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
@@ -218,21 +219,17 @@
     <!-- Introduction panel with rundown of the game rules for newcomers -->
     <section id="rulebook">
         <div class="container">
-            <section id="localstorage">
                 <div class="container-fluid">
-                    <fieldset>
                     <div class="row">
                       <div>
                         <h1>Mystery Guessing Game!</h1>
                         <img src="assets/images/Dective Homepage Photo.png" alt="detective looking at clue" width="250px" height="250px">
                       </div>
                     </div>
-                    </fieldset>
                 </div>
-            </section>
             <hr>
             <h1>Rules</h1>
-            <p>Who has the motive? Can you solve this case?</p> 
+            <span>Who has the motive? Can you solve this case?</span> 
             <ol style="text-align:center;">
                 <li>Choose a session username and then read the case files on each characters and assess the evidence.</li>
                 <li>There are nine suspects for you to chose from.</li>
@@ -284,6 +281,7 @@
                 <th>Username</th>
               </tr>
             </table>
+            <br>
             <footer>
               <div class="container">
                 <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
@@ -304,118 +302,6 @@
 
       <script>
 
-      // check broswer storage type, check if the browser supports local storage, if not then clear local storage 
-      if(typeof(Storage) !== "undefined") {
-          document.getElementById("clear-button").addEventListener("click", function() {
-              localStorage.clear();
-              document.getElementById("isOutput").innerHTML = "";
-          });
-      }
-
-      // clear local storage and the inner html
-      document.getElementById("clear-button").addEventListener("click", function() {
-          localStorage.clear();
-          document.getElementById("isOutput").innerHTML = "";
-      });
-
-      function loadWitnessesAjax5() {
-      const xhttp = new XMLHttpRequest();
-      xhttp.onload = function() {
-        document.getElementById("ajaxResponse5").innerHTML = this.responseText;
-        }
-      xhttp.open("GET", "assets/text_files/ajax_jackie_witness5.txt", true);
-      xhttp.send();
-    }
-
-      // disable button if guesses equals 3 or game won
-      function disableSubmit() {
-        let StopSubmit = document.getElementById("submitButton");
-        StopSubmit.disabled = true;
-      }
-
-      function createSolutionLink() {
-        document.getElementById("solution").innerHTML = `
-          <a href="solution.html" style="color: red;">
-            Click here for the solution breakdown and story conclusion.
-          </a>
-        `;
-      }
-
-      let count = 0;
-      const display = document.getElementById("display");
-      const storageDisplay = document.getElementById("storageDisplay");
-    
-      function Guesses() {
-        count++;
-        display.innerHTML = "Guesses:&nbsp;" + count;
-        localStorage.setItem("count", count);
-      }
-
-      // fix to allow username to work with other local storage code
-      let playerUsername = localStorage.getItem("playerUsername");
-      if (!playerUsername) {
-        playerUsername = prompt("Please enter your username:");
-        localStorage.setItem("playerUsername", playerUsername);
-      }
-
-      let correctNumber = 4;      // character 4
-      let leaderboard = document.getElementById("leaderboard");
-      let attempts = 0;
-
-      function addGuessToLeaderboard(guess) {
-          attempts++;
-          let row = leaderboard.insertRow(-1);
-          let cell1 = row.insertCell(0);
-          let cell2 = row.insertCell(1);
-          let cell3 = row.insertCell(2);
-          let cell4 = row.insertCell(3);
-          let playerGuess = document.getElementById("guess-input").value;
-          let correct = "";
-          if (playerGuess == 4) {
-            correct = "Correct";
-          } else {
-            correct = "Incorrect";
-          }
-          cell1.innerHTML = "Guess Number: " + attempts + "&nbsp;";
-          cell2.innerHTML = "Your chosen suspect was: " + guess + "&nbsp;";
-          cell3.innerHTML = "This was " + correct + "&nbsp;";
-          cell4.innerHTML = playerUsername;
-      }
-
-      function checkGuess() {
-        let guess = document.getElementById("guess-input").value;
-        let result = document.getElementById("result");
-        let explanation = document.getElementById("explanation");
-        let solutionLink = document.getElementById("solution");
-        if (guess == correctNumber) {
-          disableSubmit();
-          result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
-          explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
-          createSolutionLink();
-          addGuessToLeaderboard(guess);
-          // get username from local storage
-          let div = document.getElementById('usernameDiv');
-        } else {
-          result.innerHTML = "Sorry, that's not the correct number. Please try again.";
-          Guesses();
-          addGuessToLeaderboard(guess);
-        }
-
-        let hint = document.getElementById("hint");
-        let gameOverDiv = document.getElementById("gameOver");
-
-        if (count === 3) {
-          console.log("game over");
-          gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
-          disableSubmit();
-        } else if (count === 2) {
-          hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
-        } else {
-          hint.innerHTML = "";
-        }
-
-      return;
-      }
 
 
     </script>

@@ -1,3 +1,7 @@
+/* 
+* File contains effects and non-game loop logic
+*/
+
 // toggle individual buttons for unique info
 $(document).ready(function(){
     $("#infoToggle-1").hide();
