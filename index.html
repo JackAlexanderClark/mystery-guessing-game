@@ -155,7 +155,13 @@
           text-align: center;
         }
 
-        table, th, td {
+        th {
+          color:rgb(194, 191, 191);
+          border-collapse: collapse;
+          font-family: "Bookman Old Style", Georgia, serif;
+        }
+
+        table, td {
           border: 1px solid black;
           border-collapse: collapse;
           font-family: "Bookman Old Style", Georgia, serif;
@@ -207,8 +213,6 @@
           </div>
         </div>
       </nav>
-    <!-- localstorage save user details on first visit -->
-
       <hr>
 
     <!-- Introduction panel with rundown of the game rules for newcomers -->
@@ -222,26 +226,8 @@
                         <h1>Mystery Guessing Game!</h1>
                         <img src="assets/images/Dective Homepage Photo.png" alt="detective looking at clue" width="250px" height="250px">
                       </div>
-                        <legend ><b>What is your username?</b></legend>
-                        <div class="col-md-6">
-                            <span style="float:left;"><small>Your session username must be a minimum of 4 characters and a maximum of 12 characters.</small></span>
-                        </div>
-                        <div class="col-md-6">
-                            <input id="inputkey" type="text" placeholder="Enter Username..." maxlength="12" onkeyup="checkUserInput();"/>
-                            <button style="float:right;" type="button" class="removeButtonColour" id="buttonSubmit" disabled="disabled" onclick="setLocalStorage()">Submit User Information</button>
-                            <div id="tooltip">
-                            </div>
-                        </div>
                     </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Local Storage Output</legend>
-                        <div> Your username is:
-                            <div id="isOutput"></div>
-                        </div>
-                    </fieldset>
-                    <p>Wish to reset local storage?</p>
-                    <button id="clear-button">Clear Local Storage</button>
                 </div>
             </section>
             <hr>
@@ -289,24 +275,25 @@
             <div id="solution"></div>
             <br>
             <!-- append a table for guesses leaderboard -->
-            <h2>Guesses Leaderboard</h2>
+            <h2>Leaderboard</h2>
             <table id="leaderboard">
               <tr>
                 <th>Attempt Number</th>
                 <th>Guess</th>
                 <th>Outcome</th>
+                <th>Username</th>
               </tr>
             </table>
             <footer>
               <div class="container">
-                  <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
-                      <div class="centered">
-                          <!-- css anchor tag to return to top of page for easier navigation -->
-                          <a href="#header-anchor"><p style="text-align:center;"> Click here to return to top of the page</p></a>
-                      </div>
-                  </div>
+                <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
+                    <div class="centered">
+                        <!-- css anchor tag to return to top of page for easier navigation -->
+                        <a href="#header-anchor"><button style="text-align:center;"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
+                    </div>
+                </div>
               </div>
-              </footer>
+            </footer>
 
         </div>
     </section>
@@ -330,15 +317,6 @@
           localStorage.clear();
           document.getElementById("isOutput").innerHTML = "";
       });
-
-      // chat tooltip for input submission
-      function hoverTooltip() {
-          $('#guess-input').hover(function() {
-              $(this).after('<span class="tooltip">Please use the number corresponding to the character.</span>');
-              }, function() {
-          $(this).next().remove();
-          });
-      };
 
       function loadWitnessesAjax5() {
       const xhttp = new XMLHttpRequest();
@@ -373,6 +351,13 @@
         localStorage.setItem("count", count);
       }
 
+      // fix to allow username to work with other local storage code
+      let playerUsername = localStorage.getItem("playerUsername");
+      if (!playerUsername) {
+        playerUsername = prompt("Please enter your username:");
+        localStorage.setItem("playerUsername", playerUsername);
+      }
+
       let correctNumber = 4;      // character 4
       let leaderboard = document.getElementById("leaderboard");
       let attempts = 0;
@@ -382,7 +367,8 @@
           let row = leaderboard.insertRow(-1);
           let cell1 = row.insertCell(0);
           let cell2 = row.insertCell(1);
-          let cell3= row.insertCell(2);
+          let cell3 = row.insertCell(2);
+          let cell4 = row.insertCell(3);
           let playerGuess = document.getElementById("guess-input").value;
           let correct = "";
           if (playerGuess == 4) {
@@ -393,6 +379,7 @@
           cell1.innerHTML = "Guess Number: " + attempts + "&nbsp;";
           cell2.innerHTML = "Your chosen suspect was: " + guess + "&nbsp;";
           cell3.innerHTML = "This was " + correct + "&nbsp;";
+          cell4.innerHTML = playerUsername;
       }
 
       function checkGuess() {
@@ -415,30 +402,21 @@
         }
 
         let hint = document.getElementById("hint");
-        if ( count === 2 ) {
-          hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
-        }
-
         let gameOverDiv = document.getElementById("gameOver");
 
-        if ( count === 3 ) {
+        if (count === 3) {
           console.log("game over");
           gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
           disableSubmit();
+        } else if (count === 2) {
+          hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
+        } else {
+          hint.innerHTML = "";
         }
-        return;
-      }
-      
-      // need to make sure can't type in 4 after 3 guesses
-      $(document).ready(function(){
-        $("#inputkey").hover(function(){
-          $(this).after("<span class='tooltip'>Tooltip text</span>");
-        }, function(){
-          $(".tooltip").remove();
-        });
-      });
 
-    
+      return;
+      }
+
 
     </script>
 </body>
