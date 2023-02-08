@@ -26,8 +26,15 @@ function Guesses() {
   localStorage.setItem("count", count);
 }
 
-// fix to allow username to work with other local storage code
 let playerUsername = localStorage.getItem("playerUsername");
+
+// check if the browser supports local storage before using it
+if(typeof(Storage) !== "undefined") {
+  playerUsername = prompt("Please enter your username:");
+  localStorage.setItem("playerUsername", playerUsername);
+}
+
+// fix to allow username to work with other local storage code
 if (!playerUsername) {
   playerUsername = prompt("Please enter your username:");
   localStorage.setItem("playerUsername", playerUsername);
@@ -37,20 +44,26 @@ let correctNumber = 4;      // character 4
 let leaderboard = document.getElementById("leaderboard");
 let attempts = 0;
 
+// create a html table
 function addGuessToLeaderboard(guess) {
+
     attempts++;
+    
     let row = leaderboard.insertRow(-1);
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
     let cell3 = row.insertCell(2);
     let cell4 = row.insertCell(3);
+
     let playerGuess = document.getElementById("guess-input").value;
+    
     let correct = "";
     if (playerGuess == 4) {
       correct = "Correct";
     } else {
       correct = "Incorrect";
     }
+
     cell1.innerHTML = "Guess Number: " + attempts + "&nbsp;";
     cell2.innerHTML = "Your chosen suspect was: " + guess + "&nbsp;";
     cell3.innerHTML = "This was " + correct + "&nbsp;";

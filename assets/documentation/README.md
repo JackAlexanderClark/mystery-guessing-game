@@ -77,6 +77,9 @@
 2. During the development process I was working on a local storage system. However, it was removed during the project as it felt superfluous to the projects aims and didn't add value and may have contributed to user confusion.
 ![image](https://user-images.githubusercontent.com/97599832/217255520-57aab574-dc46-4071-85f6-2ff928448480.png)
 
+3. JS Hint testing my javaScript code for my game.js file.
+![image](https://user-images.githubusercontent.com/97599832/217329216-4983b1f8-d855-41ca-994f-424209364bb7.png)
+
 
 ## VI) Credits
 1. Jack Clark - Code 
