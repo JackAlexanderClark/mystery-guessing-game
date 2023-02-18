@@ -44,18 +44,6 @@
 
     <style>
 
-        .addButtonColour {
-            color: white;
-            background-color: green;
-            cursor: hand;
-        }
-
-        .removeButtonColour {
-            color: whitesmoke;
-            background-color: red;
-            cursor: not-allowed;
-        }
-
         p, li, h1, h2, h3, .img-text, button {
             font-family: "Bookman Old Style", Georgia, serif;
             color:rgb(194, 191, 191);
@@ -130,10 +118,6 @@
         color:rgb(194, 191, 191);
     }
 
-    button {
-        color:black;
-    }
-
     img {
         cursor: hand;
     }
@@ -197,9 +181,7 @@
     <nav class="navbar navbar-expand-lg bg-light navbar-default navbar-inverse" role="navigation">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="assets/images/golden question mark logo.jpg" alt="game logo" height="40px" width="40px"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -250,45 +232,47 @@
             <img src="assets/images/house on fire .jpg" class="img-fluid img-thumbnail" alt="Arson Attack on the house" style="max-width: 50%; max-height: 50%; text-align: center;">
             <hr>
             <h1>Submit your Guess</h1>
-            <p>Once you are satisfied with your investigation, please submit below.</p>
-            <img src="assets/images/Police station.jpg" class="img-fluid img-thumbnail" alt="Police Station" style="max-width: 50%; max-height: 50%;">
-            <hr>
-            <h3>Choose your character.</h3>
-            <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1">
+            <p>Once you are satisfied with your investigation, choose your character and submit below.</p>
+            <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Tooltip on right" >
             <br>
-            <button onclick="checkGuess()" id="submitButton">Submit</button>
-            <p id="result"></p>
-            <p id="guesses"></p>
-            <!-- display amount of guesses -->
-            <div id="display"></div>
-            <div id="usernameDiv"></div>
-            <br>
-            <!-- game over text if game lost-->
-            <div id="gameOver"></div>
-            <!-- Explanation -->
-            <div id="explanation"></div>
-            <!-- clue if 2 incorrect guesses -->
-            <div id="hint" class="ajaxStyling"></div>
-            <!-- link to solution -->
-            <div id="solution"></div>
-            <br>
+            <div style="padding: 15px;">
+              <button onclick="checkGuess()" id="submitButton" class="btn btn-light">Submit</button>
+            </div>
             <!-- append a table for guesses leaderboard -->
-            <h2>Leaderboard</h2>
-            <table id="leaderboard">
-              <tr>
-                <th>Attempt Number</th>
-                <th>Guess</th>
-                <th>Outcome</th>
-                <th>Username</th>
-              </tr>
-            </table>
+            <div class="container-sm">
+              <p id="result"></p>
+                <p id="guesses"></p>
+                <!-- display amount of guesses -->
+                <div id="display"></div>
+                <div id="usernameDiv"></div>
+                <br>
+                <!-- game over text if game lost-->
+                <div id="gameOver"></div>
+                <!-- Explanation -->
+                <div id="explanation"></div>
+                <!-- clue if 2 incorrect guesses -->
+                <div id="hint" class="ajaxStyling"></div>
+                <!-- link to solution -->
+                <div id="solution"></div>
+                <h2>Leaderboard</h2>
+                <table id="leaderboard">
+                  <tr>
+                    <th>Attempt Number</th>
+                    <th>Guess</th>
+                    <th>Outcome</th>
+                    <th>Username</th>
+                  </tr>
+                </table>
+            </div>
+
             <br>
+
             <footer>
               <div class="container">
                 <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
                     <div class="centered">
                         <!-- css anchor tag to return to top of page for easier navigation -->
-                        <a href="#header-anchor"><button style="text-align:center;"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
+                        <a href="#header-anchor"><button style="text-align:center;" class="btn btn-light"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
                     </div>
                 </div>
               </div>
@@ -302,7 +286,10 @@
         <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous"></script>
 
       <script>
-
+    // credit to bootstrap: https://getbootstrap.com/docs/4.0/components/tooltips/
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
 
 
     </script>

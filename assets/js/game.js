@@ -30,7 +30,7 @@ let playerUsername = localStorage.getItem("playerUsername");
 
 // check if the browser supports local storage before using it
 if(typeof(Storage) !== "undefined") {
-  playerUsername = prompt("Please enter your username:");
+  playerUsername = prompt("Please enter your username:" ,defaultValue);
   localStorage.setItem("playerUsername", playerUsername);
 }
 

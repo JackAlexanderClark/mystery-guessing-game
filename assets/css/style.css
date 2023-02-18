@@ -1,5 +1,5 @@
 /* universal font family and styles */
-p, h2, h3, .img-text, button {
+p, h1, h2, h3, .img-text, button, span {
 	font-family: "Bookman Old Style", Georgia, serif;
 	color:rgb(194, 191, 191);
 } 

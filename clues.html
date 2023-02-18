@@ -10,7 +10,6 @@
     <meta name="theme-color" content="#3266a8">
     
     <title>Clues</title>
-    <script src="assets/js/game.js" defer></script>
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/album/">
@@ -100,10 +99,6 @@
         color:rgb(194, 191, 191);
     }
 
-    button {
-        color:black;
-    }
-
     img {
         cursor: hand;
     }
@@ -149,9 +144,7 @@
   <nav class="navbar navbar-expand-lg bg-light navbar-expand-md">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="assets/images/golden question mark logo.jpg" alt="game logo" height="40px" width="40px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -185,7 +178,7 @@
                     <div class="card-body">
                         <p class="card-text" id="torch"><b>Clue</b>&nbsp;<i class="fa-solid fa-1"></i></p>
                         <div><div class="img-text">Torch</div></div>
-                        <button id="buttonToggle-1">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                        <button id="buttonToggle-1" class="btn btn-light">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                         <hr>
                         <div id="infoToggle-1">
                             <ol>
@@ -206,7 +199,7 @@
                     <div class="card-body">
                         <p class="card-text">Clue&nbsp;<i class="fa-solid fa-2"></i></p>
                         <div><p class="img-text">Fingerprint</p></div>
-                        <button id="buttonToggle-2">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                        <button type="button" id="buttonToggle-2" class="btn btn-light">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                         <hr>
                         <div id="infoToggle-2">
                             <ol>
@@ -228,7 +221,7 @@
                     <div class="card-body">
                       <p class="card-text">Clue&nbsp;<i class="fa-solid fa-3"></i></p>
                       <div><div class="img-text">Receipt from Garden Center</div></div>
-                      <button id="buttonToggle-3">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                      <button type="button" class="btn btn-light" id="buttonToggle-3">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                       <hr>
                       <div id="infoToggle-3">
                         <ol>
@@ -250,7 +243,7 @@
                   <div class="card-body">
                     <p class="card-text">Clue&nbsp;<i class="fa-solid fa-4"></i></p>
                     <div><div class="img-text">Box of Matches</div></div>
-                    <button id="buttonToggle-4">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                    <button type="button" class="btn btn-light" id="buttonToggle-4">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                     <hr>
                     <div id="infoToggle-4">
                       <ol>
@@ -271,7 +264,7 @@
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-5"></i></p>
                   <div><div class="img-text">Letter Ransom Threat</div></div>
-                  <button id="buttonToggle-5">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                  <button type="button" class="btn btn-light" id="buttonToggle-5">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                   <hr>
                   <div id="infoToggle-5">
                     <ol>
@@ -292,7 +285,7 @@
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-6"></i></p>
                   <div><div class="img-text">Mysterious Phone Call</div></div>
-                  <button id="buttonToggle-6">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                  <button type="button" class="btn btn-light" id="buttonToggle-6">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                   <hr>
                   <div id="infoToggle-6">
                     <ol>
@@ -319,15 +312,15 @@
   <i class="fa-solid fa-comment"></i>
   <ul>
     <li>Question 1: Have you heard any rumours?</li>
-    <button type="button" onclick="loadWitnessesAjax()">Answer</button>
+    <button type="button" class="btn btn-light" onclick="loadWitnessesAjax()">Answer</button>
     <div class="ajaxStyling" id="ajaxResponse"></div>
 
     <li>Question 2: Did you see anyone at the time of the arson attack?</li>
-    <button type="button" onclick="loadWitnessesAjax2()">Answer</button>
+    <button type="button" class="btn btn-light" onclick="loadWitnessesAjax2()">Answer</button>
     <div class="ajaxStyling" id="ajaxResponse2"></div>
 
     <li>Question 3: Do you think he would be involved?</li>
-    <button type="button" onclick="loadWitnessesAjax3()">Answer</button>
+    <button type="button" class="btn btn-light" onclick="loadWitnessesAjax3()">Answer</button>
     <div class="ajaxStyling" id="ajaxResponse3"></div>
   </ul>
 
@@ -339,11 +332,11 @@
   <i class="fa-solid fa-comment"></i>
   <ul>
     <li>Question 1: What did you see?</li>
-    <button type="button" onclick="loadWitnessesAjax4()">Answer</button>
+    <button type="button" class="btn btn-light" onclick="loadWitnessesAjax4()">Answer</button>
     <div class="ajaxStyling" id="ajaxResponse4"></div>
 
     <li>Question 2: Why would they do this to Nick Draper?</li>
-    <button type="button" onclick="loadWitnessesAjax5()">Answer</button>
+    <button type="button" class="btn btn-light" onclick="loadWitnessesAjax5()">Answer</button>
     <div class="ajaxStyling" id="ajaxResponse5"></div>
   </ul>
 </div>
@@ -355,7 +348,7 @@
     <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
         <div class="centered">
             <!-- css anchor tag to return to top of page for easier navigation -->
-            <a href="#header-anchor"><button style="text-align:center;"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
+            <a href="#header-anchor"><button style="text-align:center;" class="btn btn-light"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
         </div>
     </div>
   </div>
@@ -373,52 +366,7 @@ function showTooltip(message) {
 }
 
 
-    // load ajax text file question reponse
-    // --- code credit: https://www.w3schools.com/js/js_ajax_intro.asp
-    function loadWitnessesAjax() {
-      const xhttp = new XMLHttpRequest();
-      xhttp.onload = function() {
-        document.getElementById("ajaxResponse").innerHTML = this.responseText;
-        }
-      xhttp.open("GET", "assets/text_files/ajax_jackie_witness.txt", true);
-      xhttp.send();
-    }
 
-    function loadWitnessesAjax2() {
-      const xhttp = new XMLHttpRequest();
-      xhttp.onload = function() {
-        document.getElementById("ajaxResponse2").innerHTML = this.responseText;
-        }
-      xhttp.open("GET", "assets/text_files/ajax_jackie_witness2.txt", true);
-      xhttp.send();
-    }
-
-    function loadWitnessesAjax3() {
-      const xhttp = new XMLHttpRequest();
-      xhttp.onload = function() {
-        document.getElementById("ajaxResponse3").innerHTML = this.responseText;
-        }
-      xhttp.open("GET", "assets/text_files/ajax_jackie_witness3.txt", true);
-      xhttp.send();
-    }
-
-    function loadWitnessesAjax4() {
-      const xhttp = new XMLHttpRequest();
-      xhttp.onload = function() {
-        document.getElementById("ajaxResponse4").innerHTML = this.responseText;
-        }
-      xhttp.open("GET", "assets/text_files/ajax_jackie_witness4.txt", true);
-      xhttp.send();
-    }
-    
-    function loadWitnessesAjax5() {
-      const xhttp = new XMLHttpRequest();
-      xhttp.onload = function() {
-        document.getElementById("ajaxResponse5").innerHTML = this.responseText;
-        }
-      xhttp.open("GET", "assets/text_files/ajax_jackie_witness5.txt", true);
-      xhttp.send();
-    }
   
 </script>
 
