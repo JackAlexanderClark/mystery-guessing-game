@@ -3,6 +3,9 @@
 */
 
 // disable button if guesses equals 3 or game won
+
+let correctNumber = 4;      // character 4
+
 function disableSubmit() {
   let StopSubmit = document.getElementById("submitButton");
   StopSubmit.disabled = true;
@@ -30,7 +33,7 @@ let playerUsername = localStorage.getItem("playerUsername");
 
 // check if the browser supports local storage before using it
 if(typeof(Storage) !== "undefined") {
-  playerUsername = prompt("Please enter your username:" ,defaultValue);
+  playerUsername = prompt("Please enter your username: ");
   localStorage.setItem("playerUsername", playerUsername);
 }
 
@@ -40,7 +43,6 @@ if (!playerUsername) {
   localStorage.setItem("playerUsername", playerUsername);
 }
 
-let correctNumber = 4;      // character 4
 let leaderboard = document.getElementById("leaderboard");
 let attempts = 0;
 

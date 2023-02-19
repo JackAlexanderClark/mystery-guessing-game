@@ -1,297 +1,157 @@
-<!-- opening page with rules and instructions before a link to the main game page -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="theme-color" content="#3266a8">
-    <!-- Credit and source from Getbootstrap-->
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.101.0">
-    <title>Rules</title>
-    
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/album/">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/product/">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+    <meta name="author" content="">
     <!-- Custom golden question mark as favicon for browser -->
     <link rel="icon" type="image/x-icon" href="assets/images/golden question mark logo.jpg" alt="mystery logo favicon">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Carousel Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- jquery CDN links -->
+        <script src="jquery-3.6.1.min.js" defer></script>
+        <script src="assets/js/effects.js" defer></script>
+        <script src="assets/js/game.js" defer></script>
 
-    <!-- jquery CDN links -->
-    <script src="jquery-3.6.1.min.js" defer></script>
-    <script src="assets/js/effects.js" defer></script>
-    <script src="assets/js/game.js" defer></script>
-    <script src="assets/js/localstorage.js" defer></script>
-    <script src="assets/js/effects.js" type="module" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
 
-    <style>
+  </head>
+  <body background="assets/images/Background-Chalkboard.png">
 
-        p, li, h1, h2, h3, .img-text, button {
-            font-family: "Bookman Old Style", Georgia, serif;
-            color:rgb(194, 191, 191);
-        } 
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#"><img src="assets/images/golden question mark logo.jpg" alt="game logo" height="40px" width="40px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link active" aria-current="page" href="index.html" style="color:yellow;"><button type="button" class="btn btn-dark">Rules&nbsp;<i class="fas fa-book"></i></button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="gamepage.html" style="color:yellow;"><button type="button" class="btn btn-dark">Characters&nbsp;<i class="fas fa-person"></i></button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="clues.html" style="color:yellow;"><button type="button" class="btn btn-dark">Clues&nbsp;<i class="fas fa-magnifying-glass"></i></button></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-        h1 {
-            text-decoration: underline;
-        }
-
-        /* Adding a border to all image tags, except the nav logo using :not css selector */
-        img:not(.weblogo) {
-            border: 2px solid rgb(194, 191, 191);
-        }
-
-        .navbar {
-          overflow: hidden;
-        }
-
-        /* Navbar links */
-        .navbar a {
-          float: left;
-          display: block;
-          text-align: center;
-          padding: 14px;
-          text-decoration: none;
-        }
-
-        /* Page content */
-        .content {
-          padding: 16px;
-        }
-
-        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-        .sticky {
-          position: fixed;
-          top: 0;
-          width: 100%;
-        }
-
-        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-        .sticky + .content {
-          padding-top: 60px;
-        }
-
-        /* end of w3schools code */
-
-      /* Credit and Source to GetBootstrap: https://getbootstrap.com/docs/4.6/examples/album/" */
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-    .heading-style {
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    li, ol {
-        font-style: italic;
-        text-align: left;
-        font-family:'Times New Roman', Times, serif;
-        color:rgb(194, 191, 191);
-    }
-
-    img {
-        cursor: hand;
-    }
-
-      /* chat css styling for tooltip */
-      .tooltip{
-          position: absolute;
-          background-color: #eee;
-          padding: 5px;
-          border-radius: 3px;
-          display: none;
-      }
-          /* witness text styling */ 
-        .ajaxStyling {
-            font-style: italic;
-            color: pink;
-        }
-
-        /* styling for guesses leaderboard */
-        #leaderboard {
-          text-align: center;
-        }
-
-        th {
-          color:rgb(194, 191, 191);
-          border-collapse: collapse;
-          font-family: "Bookman Old Style", Georgia, serif;
-        }
-
-        table, td {
-          border: 1px solid black;
-          border-collapse: collapse;
-          font-family: "Bookman Old Style", Georgia, serif;
-        }
-
-        th, td {
-          padding: 5px;
-          text-align: center;
-        }
-
-        th {
-          background-color: white;
-        }
-
-        /* Code credit to: https://stackoverflow.com/questions/7059394/how-to-position-a-table-at-the-center-of-div-horizontally-vertically */
-        #leaderboard {
-          width:100%;
-          height:100%;
-        }
-
-        table {
-          margin: 0 auto; 
-        }
-    </style>
 
     <!-- return to top of page anchor -->
     <div id='header-anchor'></div>
 
-    </head>
-<body background="assets/images/black-board background.jpg">
-    <nav class="navbar navbar-expand-lg bg-light navbar-default navbar-inverse" role="navigation">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="assets/images/golden question mark logo.jpg" alt="game logo" height="40px" width="40px"></a>
-            <span class="navbar-toggler-icon"></span>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html" style="color:yellow;">Rules&nbsp;<i class="fas fa-book"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="gamepage.html" style="color:yellow;">Characters&nbsp;<i class="fa-solid fa-person"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="clues.html" style="color:yellow;">Clues&nbsp;<i class="fa-solid fa-magnifying-glass"></i></a>
-              </li>
-            </ul>
+    <main role="main">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1 class="headings">Mystery Guessing Game!</h1>
+                <h2 class="headings">Rules</h2>
+                <ol style="text-align:center;">
+                  <li>Choose a session username and then read the case files on each characters and assess the evidence.</li>
+                  <li>There are nine suspects for you to chose from.</li>
+                  <li>You are allowed 3 guesses to chose from. Your guesses are counted and when you run out, you lose and must restart the game.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="assets/images/Dective Homepage Photo.png" alt="Detective looking at clue" width="40%" height="40%" loading="lazy">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2 class="headings">Story</h2>
+                <ul style="text-align:center;">
+                  <li>You are a police detective, investigating an arson attack.</li>
+                  <li>Waterhope is a quiet and idyllic town in the English countryside.</li>
+                  <li>At 2:35am a phone call reported a loud explosion.</li>
+                  <li>Nick Draper is the home-owner, he is a 43 year old ex-Head Teacher at Water Hope High School.</li>
+                  <li>In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.</li>
+                  <li>He was a local figure of much ire from the community.</li>
+              </ul>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="assets/images/house on fire .jpg" alt="Third slide" width="40%" height="40%" loading="lazy">
           </div>
         </div>
-      </nav>
-      <hr>
+      </div>
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <!-- Introduction panel with rundown of the game rules for newcomers -->
-    <section id="rulebook">
-        <div class="container">
-                <div class="container-fluid">
-                    <div class="row">
-                      <div>
-                        <h1>Mystery Guessing Game!</h1>
-                        <img src="assets/images/Dective Homepage Photo.png" alt="detective looking at clue" width="250px" height="250px">
-                      </div>
-                    </div>
-                </div>
-            <hr>
-            <h1>Rules</h1>
-            <span>Who has the motive? Can you solve this case?</span> 
-            <ol style="text-align:center;">
-                <li>Choose a session username and then read the case files on each characters and assess the evidence.</li>
-                <li>There are nine suspects for you to chose from.</li>
-                <li>You are allowed 3 guesses to chose from. Your guesses are counted and once you reach two you lose and must restart the game.</li>
-            </ol>
-            <hr>
-            <!-- Biography and Story context for game-->
-            <h1>The Story</h1>
-            <ol style="text-align:center;">
-                <li>You are a police detective, investigating an arson attack.</li>
-                <li>Waterhope is a quiet and idyllic town in the English countryside.</li>
-                <li>At 2:35am a phone call reported a loud explosion.</li>
-                <li>Nick Draper is the home-owner, he is a 43 year old ex-Head Teacher at Water Hope High School.</li>
-                <li>In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.</li>
-                <li>He was a local figure of much ire from the community.</li>
-            </ol>
-            <img src="assets/images/house on fire .jpg" class="img-fluid img-thumbnail" alt="Arson Attack on the house" style="max-width: 50%; max-height: 50%; text-align: center;">
-            <hr>
-            <h1>Submit your Guess</h1>
-            <p>Once you are satisfied with your investigation, choose your character and submit below.</p>
-            <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Tooltip on right" >
-            <br>
-            <div style="padding: 15px;">
-              <button onclick="checkGuess()" id="submitButton" class="btn btn-light">Submit</button>
-            </div>
-            <!-- append a table for guesses leaderboard -->
+      <div class="container marketing">
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Submit Your Guess</h2>
+            <p class="lead">Once you are satisfied with your investigation, choose your character and submit below.</p>
+            <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+            <button onclick="checkGuess()" id="submitButton" class="btn btn-light">Submit</button>
             <div class="container-sm">
               <p id="result"></p>
                 <p id="guesses"></p>
-                <!-- display amount of guesses -->
+                <!-- empty divs to be populated -->
                 <div id="display"></div>
                 <div id="usernameDiv"></div>
-                <br>
-                <!-- game over text if game lost-->
                 <div id="gameOver"></div>
-                <!-- Explanation -->
                 <div id="explanation"></div>
-                <!-- clue if 2 incorrect guesses -->
                 <div id="hint" class="ajaxStyling"></div>
-                <!-- link to solution -->
                 <div id="solution"></div>
-                <h2>Leaderboard</h2>
-                <table id="leaderboard">
-                  <tr>
-                    <th>Attempt Number</th>
-                    <th>Guess</th>
-                    <th>Outcome</th>
-                    <th>Username</th>
-                  </tr>
-                </table>
-            </div>
-
-            <br>
-
-            <footer>
-              <div class="container">
-                <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
-                    <div class="centered">
-                        <!-- css anchor tag to return to top of page for easier navigation -->
-                        <a href="#header-anchor"><button style="text-align:center;" class="btn btn-light"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
-                    </div>
+                <div class="container-fluid">
+                  <h2>Leaderboard</h2>
+                  <table id="leaderboard" style="text-align:center;">
+                    <tr>
+                      <th>Attempt Number</th>
+                      <th>Guess</th>
+                      <th>Outcome</th>
+                      <th>Username</th>
+                    </tr>
+                  </table>
                 </div>
-              </div>
-            </footer>
 
+            </div>
+          </div>
         </div>
-    </section>
-
-        <!-- CDN links and bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous"></script>
-
-      <script>
-    // credit to bootstrap: https://getbootstrap.com/docs/4.0/components/tooltips/
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
+        <hr class="featurette-divider">
+      </div><!-- /.container -->
 
 
-    </script>
-</body>
+      <!-- FOOTER -->
+      <footer class="container" style="text-align:center;">
+        <a href="#header-anchor"><button style="text-align:center;" class="btn btn-light"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous"></script>
+    <script>
+          // credit to bootstrap: https://getbootstrap.com/docs/4.0/components/tooltips/
+          $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+      </script>
+  </body>
 </html>

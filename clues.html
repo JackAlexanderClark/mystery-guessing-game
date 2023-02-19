@@ -140,8 +140,8 @@
       </div>
   
 <!-- Universal blackboard background for the theme -->
-<body background="assets/images/black-board background.jpg">
-  <nav class="navbar navbar-expand-lg bg-light navbar-expand-md">
+<body background="assets/images/Background-Chalkboard.png">
+  <nav class="navbar navbar-expand-lg bg-light navbar-expand-md" data-spy="affix">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="assets/images/golden question mark logo.jpg" alt="game logo" height="40px" width="40px"></a>
         <span class="navbar-toggler-icon"></span>
@@ -173,7 +173,7 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
               <div class="gray-fade-effect">
-                    <img src="assets/images/torch .jpg" alt="Torch Clue" class="bd-placeholder-img card-img-top" width="100" height="400">
+                    <img src="assets/images/torch .jpg" alt="Torch Clue" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
               </div>
                     <div class="card-body">
                         <p class="card-text" id="torch"><b>Clue</b>&nbsp;<i class="fa-solid fa-1"></i></p>
@@ -194,7 +194,7 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
               <div class="gray-fade-effect">
-                    <img src="assets/images/fingerprint.jpg" id ="img1" onclick="enlargeClue()" alt="Fingerprint Clue" class="bd-placeholder-img card-img-top" width="100" height="400">
+                    <img src="assets/images/fingerprint.jpg" id ="img1" alt="Fingerprint Clue" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
               </div>
                     <div class="card-body">
                         <p class="card-text">Clue&nbsp;<i class="fa-solid fa-2"></i></p>
@@ -215,7 +215,7 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
               <div class="gray-fade-effect">
-                    <img src="assets/images/clue-receipt.jpg" alt="Clue Receipt" class="bd-placeholder-img card-img-top" width="100" height="400">
+                    <img src="assets/images/clue-receipt.jpg" alt="Clue Receipt" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
               </div>
 
                     <div class="card-body">
@@ -237,7 +237,7 @@
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="gray-fade-effect">
-                  <img src="assets/images/matches clue.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="100" height="400">
+                  <img src="assets/images/matches clue.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
             </div>
 
                   <div class="card-body">
@@ -258,7 +258,7 @@
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           <div class="gray-fade-effect">
-                <img src="assets/images/letter jpg.JPG" alt="Clue Letter Threat" class="bd-placeholder-img card-img-top" width="100" height="400">
+                <img src="assets/images/letter jpg.JPG" alt="Clue Letter Threat" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
           </div>
 
                 <div class="card-body">
@@ -279,7 +279,7 @@
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           <div class="gray-fade-effect">
-                <img src="assets/images/telephone box.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="100" height="400">
+                <img src="assets/images/telephone box.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
           </div>
 
                 <div class="card-body">
@@ -300,29 +300,32 @@
 <!-- talk to witness, text rpg clickable teck speechmarks and responses -->
 
 <section style="text-align:center;">
-  <img src="assets/images/detective.jpg" class="img-thumbnail text-center" alt="Detective looking at a clue" style="max-width: 50%; max-height: 50%;">
-  <div>
-  <hr>
-  <h1><strong>Witnesses</strong></h1>
-  <small>(Ask them Questions to learn more information)</small>
-  <i class="fa-solid fa-person"></i>
-  <h3>Witness 1 - Jackie Parker (Local Hairdresser)</h3>
-  <p>Click me to ask me a question.</p>
-  <br>
-  <i class="fa-solid fa-comment"></i>
-  <ul>
-    <li>Question 1: Have you heard any rumours?</li>
-    <button type="button" class="btn btn-light" onclick="loadWitnessesAjax()">Answer</button>
-    <div class="ajaxStyling" id="ajaxResponse"></div>
-
-    <li>Question 2: Did you see anyone at the time of the arson attack?</li>
-    <button type="button" class="btn btn-light" onclick="loadWitnessesAjax2()">Answer</button>
-    <div class="ajaxStyling" id="ajaxResponse2"></div>
-
-    <li>Question 3: Do you think he would be involved?</li>
-    <button type="button" class="btn btn-light" onclick="loadWitnessesAjax3()">Answer</button>
-    <div class="ajaxStyling" id="ajaxResponse3"></div>
-  </ul>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <hr>
+      <h1><strong>Witnesses</strong></h1>
+      <small>(Ask them Questions to learn more information)</small>
+      <i class="fa-solid fa-person"></i>
+      <h3>Witness 1 - Jackie Parker (Local Hairdresser)</h3>
+      <p>Click me to ask me a question.</p>
+      <br>
+      <i class="fa-solid fa-comment"></i>
+      <ul>
+        <li>Question 1: Have you heard any rumours?</li>
+        <button type="button" class="btn btn-light" onclick="loadWitnessesAjax()">Answer</button>
+        <div class="ajaxStyling" id="ajaxResponse"></div>
+    
+        <li>Question 2: Did you see anyone at the time of the arson attack?</li>
+        <button type="button" class="btn btn-light" onclick="loadWitnessesAjax2()">Answer</button>
+        <div class="ajaxStyling" id="ajaxResponse2"></div>
+    
+        <li>Question 3: Do you think he would be involved?</li>
+        <button type="button" class="btn btn-light" onclick="loadWitnessesAjax3()">Answer</button>
+        <div class="ajaxStyling" id="ajaxResponse3"></div>
+      </ul>
+    </div>
+  </div>
+  
 
   <hr>
 
