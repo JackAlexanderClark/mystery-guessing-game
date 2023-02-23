@@ -48,6 +48,7 @@
 
 ![image](https://user-images.githubusercontent.com/97599832/214308934-2e2cc5f3-5ba2-4fb0-8359-e2f02304f197.png)
 
+5
 <ul>
 <li>(Main Page) Rules and Game page</li>
     ![image](https://user-images.githubusercontent.com/97599832/216768559-0b54d65d-9750-42fc-a0a4-ab4f307bf9d0.png)

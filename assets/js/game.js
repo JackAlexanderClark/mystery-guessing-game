@@ -4,8 +4,6 @@
 
 // disable button if guesses equals 3 or game won
 
-let correctNumber = 4;      // character 4
-
 function disableSubmit() {
   let StopSubmit = document.getElementById("submitButton");
   StopSubmit.disabled = true;
@@ -27,20 +25,6 @@ function Guesses() {
   count++;
   display.innerHTML = "Guesses:&nbsp;" + count;
   localStorage.setItem("count", count);
-}
-
-let playerUsername = localStorage.getItem("playerUsername");
-
-// check if the browser supports local storage before using it
-if(typeof(Storage) !== "undefined") {
-  playerUsername = prompt("Please enter your username: ");
-  localStorage.setItem("playerUsername", playerUsername);
-}
-
-// fix to allow username to work with other local storage code
-if (!playerUsername) {
-  playerUsername = prompt("Please enter your username:");
-  localStorage.setItem("playerUsername", playerUsername);
 }
 
 let leaderboard = document.getElementById("leaderboard");
@@ -73,9 +57,21 @@ function addGuessToLeaderboard(guess) {
 }
 
 function checkGuess() {
+
+  var correctNumber = 4;      // character 4
   let guess = document.getElementById("guess-input").value;
   let result = document.getElementById("result");
   let explanation = document.getElementById("explanation");
+
+        if (guess == " " || guess.trim() === '') {
+          // input is empty or null, handle the case here
+          alert('guess is empty or null');
+          console.log("1");
+        } else {
+          // input is not empty, handle it here
+          alert('guess is not empty: ' + guess);
+          console.log("2");
+        }
 
   if (guess == correctNumber) {
     disableSubmit();
@@ -103,4 +99,18 @@ function checkGuess() {
   }
 
 return;
+}
+
+// need to check if name is stored in local storage session
+function getName() {
+  var n, q = 'Enter name';
+  if (!window.sessionStorage) {  // if sessionStorage not supported
+      return window.prompt(q); // perform other action
+  }
+  n = window.sessionStorage.getItem('name');
+  if (!n) {
+      n = window.prompt(q);
+      window.sessionStorage.setItem('name', n);
+  }
+  return n;
 }
