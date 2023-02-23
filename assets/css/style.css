@@ -36,19 +36,14 @@ li, ol {
   border-style: dotted;
 }
 
-
-/* Colours for timer countdown */ 
-  .red-countdown {
-    color:red;
-  }
-
-  .yellow-countdown {
-    color:yellow;
-  }
-
-  .green-countdown {
-    color:greenyellow;
-  }
+/* navbar */
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
 
 /* My original navbar would break at certain pixel widths on small devices such as phones and tablets
 *  therefore, I have used media queries to hide the larger pixel width devices (i.e. laptops) as hidden,
