@@ -48,7 +48,10 @@
 
 ![image](https://user-images.githubusercontent.com/97599832/214308934-2e2cc5f3-5ba2-4fb0-8359-e2f02304f197.png)
 
-5
+5. I originally wanted to design a question and answer section within "clues.html" as seen below. It would utilise AJAX however, I later removed it as I found it to be scruffy and not particularly aesthetically pleasing.
+
+![image](https://user-images.githubusercontent.com/97599832/220933440-1cde1ac4-cfa7-4d6c-b0ba-e79ecd241db3.png)
+
 <ul>
 <li>(Main Page) Rules and Game page</li>
     ![image](https://user-images.githubusercontent.com/97599832/216768559-0b54d65d-9750-42fc-a0a4-ab4f307bf9d0.png)
@@ -71,7 +74,7 @@
 </ul>
 
 
-## IV) Testing and User Experience Stories
+# IV) Testing and User Experience Stories
 1. To help develop and test the app, I used the javaScript testing framework - jest.
 ![image](https://user-images.githubusercontent.com/97599832/216416741-59a3ed6b-326c-4751-a633-384082398b9c.png)
 
@@ -80,6 +83,30 @@
 
 3. JS Hint testing my javaScript code for my game.js file.
 ![image](https://user-images.githubusercontent.com/97599832/217329216-4983b1f8-d855-41ca-994f-424209364bb7.png)
+
+
+## W3Schools HTML Validator - Nu HTML
+### Page 1 - Index.html
+<ul>
+        <img src="https://user-images.githubusercontent.com/97599832/220934072-13499e8a-3a8a-4f48-99fb-d3402e6ca44c.png">
+    <li>Remove spaces for link path and remove alt text.</li>
+        <img src="https://user-images.githubusercontent.com/97599832/221002916-1d87cf51-af6d-4358-b471-c674420be4b2.png">
+    <li>Add the chalkboard background image via CSS {background-image} rather than HTML body tag.</li>
+        <img src="https://user-images.githubusercontent.com/97599832/221003537-d95f730f-348d-4f8e-87b3-487bbec135dc.png">
+    <li>Used incorrect px to display pixels when just the number is necessary.</li>
+        <img src="https://user-images.githubusercontent.com/97599832/221004003-e0e1027d-a8d2-4f9e-9fc1-67b15c504a0f.png">
+    <li>FIX FIX FIX</li>
+        <img src="https://user-images.githubusercontent.com/97599832/221005691-34b31d7c-d8ac-4764-80f0-e652147dc2ba.png">
+    <li>Use of the "main" html tag is redundant.</li>
+        <img src="https://user-images.githubusercontent.com/97599832/221006363-1a024497-92fc-4216-b566-da4c92cfcd6d.png">
+    <li>These two above errors are again due to incorrect path, need to remove spaces in src. Also remove % from width and height of images as uncessary.</li>
+        <img src="https://user-images.githubusercontent.com/97599832/221006668-83f12448-97d9-4413-8d89-e9b147af65eb.png">
+    <li>Remove stray div tag</li>
+        <img src="https://user-images.githubusercontent.com/97599832/221007221-bd45eaee-934a-4b5e-8518-c2bea9900e03.png">
+    <li>Incorrect order of heading tags within table headings, need to re-write.</li>
+</ul>
+
+### Page 2 - Gamepage.html
 
 
 ## VI) Credits

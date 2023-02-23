@@ -2,7 +2,11 @@
 * {
 	font-family: "Bookman Old Style", Georgia, serif;
 	color:rgb(194, 191, 191);
-} 
+}
+
+body {
+  background-image: url("assets/images/Background-Chalkboard.png");
+}
 
 .headings {
   text-decoration: underline;
