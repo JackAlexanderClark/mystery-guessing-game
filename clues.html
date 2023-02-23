@@ -110,26 +110,6 @@
 
     body { margin: 0; }
 
-  #bridge {
-    display: block;
-    margin: 0 auto;
-    background-image: url('assets/images/Cigs Clue 2.png');
-    background-image: -webkit-image-set(url('assets/images/Cigs Clue 2.png') 1x, url('assets/images/Cigs Clue 2.png') 2x );
-    background-size: cover;
-    width: 100%;
-    max-width: 750px;
-    height: auto;
-    cursor:  crosshair;
-    cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/circular-cursor.png) 53 53, crosshair;
-  }
-  #bridgeContainer { 
-    text-align: center;
-    font-family: Avenir, sans-serif;
-  }
-  #bridgeContainer figcaption {   
-    margin-top: 2rem; 
-  }
-
     </style>
 
   </head>
@@ -137,9 +117,8 @@
       <div>
         <a id="header-anchor"></a>
       </div>
-  
-<!-- Universal blackboard background for the theme -->
-<body background="assets/images/Background-Chalkboard.png">
+
+<body>
 
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -163,7 +142,6 @@
 
 <hr>
 
-<main>
   <!-- interactive clue cards -->
   <section>
     <!-- Evidence cards that can reveal more information -->
@@ -312,8 +290,6 @@
 </section>
 
 </section>
-
-</main>
 
     <!-- CDN links and bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
