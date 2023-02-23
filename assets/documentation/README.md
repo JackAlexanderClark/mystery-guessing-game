@@ -101,13 +101,27 @@
         <img src="https://user-images.githubusercontent.com/97599832/221006363-1a024497-92fc-4216-b566-da4c92cfcd6d.png">
     <li>These two above errors are again due to incorrect path, need to remove spaces in src. Also remove % from width and height of images as uncessary.</li>
         <img src="https://user-images.githubusercontent.com/97599832/221006668-83f12448-97d9-4413-8d89-e9b147af65eb.png">
-    <li>Remove stray div tag</li>
+    <li>Remove stray div tag.</li>
         <img src="https://user-images.githubusercontent.com/97599832/221007221-bd45eaee-934a-4b5e-8518-c2bea9900e03.png">
     <li>Incorrect order of heading tags within table headings, need to re-write.</li>
 </ul>
 
 ### Page 2 - Gamepage.html
+#### Nu HTML W3Schools Validator: https://validator.w3.org/nu/
+<ul>
+        <img width="876" alt="image" src="https://user-images.githubusercontent.com/97599832/221055046-af799824-18d6-4a98-8d5f-e4d9b2f5d556.png">
+    <li>Duplicate body tag needed removing.</li>
+        <img width="868" alt="image" src="https://user-images.githubusercontent.com/97599832/221055388-22af21d6-b5bd-4c72-b9d6-5010996af1bb.png">
+    <li>Same error as previous html page, with spaces in the source path for the image.</li>
+        <img width="865" alt="image" src="https://user-images.githubusercontent.com/97599832/221055511-9df80767-410d-41ec-8b43-c06417cdd043.png">
+    <li>Wrong order of descendants, need to refactor.</li>
+        <img width="879" alt="image" src="https://user-images.githubusercontent.com/97599832/221055638-e8f533c8-c26f-46cc-a0fe-640613e39ae4.png">
+    <li>Same issue with spaces in image path source, need to rename images.</li>
+        <img width="879" alt="image" src="https://user-images.githubusercontent.com/97599832/221056002-c0d686c5-4137-4569-ad4e-62604743ece0.png">
+    <li>Stray tags that need removing</li>
 
+
+</ul>
 
 ## VI) Credits
 1. Jack Clark - Code 
