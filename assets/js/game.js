@@ -63,15 +63,10 @@ function checkGuess() {
   let result = document.getElementById("result");
   let explanation = document.getElementById("explanation");
 
-        if (guess == " " || guess.trim() === '') {
-          // input is empty or null, handle the case here
-          alert('guess is empty or null');
-          console.log("1");
-        } else {
-          // input is not empty, handle it here
-          alert('guess is not empty: ' + guess);
-          console.log("2");
-        }
+      if (guess == " " || guess.trim() === '') {
+        // input is empty, alert user
+        alert('Empty answer please enter a number 1-9 corresponding to the characters.');
+      }
 
   if (guess == correctNumber) {
     disableSubmit();

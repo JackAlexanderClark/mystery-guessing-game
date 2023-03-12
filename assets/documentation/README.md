@@ -78,7 +78,7 @@
 1. To help develop and test the app, I used the javaScript testing framework - jest.
 ![image](https://user-images.githubusercontent.com/97599832/216416741-59a3ed6b-326c-4751-a633-384082398b9c.png)
 
-2. During the development process I was working on a local storage system. However, it was removed during the project as it felt superfluous to the projects aims and didn't add value and may have contributed to user confusion.
+2. During the development process I was working on a local storage system. However, it was removed during the project as it felt superfluous to the projects aims and didn't add value and may have contributed to user confusion. Also login systems would not be used in localStorage as they are not safely stored, furthermore I will be working on login systems in project 3 and 4.
 ![image](https://user-images.githubusercontent.com/97599832/217255520-57aab574-dc46-4071-85f6-2ff928448480.png)
 
 3. JS Hint testing my javaScript code for my game.js file.
@@ -123,7 +123,14 @@
 
 </ul>
 
-## VI) Credits
+## VI) Deployment
+<ul>
+    <li>This project was build using the GitPod IDE.</li>
+    <li>It was deployed as a static application on GitHub pages.</li>
+    <li>You can clone a copy of the repository using Git Clone.</li>
+</ul>
+
+## VII) Credits
 1. Jack Clark - Code 
 2. Jamie Preston - Commisioned art work of the nine suspects drawings.
 3. DALLE-2 - Artwork

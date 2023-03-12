@@ -1,5 +1,8 @@
 // save a username to local storage
 
+// create a flag for if we have username
+var hasUsername = false;
+
 const usernameInput = document.getElementById('username');
 const saveButton = document.getElementById('save-btn');
 const displayDiv = document.getElementById('display-username');
@@ -18,6 +21,9 @@ saveButton.addEventListener('click', () => {
   displayDiv.textContent = `Username: ${username}`;
 });
 
+if (username) {
+  hasUsername = true; 
+}
 
 // check if the browser supports local storage before using it
 if(typeof(Storage) !== "undefined") {
@@ -26,7 +32,7 @@ if(typeof(Storage) !== "undefined") {
   }
   
   // fix to allow username to work with other local storage code
-  if (!playerUsername) {
+  if (!hasUsername && playerUsername === true) {
     playerUsername = prompt("Please enter your username:");
     localStorage.setItem("playerUsername", playerUsername);
   }
