@@ -26,91 +26,14 @@
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
     <script src="assets/js/effects.js" defer></script>
     
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
-    <style>
-      /* https://www.w3schools.com/howto/howto_js_navbar_sticky.asp   */
-      /* Style the navbar */
-        .navbar {
-          overflow: hidden;
-        }
 
-        /* Navbar links */
-        .navbar a {
-          float: left;
-          display: block;
-          text-align: center;
-          padding: 14px;
-          text-decoration: none;
-        }
-
-        /* Page content */
-        .content {
-          padding: 16px;
-        }
-
-        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-        .sticky {
-          position: fixed;
-          top: 0;
-          width: 100%;
-        }
-
-        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-        .sticky + .content {
-          padding-top: 60px;
-        }
-
-        /* end of w3schools code */
-
-      /* Credit and Source to GetBootstrap: https://getbootstrap.com/docs/4.6/examples/album/" */
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      
-    img:not(.weblogo) {
-        border: 2px solid rgb(194, 191, 191);
-    }
-
-    .heading-style {
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    li, ol, small {
-        font-style: italic;
-        text-align: left;
-        font-family:'Times New Roman', Times, serif;
-        color:rgb(194, 191, 191);
-    }
-
-    img {
-        cursor: crosshair;
-    }
-
-    /* witness text styling */ 
-    .ajaxStyling {
-        font-style: italic;
-        color: pink;
-    }
-
-    body { margin: 0; }
-
-    </style>
 
   </head>
       <!-- top anchor head for navigation -->
@@ -118,11 +41,10 @@
         <a id="header-anchor"></a>
       </div>
 
-<body>
-
+<body style="background-image: url('assets/images/Background-Chalkboard.png');">
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <img src="assets/images/golden question mark logo.jpg" alt="game logo" height="40" width="40">
+      <img src="assets/images/goldenquestionmarklogo.jpg" alt="game logo" height="40" width="40">
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -150,12 +72,12 @@
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
               <div class="gray-fade-effect">
-                    <img src="assets/images/torch .jpg" alt="Torch Clue" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
+                    <img src="assets/images/torch.jpg" alt="Torch Clue" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
               </div>
                     <div class="card-body">
                         <p class="card-text" id="torch"><b>Clue</b>&nbsp;<i class="fa-solid fa-1"></i></p>
                         <div><div class="img-text">Torch</div></div>
-                        <button id="buttonToggle-1" class="btn btn-light">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                        <button id="buttonToggle-1" class="btn btn-light" onclick="toggleTextboxes(1)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                         <hr>
                         <div id="infoToggle-1">
                             <ol>
@@ -176,7 +98,7 @@
                     <div class="card-body">
                         <p class="card-text">Clue&nbsp;<i class="fa-solid fa-2"></i></p>
                         <div><p class="img-text">Fingerprint</p></div>
-                        <button type="button" id="buttonToggle-2" class="btn btn-light">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                        <button type="button" id="buttonToggle-2" class="btn btn-light" onclick="toggleTextboxes(2)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                         <hr>
                         <div id="infoToggle-2">
                             <ol>
@@ -198,7 +120,7 @@
                     <div class="card-body">
                       <p class="card-text">Clue&nbsp;<i class="fa-solid fa-3"></i></p>
                       <div><div class="img-text">Receipt from Garden Center</div></div>
-                      <button type="button" class="btn btn-light" id="buttonToggle-3">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                      <button type="button" class="btn btn-light" id="buttonToggle-3" onclick="toggleTextboxes(3)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                       <hr>
                       <div id="infoToggle-3">
                         <ol>
@@ -214,13 +136,13 @@
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             <div class="gray-fade-effect">
-                  <img src="assets/images/matches clue.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
+                  <img src="assets/images/matches-clue.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
             </div>
 
                   <div class="card-body">
                     <p class="card-text">Clue&nbsp;<i class="fa-solid fa-4"></i></p>
                     <div><div class="img-text">Box of Matches</div></div>
-                    <button type="button" class="btn btn-light" id="buttonToggle-4">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                    <button type="button" class="btn btn-light" id="buttonToggle-4" onclick="toggleTextboxes(4)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                     <hr>
                     <div id="infoToggle-4">
                       <ol>
@@ -235,13 +157,13 @@
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           <div class="gray-fade-effect">
-                <img src="assets/images/letter jpg.JPG" alt="Clue Letter Threat" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
+                <img src="assets/images/letter.JPG" alt="Clue Letter Threat" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
           </div>
 
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-5"></i></p>
                   <div><div class="img-text">Letter Ransom Threat</div></div>
-                  <button type="button" class="btn btn-light" id="buttonToggle-5">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                  <button type="button" class="btn btn-light" id="buttonToggle-5" onclick="toggleTextboxes(5)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                   <hr>
                   <div id="infoToggle-5">
                     <ol>
@@ -256,13 +178,13 @@
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
           <div class="gray-fade-effect">
-                <img src="assets/images/telephone box.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
+                <img src="assets/images/telephone-box.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="100" height="400" loading="lazy">
           </div>
 
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-6"></i></p>
                   <div><div class="img-text">Mysterious Phone Call</div></div>
-                  <button type="button" class="btn btn-light" id="buttonToggle-6">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                  <button type="button" class="btn btn-light" id="buttonToggle-6" onclick="toggleTextboxes(6)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                   <hr>
                   <div id="infoToggle-6">
                     <ol>

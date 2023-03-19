@@ -78,7 +78,7 @@
 1. To help develop and test the app, I used the javaScript testing framework - jest.
 ![image](https://user-images.githubusercontent.com/97599832/216416741-59a3ed6b-326c-4751-a633-384082398b9c.png)
 
-2. During the development process I was working on a local storage system. However, it was removed during the project as it felt superfluous to the projects aims and didn't add value and may have contributed to user confusion.
+2. During the development process I was working on a local storage system. However, it was removed during the project as it felt superfluous to the projects aims and didn't add value and may have contributed to user confusion. Also login systems would not be used in localStorage as they are not safely stored, furthermore I will be working on login systems in project 3 and 4.
 ![image](https://user-images.githubusercontent.com/97599832/217255520-57aab574-dc46-4071-85f6-2ff928448480.png)
 
 3. JS Hint testing my javaScript code for my game.js file.
@@ -101,15 +101,53 @@
         <img src="https://user-images.githubusercontent.com/97599832/221006363-1a024497-92fc-4216-b566-da4c92cfcd6d.png">
     <li>These two above errors are again due to incorrect path, need to remove spaces in src. Also remove % from width and height of images as uncessary.</li>
         <img src="https://user-images.githubusercontent.com/97599832/221006668-83f12448-97d9-4413-8d89-e9b147af65eb.png">
-    <li>Remove stray div tag</li>
+    <li>Remove stray div tag.</li>
         <img src="https://user-images.githubusercontent.com/97599832/221007221-bd45eaee-934a-4b5e-8518-c2bea9900e03.png">
     <li>Incorrect order of heading tags within table headings, need to re-write.</li>
 </ul>
 
 ### Page 2 - Gamepage.html
+#### Nu HTML W3Schools Validator: https://validator.w3.org/nu/
+<ul>
+        <img width="876" alt="image" src="https://user-images.githubusercontent.com/97599832/221055046-af799824-18d6-4a98-8d5f-e4d9b2f5d556.png">
+    <li>Duplicate body tag needed removing.</li>
+        <img width="868" alt="image" src="https://user-images.githubusercontent.com/97599832/221055388-22af21d6-b5bd-4c72-b9d6-5010996af1bb.png">
+    <li>Same error as previous html page, with spaces in the source path for the image.</li>
+        <img width="865" alt="image" src="https://user-images.githubusercontent.com/97599832/221055511-9df80767-410d-41ec-8b43-c06417cdd043.png">
+    <li>Wrong order of descendants, need to refactor.</li>
+        <img width="879" alt="image" src="https://user-images.githubusercontent.com/97599832/221055638-e8f533c8-c26f-46cc-a0fe-640613e39ae4.png">
+    <li>Same issue with spaces in image path source, need to rename images.</li>
+        <img width="879" alt="image" src="https://user-images.githubusercontent.com/97599832/221056002-c0d686c5-4137-4569-ad4e-62604743ece0.png">
+    <li>Stray tags that need removing</li>
+</ul>
 
+### Bugs
+#### 1. Effects.js - Toggle Clues not Working
+![image](https://user-images.githubusercontent.com/97599832/226174732-e9f1803f-e8db-4c28-91a6-ab320a2b904f.png)
+The html textbox is shown by default when it needs to be hidden, then clicking the button will show. 
 
-## VI) Credits
+![image](https://user-images.githubusercontent.com/97599832/226174779-e99c09ee-0a9b-4bfb-a2fb-544a085d6c23.png)
+
+#### 2. Gamepage.html - Fact Sheet Bootstrap Modal not working when clicked.
+![image](https://user-images.githubusercontent.com/97599832/226176595-0372a075-a69a-4d5c-b5b2-dd49d57a3e51.png)
+Investigating this bug I checked Chome Developer Tools and saw an error for bootstrap missing a jQuery CDN link.
+
+Before Fix:
+![image](https://user-images.githubusercontent.com/97599832/226177103-3f6e4eae-b2b3-48f8-8b05-ac8403cdfad5.png)
+
+After Fix: 
+![image](https://user-images.githubusercontent.com/97599832/226177132-00eaf5c1-f939-481b-ad21-baa72a02a6ad.png)
+
+## VI) Deployment
+<ul>
+    <li>This project was built using the GitPod IDE.</li>
+    <li>A test server is run using "python3 -m http.server" in the terminal.</li>
+    <li>It was deployed as a static application on GitHub pages.</li>
+    <li>You can clone a copy of the repository using Git Clone.</li>
+</ul>
+
+## VII) Credits
 1. Jack Clark - Code 
 2. Jamie Preston - Commisioned art work of the nine suspects drawings.
 3. DALLE-2 - Artwork
+4. GetBootstrap Templates; Album and Product. Source: "https://getbootstrap.com/docs/4.6/examples/album/", "https://getbootstrap.com/docs/4.6/examples/product/".
