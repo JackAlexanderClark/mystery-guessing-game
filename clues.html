@@ -26,10 +26,13 @@
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
-    <script src="assets/js/effects.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+    <script src="assets/js/effects.js" defer></script>
+    
+
 
 
   </head>
@@ -38,8 +41,7 @@
         <a id="header-anchor"></a>
       </div>
 
-<body>
-
+<body style="background-image: url('assets/images/Background-Chalkboard.png');">
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <img src="assets/images/goldenquestionmarklogo.jpg" alt="game logo" height="40" width="40">
@@ -75,7 +77,7 @@
                     <div class="card-body">
                         <p class="card-text" id="torch"><b>Clue</b>&nbsp;<i class="fa-solid fa-1"></i></p>
                         <div><div class="img-text">Torch</div></div>
-                        <button id="buttonToggle-1" class="btn btn-light">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                        <button id="buttonToggle-1" class="btn btn-light" onclick="toggleTextboxes(1)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                         <hr>
                         <div id="infoToggle-1">
                             <ol>
@@ -96,7 +98,7 @@
                     <div class="card-body">
                         <p class="card-text">Clue&nbsp;<i class="fa-solid fa-2"></i></p>
                         <div><p class="img-text">Fingerprint</p></div>
-                        <button type="button" id="buttonToggle-2" class="btn btn-light">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                        <button type="button" id="buttonToggle-2" class="btn btn-light" onclick="toggleTextboxes(2)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                         <hr>
                         <div id="infoToggle-2">
                             <ol>
@@ -118,7 +120,7 @@
                     <div class="card-body">
                       <p class="card-text">Clue&nbsp;<i class="fa-solid fa-3"></i></p>
                       <div><div class="img-text">Receipt from Garden Center</div></div>
-                      <button type="button" class="btn btn-light" id="buttonToggle-3">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                      <button type="button" class="btn btn-light" id="buttonToggle-3" onclick="toggleTextboxes(3)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                       <hr>
                       <div id="infoToggle-3">
                         <ol>
@@ -140,7 +142,7 @@
                   <div class="card-body">
                     <p class="card-text">Clue&nbsp;<i class="fa-solid fa-4"></i></p>
                     <div><div class="img-text">Box of Matches</div></div>
-                    <button type="button" class="btn btn-light" id="buttonToggle-4">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                    <button type="button" class="btn btn-light" id="buttonToggle-4" onclick="toggleTextboxes(4)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                     <hr>
                     <div id="infoToggle-4">
                       <ol>
@@ -161,7 +163,7 @@
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-5"></i></p>
                   <div><div class="img-text">Letter Ransom Threat</div></div>
-                  <button type="button" class="btn btn-light" id="buttonToggle-5">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                  <button type="button" class="btn btn-light" id="buttonToggle-5" onclick="toggleTextboxes(5)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                   <hr>
                   <div id="infoToggle-5">
                     <ol>
@@ -182,7 +184,7 @@
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-6"></i></p>
                   <div><div class="img-text">Mysterious Phone Call</div></div>
-                  <button type="button" class="btn btn-light" id="buttonToggle-6">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                  <button type="button" class="btn btn-light" id="buttonToggle-6" onclick="toggleTextboxes(6)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                   <hr>
                   <div id="infoToggle-6">
                     <ol>

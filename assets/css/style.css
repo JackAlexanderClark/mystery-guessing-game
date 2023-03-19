@@ -1,11 +1,12 @@
 /* universal font family and styles */
 * {
 	font-family: "Bookman Old Style", Georgia, serif;
-	color:rgb(194, 191, 191);
+	color: black;
 }
 
 body {
   background-image: url("assets/images/Background-Chalkboard.png");
+  background-repeat: no-repeat;
 }
 
 .headings {
@@ -28,6 +29,10 @@ li, ol {
   font-family:"Bookman Old Style", Georgia, serif;
   	color:rgb(194, 191, 191);
 }
+
+  #story-wrapper {
+    display: none;
+  }
 
 /* style nav bar so can tell which page is active */
 /* fix */

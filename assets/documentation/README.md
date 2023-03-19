@@ -119,13 +119,29 @@
     <li>Same issue with spaces in image path source, need to rename images.</li>
         <img width="879" alt="image" src="https://user-images.githubusercontent.com/97599832/221056002-c0d686c5-4137-4569-ad4e-62604743ece0.png">
     <li>Stray tags that need removing</li>
-
-
 </ul>
+
+### Bugs
+#### 1. Effects.js - Toggle Clues not Working
+![image](https://user-images.githubusercontent.com/97599832/226174732-e9f1803f-e8db-4c28-91a6-ab320a2b904f.png)
+The html textbox is shown by default when it needs to be hidden, then clicking the button will show. 
+
+![image](https://user-images.githubusercontent.com/97599832/226174779-e99c09ee-0a9b-4bfb-a2fb-544a085d6c23.png)
+
+#### 2. Gamepage.html - Fact Sheet Bootstrap Modal not working when clicked.
+![image](https://user-images.githubusercontent.com/97599832/226176595-0372a075-a69a-4d5c-b5b2-dd49d57a3e51.png)
+Investigating this bug I checked Chome Developer Tools and saw an error for bootstrap missing a jQuery CDN link.
+
+Before Fix:
+![image](https://user-images.githubusercontent.com/97599832/226177103-3f6e4eae-b2b3-48f8-8b05-ac8403cdfad5.png)
+
+After Fix: 
+![image](https://user-images.githubusercontent.com/97599832/226177132-00eaf5c1-f939-481b-ad21-baa72a02a6ad.png)
 
 ## VI) Deployment
 <ul>
-    <li>This project was build using the GitPod IDE.</li>
+    <li>This project was built using the GitPod IDE.</li>
+    <li>A test server is run using "python3 -m http.server" in the terminal.</li>
     <li>It was deployed as a static application on GitHub pages.</li>
     <li>You can clone a copy of the repository using Git Clone.</li>
 </ul>
@@ -134,3 +150,4 @@
 1. Jack Clark - Code 
 2. Jamie Preston - Commisioned art work of the nine suspects drawings.
 3. DALLE-2 - Artwork
+4. GetBootstrap Templates; Album and Product. Source: "https://getbootstrap.com/docs/4.6/examples/album/", "https://getbootstrap.com/docs/4.6/examples/product/".
