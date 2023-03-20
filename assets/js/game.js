@@ -4,6 +4,34 @@
 
 // disable button if guesses equals 3 or game won
 
+let count = 0;
+
+// let user choose how many lives 
+function ToggleEasyMode() {
+
+    if ( $("#easy-mode").is(":checked") ) {
+
+      alert("Easy mode enabled.");
+      $("#easy-mode-tag").show();
+      $("#hard-mode-tag").hide();
+      count = 3;
+      StopSubmit.disabled = false;
+
+    } else if ( $("hard-mode").is(":checked") ) {
+
+      alert("Hard mode enabled."); 
+      $("#hard-mode-tag").show();
+      $("#easy-mode-tag").hide();
+      count = 1;
+      StopSubmit.disabled = false;
+
+    } else {
+
+      alert("No difficulty selected");
+      StopSubmit.disabled = true;
+    }
+}
+
 function disableSubmit() {
   let StopSubmit = document.getElementById("submitButton");
   StopSubmit.disabled = true;
@@ -17,7 +45,7 @@ function createSolutionLink() {
   `;
 }
 
-let count = 0;
+
 const display = document.getElementById("display");
 const storageDisplay = document.getElementById("storageDisplay");
 
@@ -39,7 +67,6 @@ function addGuessToLeaderboard(guess) {
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
     let cell3 = row.insertCell(2);
-    let cell4 = row.insertCell(3);
 
     let playerGuess = document.getElementById("guess-input").value;
     
@@ -53,7 +80,6 @@ function addGuessToLeaderboard(guess) {
     cell1.innerHTML = "Guess Number: " + attempts + "&nbsp;";
     cell2.innerHTML = "Your chosen suspect was: " + guess + "&nbsp;";
     cell3.innerHTML = "This was " + correct + "&nbsp;";
-    cell4.innerHTML = playerUsername;
 }
 
 function checkGuess() {
@@ -96,16 +122,3 @@ function checkGuess() {
 return;
 }
 
-// need to check if name is stored in local storage session
-function getName() {
-  var n, q = 'Enter name';
-  if (!window.sessionStorage) {  // if sessionStorage not supported
-      return window.prompt(q); // perform other action
-  }
-  n = window.sessionStorage.getItem('name');
-  if (!n) {
-      n = window.prompt(q);
-      window.sessionStorage.setItem('name', n);
-  }
-  return n;
-}

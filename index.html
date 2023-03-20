@@ -48,6 +48,14 @@
           width: 100%;
         }
       }
+
+      #title {
+        border: 2px solid whitesmoke;
+        padding: 10px;
+        text-align: center;
+      }
+
+      
     </style>
 
 
@@ -77,53 +85,69 @@
     <div id='header-anchor'></div>
 
     <main role="main">
-
-      <div class="container col-md-6" style="padding-top: 120px; text-align: center;">
-        <h1 class="headings">Mystery Guessing Game!</h1>
+      
+      <div class="row justify-content-md-center">
+          <div class="container-fluid col-md-6" style="text-align: center; padding-top: 120px;">
+            <h1 class="headings" id="title">Mystery Guessing Game!</h1>
+            <img src="assets/images/houseonfire.jpg" loading="lazy" alt="The House on Fire" height="200" width="200">
+          </div>
       </div>
 
+      <!-- correct padding for one single paragraph -->
+      <!-- look up bootstrap paragraphsb-->
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
-
-      <div class="container-fluid">
-        <div class="row" style="text-align: center;">
-          <div class="col-md-6">
+      <div class="container-fluid" style="padding-top: 100px;">
+        <div class="row justify-content-md-center">
+          <div class="col-md-12">
               <div class="container">
                 <div class="carousel-caption text-left">
-                  <h2 style="text-align:center;">How to play? <i class="fa-solid fa-dice"></i></h2>
+                  <h2 style="text-align:center;">Story and How to Play <i class="fa-solid fa-dice"></i></h2>
                   <p style="text-align:center;">
                     Choose a session username and then read the case files on each characters and assess the evidence.
                     There are nine suspects for you to chose from.
-                    You are allowed 3 guesses to chose from. Your guesses are counted and when you run out.
-                    You lose and must restart the game.
-                  </p>
+                    You are a police detective, investigating an arson attack.
+                    Waterhope is a quiet and idyllic town in the English countryside.
+                    At 2:35am a phone call reported a loud explosion.
+                    Nick Draper is the home-owner, he is a 43 year old ex-Head Teacher at Water Hope High School.
+                    In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.
+                    He was a local figure of much ire from the community.
                 </div>
               </div>
           </div>
-
-            <div class="col-md-6">
-              <h2>The Story <i class="fa-solid fa-book"></i></h2>
-              <p style="text-align:center;">
-                You are a police detective, investigating an arson attack.
-                Waterhope is a quiet and idyllic town in the English countryside.
-                At 2:35am a phone call reported a loud explosion.
-                Nick Draper is the home-owner, he is a 43 year old ex-Head Teacher at Water Hope High School.
-                In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.
-                He was a local figure of much ire from the community.
-              <p>
-            </div>
-
-          
-
-
         </div>
+        <br>
+        
+        <div class="row justify-content-md-center">
+            <div class="col-md-12" style="text-align:center; display: block;">
 
-        <div class="row">
-            <div class="col-md-6">
-              <h2 class="featurette-heading" style="text-align:center;">Submit Your Guess</h2>          
+              <div class="form-group">
+                <div class="col-md-12 col-md-12-offset-12">
+                  <div id="hard-mode-tag"><h1>NORMAL MODE ENABLED</h1></div>
+                  <div id="easy-mode-tag"><h1>EASY MODE ENABLED</h1></div>
+                  <label class="checkbox-inline justify-content-center"><input type="checkbox" id="easy-mode" name="easy-mode" value="1" onchange="ToggleDifficultyMode();" /> Tick to play Easy Mode (3 lives)</label>
+                </div>
+              </div>
+
+
+              <h2 class="featurette-heading" >Submit Your Guess</h2>          
               <p class="lead" style="text-align:center;">Once you are satisfied with your investigation, choose your character and submit below.</p>
               <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Tooltip on right" style="text-align:center;">
               <button onclick="checkGuess()" id="submitButton" class="btn btn-light" style="text-align:center;">Submit</button>
-              <div class="container-sm" style="text-align: center;">
+            </div>
+          
+          
+            <div class="container-sm" style="text-align: center;">
                 <p id="result"></p>
                   <p id="guesses"></p>
                   <!-- empty divs to be populated -->
@@ -133,23 +157,23 @@
                   <div id="explanation"></div>
                   <div id="hint" class="ajaxStyling"></div>
                   <div id="solution"></div>
-                  <div class="container-fluid" style="text-align:center;">
+          </div>
+                  <div class="container-fluid col-md-4" style="text-align:center;">
                     <h2>Leaderboard</h2>
                     <table id="leaderboard" style="text-align:center;">
                       <tr style="text-align:center;">
                         <th style="text-align:center;">Attempt Number</th>
                         <th style="text-align:center;">Guess</th>
                         <th style="text-align:center;">Outcome</th>
-                        <th style="text-align:center;">Username</th>
                       </tr>
                     </table>
                   </div>
               </div>
-            </div>
     
         </div>
 
-      </div>
+
+      
 
 
           
@@ -185,6 +209,30 @@
           navbar.classList.add("sticky");
         }
       }
+
+      $("#easy-mode-tag").hide();
+      
+      function ToggleDifficultyMode() {
+
+        if ( $("#easy-mode").is(":checked") ) {
+
+            $("#hard-mode-tag").hide();
+            $("#easy-mode-tag").show();
+
+            count = 3;
+
+          } else {
+
+            count = 1;
+            $("#easy-mode-tag").hide();
+            $("#hard-mode-tag").show();
+            //StopSubmit.disabled = true;
+          }
+
+          return count;
+    
+    }
+    
       </script>
   </body>
 </html>

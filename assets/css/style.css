@@ -34,6 +34,11 @@ li, ol {
     display: none;
   }
 
+  table, th, td {
+    border: 3px solid whitesmoke;
+    border-collapse: collapse;
+  }
+
 /* style nav bar so can tell which page is active */
 /* fix */
 .active {
@@ -102,7 +107,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
-<style>
 /* https://www.w3schools.com/howto/howto_js_navbar_sticky.asp   */
 /* Style the navbar */
 .navbar {
