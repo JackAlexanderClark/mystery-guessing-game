@@ -1,5 +1,6 @@
 /* universal font family and styles */
-* {
+/* all except ul and li */
+*:not(ul, li){
 	font-family: "Bookman Old Style", Georgia, serif;
 	color: black;
 }
@@ -30,7 +31,7 @@ li, ol {
   font-style: italic;
   text-align: left;
   font-family:"Bookman Old Style", Georgia, serif;
-  	color:rgb(194, 191, 191);
+  color: black;
 }
 
   #story-wrapper {
@@ -42,10 +43,14 @@ li, ol {
     border-collapse: collapse;
   }
 
+.italic {
+  font-style: italic;
+}
+
 /* style nav bar so can tell which page is active */
 /* fix */
 .active {
-  border:1px whitesmoke;
+  border:5px yellow;
   border-style: dotted;
 }
 
@@ -106,10 +111,6 @@ li, ol {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-}
-
 /* https://www.w3schools.com/howto/howto_js_navbar_sticky.asp   */
 /* Style the navbar */
 .navbar {
@@ -160,11 +161,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Adding a border to all image tags, except the nav logo using :not css selector */
-img:not(.weblogo) {
-  border: 2px solid rgb(194, 191, 191);
-}
-
 .heading-style {
 font-weight: bold;
 font-style: italic;
@@ -219,8 +215,8 @@ font-style: italic;
 }
 
 .heading-style {
-font-weight: bold;
-font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 li, ol {
@@ -289,61 +285,6 @@ li, ol {
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
-/*
- * Blog name and description
- */
-.blog-title {
-  margin-bottom: 0;
-  font-size: 2rem;
-  font-weight: 400;
-}
-.blog-description {
-  font-size: 1.1rem;
-  color: #999;
-}
-
-@media (min-width: 40em) {
-  .blog-title {
-    font-size: 3.5rem;
-  }
-}
-
-/* Pagination */
-.blog-pagination {
-  margin-bottom: 4rem;
-}
-.blog-pagination > .btn {
-  border-radius: 2rem;
-}
-
-/*
- * Blog posts
- */
-.blog-post {
-  margin-bottom: 4rem;
-}
-.blog-post-title {
-  margin-bottom: .25rem;
-  font-size: 2.5rem;
-}
-.blog-post-meta {
-  margin-bottom: 1.25rem;
-  color: #999;
-}
-
-/*
- * Footer
- */
-.blog-footer {
-  padding: 2.5rem 0;
-  color: #999;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5;
-}
-.blog-footer p:last-child {
-  margin-bottom: 0;
-}
 
 /* -------------------------get bootstrap album CSS code-------------------------------- */
 /* --------- Credit: https://getbootstrap.com/docs/4.6/examples/product/ ----------------*/

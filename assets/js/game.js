@@ -3,6 +3,9 @@
 */
 
 // disable button if guesses equals 3 or game won
+$(document).ready(function()  {
+  console.log("ready");
+});
 
 let count = 0;
 
@@ -24,7 +27,10 @@ const storageDisplay = document.getElementById("storageDisplay");
 
 function Guesses() {
   count++;
-  display.innerHTML = "Guesses:&nbsp;" + count;;
+  display.innerHTML = "Guesses Used:&nbsp;" + count;
+  if (count === 3) {
+    disableSubmit();
+  } 
 }
 
 let leaderboard = document.getElementById("leaderboard");
