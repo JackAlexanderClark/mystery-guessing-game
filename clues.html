@@ -30,6 +30,7 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/effects.js" defer></script>
 
 
@@ -42,22 +43,27 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <img src="assets/images/goldenquestionmarklogo.jpg" alt="game logo" height="40" width="40">
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html" ><button type="button" class="btn btn-secondary">Rules&nbsp;<i class="fas fa-book"></i></button></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="gamepage.html" style="color:yellow;"><button type="button" class="btn btn-secondary">Characters&nbsp;<i class="fas fa-person"></i></button></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link active" aria-current="page" href="clues.html" style="color:yellow;"><button type="button" class="btn btn-secondary">Clues&nbsp;<i class="fas fa-magnifying-glass"></i></button></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="laptop-nav-bar">
+      <nav class="navbar navbar-default" style="background-color: #e2e2e2; position: relative;">
+        <div class="container-fluid d-flex flex-column">
+            <div class="row">
+              <a class="py-2" href="#" aria-label="Product">
+                  <img src="assets/images/goldenquestionmarklogo.jpg" alt="game logo" height="40" width="40">
+              </a>
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="py-2 d-none d-md-inline-block" aria-current="page" href="index.html"><button type="button" class="btn btn-secondary">Rules&nbsp;<i class="fas fa-book"></i></button></a>
+                  <li class="nav-item">
+                    <a class="py-2 d-none d-md-inline-block"aria-current="page" href="gamepage.html" style="color:yellow;"><button type="button" class="btn btn-secondary">Characters&nbsp;<i class="fas fa-person"></i></button></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="active py-2 d-none d-md-inline-block" aria-current="page" href="clues.html" style="color:yellow;"><button type="button" class="btn btn-secondary">Clues&nbsp;<i class="fas fa-magnifying-glass"></i></button></a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+      </nav>
+    </div>
   </header>
 
 <hr>
@@ -70,9 +76,7 @@
       <div class="row">
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <div class="gray-fade-effect">
                     <img src="assets/images/torch.jpg" alt="Torch Clue" class="bd-placeholder-img card-img-top" width="150" height="400" loading="lazy">
-              </div>
                     <div class="card-body">
                         <p class="card-text" id="torch"><b>Clue</b>&nbsp;<i class="fa-solid fa-1"></i></p>
                         <div><div class="img-text">Torch</div></div>
@@ -91,9 +95,7 @@
           
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <div class="gray-fade-effect">
                     <img src="assets/images/fingerprint.jpg" id ="img1" alt="Fingerprint Clue" class="bd-placeholder-img card-img-top" width="150" height="400" loading="lazy">
-              </div>
                     <div class="card-body">
                         <p class="card-text">Clue&nbsp;<i class="fa-solid fa-2"></i></p>
                         <div><p class="img-text">Fingerprint</p></div>
@@ -112,9 +114,7 @@
 
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <div class="gray-fade-effect">
                     <img src="assets/images/clue-receipt.jpg" alt="Clue Receipt" class="bd-placeholder-img card-img-top" width="150" height="400" loading="lazy">
-              </div>
 
                     <div class="card-body">
                       <p class="card-text">Clue&nbsp;<i class="fa-solid fa-3"></i></p>
@@ -134,10 +134,7 @@
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <div class="gray-fade-effect">
                   <img src="assets/images/matches-clue.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="150" height="400" loading="lazy">
-            </div>
-
                   <div class="card-body">
                     <p class="card-text">Clue&nbsp;<i class="fa-solid fa-4"></i></p>
                     <div><div class="img-text">Box of Matches</div></div>
@@ -155,10 +152,7 @@
 
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
-          <div class="gray-fade-effect">
                 <img src="assets/images/letter.JPG" alt="Clue Letter Threat" class="bd-placeholder-img card-img-top" width="150" height="400" loading="lazy">
-          </div>
-
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-5"></i></p>
                   <div><div class="img-text">Letter Ransom Threat</div></div>
@@ -176,10 +170,7 @@
       
       <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
-          <div class="gray-fade-effect">
                 <img src="assets/images/telephone-box.jpg" alt="Clue Matches" class="bd-placeholder-img card-img-top" width="150" height="400" loading="lazy">
-          </div>
-
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-6"></i></p>
                   <div><div class="img-text">Mysterious Phone Call</div></div>

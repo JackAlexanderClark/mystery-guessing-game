@@ -7,6 +7,9 @@
 body, html {
   background-color: #d9d5d4;
   height: 100%;
+  background-size: cover;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .headings {

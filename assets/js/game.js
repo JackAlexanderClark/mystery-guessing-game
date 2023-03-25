@@ -27,7 +27,6 @@ function Guesses() {
   display.innerHTML = "Guesses:&nbsp;" + count;;
 }
 
-
 let leaderboard = document.getElementById("leaderboard");
 let attempts = 0;
 
@@ -61,11 +60,13 @@ function checkGuess() {
     let guess = document.getElementById("guess-input").value;
     let result = document.getElementById("result");
     let explanation = document.getElementById("explanation");
+    let hint = document.getElementById("hint");
+    let gameOverDiv = document.getElementById("gameOver");
 
-        if (guess == " " || guess.trim() === '') {
-            // input is empty, alert user
-            alert('Empty answer please enter a number 1-9 corresponding to the characters.');
-        }
+    if (guess == " " || guess.trim() === '') {
+        // input is empty, alert user
+        alert('Empty answer please enter a number 1-9 corresponding to the characters.');
+    }
 
     if (guess == correctNumber) {
         disableSubmit();
@@ -79,21 +80,17 @@ function checkGuess() {
         addGuessToLeaderboard(guess);
     }
 
-        let hint = document.getElementById("hint");
-        let gameOverDiv = document.getElementById("gameOver");
-
-        if (lives === 0) {
-          console.log("game over");
-          gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
-          disableSubmit();
-        } else if (lives === 1) {
-            hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
-        } else {
-            hint.innerHTML = "";
-        }
-
-          return;
+    if (lives === 0) {
+      console.log("game over");
+      gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
+      disableSubmit();
+    } else if (lives === 1) {
+        hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
+    } else {
+        hint.innerHTML = "";
     }
+
+}
 
 
   
