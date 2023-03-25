@@ -4,7 +4,7 @@
 
 // hide textbox 
 $(document).ready(function()  {
-    //
+    console.log("ready");
 })
 
 // pass in id of textbox and reveal it if clicked

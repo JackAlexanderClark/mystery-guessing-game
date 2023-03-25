@@ -4,9 +4,9 @@
 	color: black;
 }
 
-body {
-  background-image: url("assets/images/Background-Chalkboard.png");
-  background-repeat: no-repeat;
+body, html {
+  background-color: #d9d5d4;
+  height: 100%;
 }
 
 .headings {
@@ -340,4 +340,58 @@ li, ol {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+/* -------------------------get bootstrap album CSS code-------------------------------- */
+/* --------- Credit: https://getbootstrap.com/docs/4.6/examples/product/ ----------------*/
+.container {
+  max-width: 960px;
+}
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+.overflow-hidden { 
+  overflow: hidden; 
 }

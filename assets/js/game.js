@@ -6,32 +6,6 @@
 
 let count = 0;
 
-// let user choose how many lives 
-function ToggleEasyMode() {
-
-    if ( $("#easy-mode").is(":checked") ) {
-
-      alert("Easy mode enabled.");
-      $("#easy-mode-tag").show();
-      $("#hard-mode-tag").hide();
-      count = 3;
-      StopSubmit.disabled = false;
-
-    } else if ( $("hard-mode").is(":checked") ) {
-
-      alert("Hard mode enabled."); 
-      $("#hard-mode-tag").show();
-      $("#easy-mode-tag").hide();
-      count = 1;
-      StopSubmit.disabled = false;
-
-    } else {
-
-      alert("No difficulty selected");
-      StopSubmit.disabled = true;
-    }
-}
-
 function disableSubmit() {
   let StopSubmit = document.getElementById("submitButton");
   StopSubmit.disabled = true;
@@ -45,15 +19,14 @@ function createSolutionLink() {
   `;
 }
 
-
 const display = document.getElementById("display");
 const storageDisplay = document.getElementById("storageDisplay");
 
 function Guesses() {
   count++;
-  display.innerHTML = "Guesses:&nbsp;" + count;
-  localStorage.setItem("count", count);
+  display.innerHTML = "Guesses:&nbsp;" + count;;
 }
+
 
 let leaderboard = document.getElementById("leaderboard");
 let attempts = 0;
@@ -84,41 +57,43 @@ function addGuessToLeaderboard(guess) {
 
 function checkGuess() {
 
-  var correctNumber = 4;      // character 4
-  let guess = document.getElementById("guess-input").value;
-  let result = document.getElementById("result");
-  let explanation = document.getElementById("explanation");
+    var correctNumber = 4;      // character 4
+    let guess = document.getElementById("guess-input").value;
+    let result = document.getElementById("result");
+    let explanation = document.getElementById("explanation");
 
-      if (guess == " " || guess.trim() === '') {
-        // input is empty, alert user
-        alert('Empty answer please enter a number 1-9 corresponding to the characters.');
-      }
+        if (guess == " " || guess.trim() === '') {
+            // input is empty, alert user
+            alert('Empty answer please enter a number 1-9 corresponding to the characters.');
+        }
 
-  if (guess == correctNumber) {
-    disableSubmit();
-    result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
-    explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
-    createSolutionLink();
-    addGuessToLeaderboard(guess);
-  } else {
-    result.innerHTML = "Sorry, that's not the correct number. Please try again.";
-    Guesses();
-    addGuessToLeaderboard(guess);
-  }
+    if (guess == correctNumber) {
+        disableSubmit();
+        result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
+        explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
+        createSolutionLink();
+        addGuessToLeaderboard(guess);
+    } else {
+        result.innerHTML = "Sorry, that's not the correct number. Please try again.";
+        Guesses();
+        addGuessToLeaderboard(guess);
+    }
 
-  let hint = document.getElementById("hint");
-  let gameOverDiv = document.getElementById("gameOver");
+        let hint = document.getElementById("hint");
+        let gameOverDiv = document.getElementById("gameOver");
 
-  if (count === 3) {
-    console.log("game over");
-    gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
-    disableSubmit();
-  } else if (count === 2) {
-    hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
-  } else {
-    hint.innerHTML = "";
-  }
+        if (lives === 0) {
+          console.log("game over");
+          gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
+          disableSubmit();
+        } else if (lives === 1) {
+            hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
+        } else {
+            hint.innerHTML = "";
+        }
 
-return;
-}
+          return;
+    }
 
+
+  
