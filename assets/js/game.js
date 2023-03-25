@@ -4,6 +4,8 @@
 
 // disable button if guesses equals 3 or game won
 
+let count = 0;
+
 function disableSubmit() {
   let StopSubmit = document.getElementById("submitButton");
   StopSubmit.disabled = true;
@@ -17,15 +19,14 @@ function createSolutionLink() {
   `;
 }
 
-let count = 0;
 const display = document.getElementById("display");
 const storageDisplay = document.getElementById("storageDisplay");
 
 function Guesses() {
   count++;
-  display.innerHTML = "Guesses:&nbsp;" + count;
-  localStorage.setItem("count", count);
+  display.innerHTML = "Guesses:&nbsp;" + count;;
 }
+
 
 let leaderboard = document.getElementById("leaderboard");
 let attempts = 0;
@@ -39,7 +40,6 @@ function addGuessToLeaderboard(guess) {
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
     let cell3 = row.insertCell(2);
-    let cell4 = row.insertCell(3);
 
     let playerGuess = document.getElementById("guess-input").value;
     
@@ -53,59 +53,47 @@ function addGuessToLeaderboard(guess) {
     cell1.innerHTML = "Guess Number: " + attempts + "&nbsp;";
     cell2.innerHTML = "Your chosen suspect was: " + guess + "&nbsp;";
     cell3.innerHTML = "This was " + correct + "&nbsp;";
-    cell4.innerHTML = playerUsername;
 }
 
 function checkGuess() {
 
-  var correctNumber = 4;      // character 4
-  let guess = document.getElementById("guess-input").value;
-  let result = document.getElementById("result");
-  let explanation = document.getElementById("explanation");
+    var correctNumber = 4;      // character 4
+    let guess = document.getElementById("guess-input").value;
+    let result = document.getElementById("result");
+    let explanation = document.getElementById("explanation");
 
-      if (guess == " " || guess.trim() === '') {
-        // input is empty, alert user
-        alert('Empty answer please enter a number 1-9 corresponding to the characters.');
-      }
+        if (guess == " " || guess.trim() === '') {
+            // input is empty, alert user
+            alert('Empty answer please enter a number 1-9 corresponding to the characters.');
+        }
 
-  if (guess == correctNumber) {
-    disableSubmit();
-    result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
-    explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
-    createSolutionLink();
-    addGuessToLeaderboard(guess);
-  } else {
-    result.innerHTML = "Sorry, that's not the correct number. Please try again.";
-    Guesses();
-    addGuessToLeaderboard(guess);
-  }
+    if (guess == correctNumber) {
+        disableSubmit();
+        result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
+        explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
+        createSolutionLink();
+        addGuessToLeaderboard(guess);
+    } else {
+        result.innerHTML = "Sorry, that's not the correct number. Please try again.";
+        Guesses();
+        addGuessToLeaderboard(guess);
+    }
 
-  let hint = document.getElementById("hint");
-  let gameOverDiv = document.getElementById("gameOver");
+        let hint = document.getElementById("hint");
+        let gameOverDiv = document.getElementById("gameOver");
 
-  if (count === 3) {
-    console.log("game over");
-    gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
-    disableSubmit();
-  } else if (count === 2) {
-    hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
-  } else {
-    hint.innerHTML = "";
-  }
+        if (lives === 0) {
+          console.log("game over");
+          gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
+          disableSubmit();
+        } else if (lives === 1) {
+            hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
+        } else {
+            hint.innerHTML = "";
+        }
 
-return;
-}
+          return;
+    }
 
-// need to check if name is stored in local storage session
-function getName() {
-  var n, q = 'Enter name';
-  if (!window.sessionStorage) {  // if sessionStorage not supported
-      return window.prompt(q); // perform other action
-  }
-  n = window.sessionStorage.getItem('name');
-  if (!n) {
-      n = window.prompt(q);
-      window.sessionStorage.setItem('name', n);
-  }
-  return n;
-}
+
+  

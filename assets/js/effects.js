@@ -4,12 +4,7 @@
 
 // hide textbox 
 $(document).ready(function()  {
-    $("#infoToggle-1").hide();
-    $("#infoToggle-2").hide();
-    $("#infoToggle-3").hide();
-    $("#infoToggle-4").hide();
-    $("#infoToggle-5").hide();
-    $("#infoToggle-6").hide();
+    console.log("ready");
 })
 
 // pass in id of textbox and reveal it if clicked
