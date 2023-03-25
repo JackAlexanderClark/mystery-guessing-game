@@ -8,6 +8,7 @@
 ## Website Device Mockup
 ![3-devices-black](https://user-images.githubusercontent.com/97599832/216617427-a2814925-0c9e-4459-a972-7d0ab0215c42.png)
 
+
 # I) Project Goals and Planning
 
 ![image](https://user-images.githubusercontent.com/97599832/216454104-be44cc1b-f261-412f-a7bc-b091f2cc3cf2.png)
@@ -30,6 +31,12 @@
     <li>To have a clear and intuitive interface that makes it easy for the user to start playing the number guessing game</li>
     <li>To receive immediate feedback whether you were correct or incorrect and to see how many guesses you've used.</li>
 </ul>
+
+<ol>Business Goals</ol>
+<ul>
+    <li>A possible business goal would be to monitise the game.</li>
+</ul>
+
 
 # III) Development and Features
 1. To add interactivity to my game, the user is encourage to navigate and explore the web app by using the navigation bar to explore the other web pages, such as the clues page. From here users can click to learn more about each individual piece of information, utilising jQuery to expand and close text information pertaining to said piece of evidence.
@@ -61,6 +68,10 @@
 
 8. Furthermore, a HTML table will be generated with each guess, recording which character you chose and the outcome.
 ![image](https://user-images.githubusercontent.com/97599832/226471914-9579d0ce-5c4c-49e3-847b-b7a7c1a7127b.png)
+
+9. Using Bootstraps built in responsiveness, will collapse the character cards into a single column for Mobile users.
+![image](https://user-images.githubusercontent.com/97599832/227731483-f4e62072-7f31-4664-a229-e51f9d7523aa.png)
+
 
 <ul>
 <li>(Main Page) Rules and Game page</li>
@@ -116,6 +127,7 @@
     <li>Incorrect order of heading tags within table headings, need to re-write.</li>
 </ul>
 
+
 ### Page 2 - Gamepage.html
 #### Nu HTML W3Schools Validator: https://validator.w3.org/nu/
 <ul>
@@ -130,6 +142,7 @@
         <img width="879" alt="image" src="https://user-images.githubusercontent.com/97599832/221056002-c0d686c5-4137-4569-ad4e-62604743ece0.png">
     <li>Stray tags that need removing</li>
 </ul>
+
 
 ### Page 3 - Clues.html
 #### Nu HTML W3Schools Validator: https://validator.w3.org/nu/
@@ -146,14 +159,17 @@
 ##### Part 2)
 ![image](https://user-images.githubusercontent.com/97599832/226191870-e8cdeb90-c567-4941-9f3f-aa5941df3141.png)
 
+
 <ul>
     <li>Need to remove 2 unused variables and 1 undefined variable.</li>
     <li>Need to rework the use of ES6 syntax.</li>
 </ul>
 
+
 ### Manual Testing Examples using Jest: https://jestjs.io/
 This is an example of using Jest to test some of the interactive elements such as a HTML checkbox. The test explains the process and expect is where we state the outcome we intend, if this fails we can then identify there is an issue with the code.
 ![image](https://user-images.githubusercontent.com/97599832/226964695-b11f1435-c3b6-46bb-8042-264617d603ff.png)
+
 
 ### Bugs
 #### 1. Effects.js - Toggle Clues not Working
@@ -175,6 +191,7 @@ After Fix:
 #### 3. Index.html - Text Paragraphs overlapping when collapsing for smaller view port widths
 ![image](https://user-images.githubusercontent.com/97599832/226184422-938c4a21-7b22-4722-ac07-0fef3c922b8a.png)
 
+
 ## VI) Deployment
 <ul>
     <li>This project was built using the GitPod IDE.</li>
@@ -182,6 +199,7 @@ After Fix:
     <li>It was deployed as a static application on GitHub pages.</li>
     <li>You can clone a copy of the repository using Git Clone.</li>
 </ul>
+
 
 ## VII) Credits
 1. Jack Clark - Code 

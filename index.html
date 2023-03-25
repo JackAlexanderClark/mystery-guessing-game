@@ -54,7 +54,7 @@
         <a id="header-anchor"></a>
     </div>
 
-    
+  <header>
     <!-- Laptop and Ipad navbar used until certain pixel width -->
     <div class="laptop-nav-bar">
       <nav class="navbar navbar-default" style="background-color: #e2e2e2; position: relative;">
@@ -64,7 +64,7 @@
                   <img src="assets/images/goldenquestionmarklogo.jpg" alt="game logo" height="40" width="40">
               </a>
                 <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
+                  <li class="nav-item">
                     <a class="active py-2 d-none d-md-inline-block" aria-current="page" href="index.html"><button type="button" class="btn btn-secondary">Rules&nbsp;<i class="fas fa-book"></i></button></a>
                   <li class="nav-item">
                     <a class="py-2 d-none d-md-inline-block"aria-current="page" href="gamepage.html" style="color:yellow;"><button type="button" class="btn btn-secondary">Characters&nbsp;<i class="fas fa-person"></i></button></a>
@@ -77,13 +77,11 @@
         </div>
       </nav>
     </div>
-
-    <!-- Mobiles and Iphone Navbar, hidden by media query until certain pixel width and vice versa -->
-    <div class="mobile-nav-bar">
+        <!-- Mobiles and Iphone Navbar, hidden by media query until certain pixel width and vice versa -->
+        <div class="mobile-nav-bar">
  
-    </div>
-
-
+        </div>
+  </header>
 
 <div class="row">
   <div class="col-md-12">
@@ -94,15 +92,15 @@
   <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" style="max-width: 100%; height: auto;">
     <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="background-color:grey">
       <div class="my-3 py-3">
-        <h2 class="display-5 heading-style">Story</h2>
-        <p class="lead">                    
+        <h2 class="display-5 heading-style">Story <i class="fa-solid fa-book"></i></h2>
+        <p class="lead italic">                    
           Waterhope is a quiet and idyllic town in the English countryside.
           Nick Draper is the home-owner, he is a 43 year old ex-Head Teacher at Water Hope High School.
           In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.
           He was a local figure of much ire from the community.</p>
           <br>
       </div>
-      <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; padding-bottom: 5px;">  
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;padding-bottom: 5px;"> 
         <img src="assets/images/houseonfire.jpg" loading="lazy" alt="The House on Fire" height="200" width="200" style='height: 100%; width: 100%; object-fit: contain;'>
       </div>
     </div>
@@ -110,24 +108,26 @@
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 p-3">
         <h2 class="display-5 heading-style">How to Play <i class="fa-solid fa-dice"></i></h2>
-        <p class="lead">                    
+        <p class="lead italic">                    
           Read the case files on each characters and assess the evidence.
           There are nine suspects for you to chose from.
           You are a police detective, investigating an arson attack.
           At 2:35am a phone call reported a loud explosion.
-          You have 3 guesses available.</p>
+          You have 3 guesses available.
+          Each guess will be displayed in the leaderboard, for reference.</p>
       </div>
       <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;padding-bottom: 5px;"> 
-        <img src="assets/images/detective.jpg" alt="Detective looking at Clue" style='height: 100%; width: 100%; object-fit: contain;' loading="lazy"> </div>
+        <img src="assets/images/detective.jpg" alt="Detective looking at Clue" style='height: 100%; width: 100%; object-fit: contain;' loading="lazy"> 
+      </div>
     </div>
   </div>
 
-<hr>
+
   <div class="container" style="display:grid; place-items: center; align-content: center; ">
-        <h2 class="featurette-heading" >Submit Your Guess</h2>          
+        <h2 class="featurette-heading" >Submit Your Guess <i class="fa-solid fa-check"></i></h2>          
         <p class="lead" style="text-align:center;">Once you are satisfied with your investigation, choose your character and submit below.</p>
-        <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Tooltip on right" style="text-align:center;">
-        <button onclick="checkGuess()" id="submitButton" class="btn btn-light" style="text-align:center;">Submit</button>
+        <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Enter your answer here." style="text-align:center;">
+        <button onclick="checkGuess()" id="submitButton" class="btn btn-light" style="text-align:center; padding-top: 10px;">Submit</button>
     </div>
       <div class="container-sm" style="text-align: center;">
         <p id="result"></p>
@@ -140,7 +140,10 @@
           <div id="hint" class="ajaxStyling"></div>
           <div id="solution"></div>
           <div class="container-fluid col-md-8" style="text-align:center;">
-            <h2>Leaderboard</h2>
+
+            <hr>
+
+            <h2>Leaderboard <i class="fa-solid fa-bars"></i></h2>
                 <table id="leaderboard" style="text-align:center; display: inline-block; margin:auto;">
                   <tr style="text-align:center;">
                     <th style="text-align:center;">Attempt</th>
@@ -153,13 +156,10 @@
 
 </div>  
 </div>
-
-<!-- footer contact details and tintagel location information -->
-      <!-- FOOTER -->
+      
       <footer class="container" style="text-align:center;">
         <a href="#header-anchor"><button style="text-align:center;" class="btn btn-light"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
       </footer>
-    </main>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -185,7 +185,6 @@
           navbar.classList.add("sticky");
         }
       }
-    
       </script>
   </body>
 </html>
