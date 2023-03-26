@@ -86,10 +86,9 @@ li, ol {
     display: none;
   }
 
-  /* Show aqua underline for mobile nav bar to show which page you are on */
     #show-page > small  {
     text-decoration-line: underline;
-    text-decoration-color: aqua;
+    text-decoration-color: yellow;
   }
 }
 

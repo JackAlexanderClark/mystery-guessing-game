@@ -2,8 +2,11 @@
 * File contains effects and non-game loop logic
 */
 
-// hide textboxes
 $(document).ready(function()  {
+
+    $('#title').hide().slideDown(750);
+
+    // hide textboxes
     for (var i = 1; i <= 6; i++){
         $("#infoToggle-" + i).hide();
     }
