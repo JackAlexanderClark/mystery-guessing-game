@@ -6,7 +6,6 @@
 }
 
 body, html {
-  background-color: #d9d5d4;
   height: 100%;
   background-size: cover;
   margin: 0 auto;
@@ -34,14 +33,14 @@ li, ol {
   color: black;
 }
 
-  #story-wrapper {
-    display: none;
-  }
+#failed-tag {
+  color: red;
+}
 
-  table, th, td {
-    border: 3px solid whitesmoke;
-    border-collapse: collapse;
-  }
+table, th, td {
+  border: 3px solid whitesmoke;
+  border-collapse: collapse;
+}
 
 .italic {
   font-style: italic;
@@ -52,7 +51,7 @@ li, ol {
 */
 
 .topnav {
-  background-color: #333;
+  background-color:gainsboro;
   overflow: hidden;
 }
 
@@ -60,7 +59,7 @@ li, ol {
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #b0b0b0;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -70,7 +69,7 @@ li, ol {
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
-  color: black;
+  color: yellow;
 }
 
 /* Add an active class to highlight the current page */

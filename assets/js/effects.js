@@ -19,7 +19,6 @@ function toggleTextboxes(id) {
     $("#infoToggle-" + id).slideToggle("slow");
 }
 
-
 /* Code Source: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 function toggleNavBar() {
     var x = document.getElementById("myTopnav");
