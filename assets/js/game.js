@@ -4,7 +4,7 @@
 
 // disable button if guesses equals 3 or game won
 $(document).ready(function()  {
-    console.log("ready");
+    $('#failed-tag').hide();
 });
 
 var count = 0;
@@ -44,6 +44,7 @@ function Guesses() {
     if (count === 3) {
         gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect.";
         disableSubmit();
+        $('#failed-tag').show();
     } else if (count === 2) {
         hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck.";
     } else {
@@ -74,6 +75,23 @@ function addGuessToLeaderboard(guess) {
     cell3.innerHTML = "This was " + correct + "&nbsp;";
 }
 
+cleanCharacters(document.getElementById('buttonSubmit'));
+
+function cleanCharacters(element) {
+    element.onkeydown = function(event) {
+        // only let number inputs
+        if (event.key >= '1' && event.key <= '9') {
+            console.log("working");
+            return true;
+        } else {
+            console.log("not working");
+            event.preventDefault();
+            return false;
+        }
+    };
+  }
+
+
 function checkGuess() {
 
     let correctNumber = 4;      // character 4
@@ -86,11 +104,13 @@ function checkGuess() {
         alert('Empty answer please enter a number 1-9 corresponding to the characters.');
     }
 
+
+
     if (guess == correctNumber) {
         Guesses();
         disableSubmit();
         result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
-        explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count) + " <em>guess(es)</em>";
+        explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson.</em>\n" + "<em>To solve it took you: </em>" + (count) + " <em>guess(es)</em>";
         createLinks();
         addGuessToLeaderboard(guess);
     } else {
