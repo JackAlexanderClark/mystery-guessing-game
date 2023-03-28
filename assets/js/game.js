@@ -22,7 +22,7 @@ function createLinks() {
         </a>
     `;
 
-    document.getElementById("restart").innerHTML = "<button onclick='Restart();'>Want to try again?</button>";
+    document.getElementById("restart").innerHTML = "<br><button class='btn btn-outline-secondary' onclick='Restart();'>Want to try again?</button>";
 
 }
 
@@ -42,10 +42,10 @@ function Guesses() {
     display.innerHTML = "Guesses Used:&nbsp;" + count;
 
     if (count === 3) {
-        gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect";
+        gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect.";
         disableSubmit();
     } else if (count === 2) {
-        hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck";
+        hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck.";
     } else {
         hint.innerHTML = "";
     }
@@ -90,7 +90,7 @@ function checkGuess() {
         Guesses();
         disableSubmit();
         result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
-        explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count + 1) + " <em>guess(es)</em>";
+        explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson</em>\n" + "<em>To solve it took you: </em>" + (count) + " <em>guess(es)</em>";
         createLinks();
         addGuessToLeaderboard(guess);
     } else {

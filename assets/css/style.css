@@ -47,51 +47,42 @@ li, ol {
   font-style: italic;
 }
 
-/* style nav bar so can tell which page is active */
-/* fix */
-.active {
-  border:5px yellow;
-  border-style: dotted;
+/* 
+* Responsive Nav Bar Credited to : https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+*/
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
 }
 
-/* navbar */
-.navbar a {
+/* Style the links inside the navigation bar */
+.topnav a {
   float: left;
   display: block;
+  color: #f2f2f2;
   text-align: center;
-  padding: 14px;
+  padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
 }
 
-/* My original navbar would break at certain pixel widths on small devices such as phones and tablets
-*  therefore, I have used media queries to hide the larger pixel width devices (i.e. laptops) as hidden,
-*  when a certain pixel width is reached and vice versa.
-*/
-.mobile-nav-bar{
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
   display: none;
 }
-.laptop-nav-bar{
-  display: inline;
-}
-@media only screen 
-  and (max-device-width : 667px) 
-  and (orientation : portrait) 
-  and (-webkit-min-device-pixel-ratio : 2)
-{
-  .mobile-nav-bar{
-    display: inline;
-  }
-
-  .laptop-nav-bar{
-    display: none;
-  }
-
-    #show-page > small  {
-    text-decoration-line: underline;
-    text-decoration-color: yellow;
-  }
-}
-
 
 /* ----- getBootstrap - blog CSS - Source: https://getbootstrap.com/docs/4.0/examples/blog ---- */
 /* stylelint-disable selector-list-comma-newline-after */

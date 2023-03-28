@@ -43,48 +43,15 @@
 
 <body>
   <header>
-    <div class="laptop-nav-bar">
-      <nav class="navbar navbar-default" style="background-color: #e2e2e2; position: relative;">
-        <div class="container-fluid d-flex flex-column">
-            <div class="row">
-              <a class="py-2" href="#" aria-label="Product">
-                  <img src="assets/images/goldenquestionmarklogo.jpg" alt="game logo" height="40" width="40">
-              </a>
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="py-2 d-none d-md-inline-block" aria-current="page" href="index.html"><button type="button" class="btn btn-secondary">Rules&nbsp;<i class="fas fa-book"></i></button></a>
-                  <li class="nav-item">
-                    <a class="py-2 d-none d-md-inline-block"aria-current="page" href="gamepage.html" style="color:yellow;"><button type="button" class="btn btn-secondary">Characters&nbsp;<i class="fas fa-person"></i></button></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="active py-2 d-none d-md-inline-block" aria-current="page" href="clues.html" style="color:yellow;"><button type="button" class="btn btn-secondary">Clues&nbsp;<i class="fas fa-magnifying-glass"></i></button></a>
-                  </li>
-              </ul>
-            </div>
-        </div>
-      </nav>
-    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div class="mobile-nav-bar">
-      <nav class="navbar navbar-default" style="background-color: #e2e2e2; position: relative;">
-        <div class="container-fluid d-flex flex-column">
-            <div class="row">
-              <a class="py-2" href="#" aria-label="Product">
-                  <img src="assets/images/goldenquestionmarklogo.jpg" alt="game logo" height="30" width="30">
-              </a>
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="active py-2 d-none d-md-inline-block" aria-current="page" href="index.html"><small>Rules&nbsp;<i class="fas fa-book"></i></small></a>
-                  <li class="nav-item">
-                    <a class="py-2 d-none d-md-inline-block"aria-current="page" href="gamepage.html" style="color:yellow;"><small>Characters&nbsp;<i class="fas fa-person"></i></small></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="py-2 d-none d-md-inline-block" aria-current="page" href="clues.html" style="color:yellow;"><small>Clues&nbsp;<i class="fas fa-magnifying-glass"></i></small></a>
-                  </li>
-              </ul>
-            </div>
-        </div>
-      </nav>
+    <div class="topnav" id="myTopnav" style="text-align: center;">
+      <a href="index.html">Rules <i class="fas fa-book"></i></a>
+      <a href="gamepage.html">Characters <i class="fas fa-person"></i></a>
+      <a href="clues.html" class="active">Clues <i class="fas fa-magnifying-glass"></i></a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleNavBar()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
 
     
@@ -96,7 +63,7 @@
   <section>
     <!-- Evidence cards that can reveal more information -->
     <div class="container" id="hidegame">
-      <h1 style="text-align:center;"><strong>Evidence</strong></h1>
+      <h1 style="text-align:center;" id="clues"><strong>Evidence</strong></h1>
       <div class="row">
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
@@ -229,9 +196,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous"></script>
+    
   <script>
   // Code credit and source: "https://www.w3schools.com/howto/howto_js_navbar_sticky.asp"
-    win dow.onscroll = function() {myFunction()};
+    window.onscroll = function() {myFunction()};
 
     var navbar = document.getElementsByClassName("navbar");
 
