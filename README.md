@@ -179,6 +179,9 @@
 
 - Page is slow loading due to javascript source dependancies, in response I added the defer attribute so they load after other DOM elements have rendered.
 
+![image](https://user-images.githubusercontent.com/97599832/228567569-72880580-067b-4246-957a-f4e9627eb364.png)
+
+
 
 ### Manual Testing Examples using Jest: https://jestjs.io/
 This is an example of using Jest to test some of the interactive elements such as a HTML checkbox. The test explains the process and expect is where we state the outcome we intend, if this fails we can then identify there is an issue with the code.
