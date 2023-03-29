@@ -4,9 +4,9 @@
 
 $(document).ready(function()  {
 
-    $('#title').hide().slideDown(750);
-    $('#characters').hide().slideDown(750);
-    $('#clues').hide().slideDown(750);
+    $('#title').hide().slideDown(1250);
+    $('#characters').hide().slideDown(1250);
+    $('#clues').hide().slideDown(1250);
 
     // hide textboxes
     for (var i = 1; i <= 6; i++){

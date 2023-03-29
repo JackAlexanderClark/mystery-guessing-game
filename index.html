@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <!-- Credit and source from Getbootstrap-->
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
     <meta name="theme-color" content="#3266a8">
     
@@ -121,13 +119,13 @@
           <p id="result"></p>
           <p id="guesses"></p>
           <!-- empty divs to be populated -->
+          <div id="failed-tag"><h2>Game Over!!!</h2></div>
           <div id="display"></div>
           <div id="usernameDiv"></div>
           <div id="gameOver"></div>
           <div id="explanation"></div>
           <div id="hint" class="ajaxStyling"></div>
           <div id="solution"></div>
-          <div id="failed-tag"><h2>Game Over!!!</h2></div>
           <div id="restart"></div>
           <div class="container-fluid col-md-8" style="text-align:center;">
 
@@ -153,14 +151,12 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"  defer></script>
+    <script src="../../../../assets/js/vendor/holder.min.js" defer></script>
     <!-- font awesome cdn -->
-    <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous" defer></script>
 
     <script>
       // Code credit and source: "https://www.w3schools.com/howto/howto_js_navbar_sticky.asp"
