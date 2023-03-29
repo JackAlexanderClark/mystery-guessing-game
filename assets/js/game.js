@@ -51,14 +51,17 @@ function Guesses() {
         hint.innerHTML = "";
     }
 
+    return (count);
+
 }
+
+// let attempts = 0;
 
 function addGuessToLeaderboard(guess) {
 
     let leaderboard = document.getElementById("leaderboard");
-    let attempts = 0;
 
-    attempts++;
+    let attempts = Guesses(count);
     
     // create a html table
     let row = leaderboard.insertRow(-1);
