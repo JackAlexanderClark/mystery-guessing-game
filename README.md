@@ -151,6 +151,11 @@
     <li>Need to rework the use of ES6 syntax.</li>
 </ul>
 
+#### File 2: effects.js
+![image](https://user-images.githubusercontent.com/97599832/228542467-0694ea44-e65d-411a-90a6-a0b30bc440c7.png)
+
+
+
 ### Manual Testing Examples using Jest: https://jestjs.io/
 This is an example of using Jest to test some of the interactive elements such as a HTML checkbox. The test explains the process and expect is where we state the outcome we intend, if this fails we can then identify there is an issue with the code.
 ![image](https://user-images.githubusercontent.com/97599832/226964695-b11f1435-c3b6-46bb-8042-264617d603ff.png)
