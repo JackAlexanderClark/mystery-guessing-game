@@ -121,7 +121,6 @@
         <img src="https://user-images.githubusercontent.com/97599832/221003537-d95f730f-348d-4f8e-87b3-487bbec135dc.png">
     <li>Used incorrect px to display pixels when just the number is necessary.</li>
         <img src="https://user-images.githubusercontent.com/97599832/221004003-e0e1027d-a8d2-4f9e-9fc1-67b15c504a0f.png">
-    <li>FIX FIX FIX</li>
         <img src="https://user-images.githubusercontent.com/97599832/221005691-34b31d7c-d8ac-4764-80f0-e652147dc2ba.png">
     <li>Use of the "main" html tag is redundant.</li>
         <img src="https://user-images.githubusercontent.com/97599832/221006363-1a024497-92fc-4216-b566-da4c92cfcd6d.png">
@@ -130,6 +129,14 @@
     <li>Remove stray div tag.</li>
         <img src="https://user-images.githubusercontent.com/97599832/221007221-bd45eaee-934a-4b5e-8518-c2bea9900e03.png">
     <li>Incorrect order of heading tags within table headings, need to re-write.</li>
+    
+    ![image](https://user-images.githubusercontent.com/97599832/228576950-e1c6a683-194a-48d3-a27e-7e07536c29d9.png)
+    
+    - After fixes.
+![image](https://user-images.githubusercontent.com/97599832/228582586-f65b8499-bf4f-48c8-b502-57dee97b9d40.png)
+
+
+
 </ul>
 
 ### Page 2 - Gamepage.html
@@ -147,12 +154,19 @@
     <li>Stray tags that need removing</li>
 </ul>
 
+- After fixes:
+![image](https://user-images.githubusercontent.com/97599832/228617432-0044fa43-e1a3-4680-a66d-79db44007f55.png)
+
 ### Page 3 - Clues.html
 #### Nu HTML W3Schools Validator: https://validator.w3.org/nu/
 ![image](https://user-images.githubusercontent.com/97599832/226192388-6a2654dc-9404-4714-905a-045ef06fcc66.png)
 <ul>
     <li>Fatal Error: Duplicate body tags.</li>
 </ul>
+
+- After fixes:
+![image](https://user-images.githubusercontent.com/97599832/228587247-43c35715-ddcb-496f-909c-fc36b771144d.png)
+
 
 ### CSS Validator - Jigsaw Validator: https://jigsaw.w3.org/css-validator/validator
 ![image](https://user-images.githubusercontent.com/97599832/228544227-a161e20d-772c-49ba-b7f4-98bcba5643e5.png)
@@ -172,6 +186,9 @@
 
 #### File 2: effects.js
 ![image](https://user-images.githubusercontent.com/97599832/228542467-0694ea44-e65d-411a-90a6-a0b30bc440c7.png)
+
+- No JavaScript Errors in console: 
+![image](https://user-images.githubusercontent.com/97599832/228579340-f9c204d1-0adf-4b70-b670-46ed65a8c103.png)
 
 
 #### Lighthouse Perfomance Testing.
@@ -194,6 +211,12 @@ This is an example of using Jest to test some of the interactive elements such a
 The html textbox is shown by default when it needs to be hidden, then clicking the button will show. 
 
 ![image](https://user-images.githubusercontent.com/97599832/226174779-e99c09ee-0a9b-4bfb-a2fb-544a085d6c23.png)
+
+-Solution: 
+<br>
+- The solution was to use a document ready function so the textbox is hidden only once the other elements have been hidden.
+![image](https://user-images.githubusercontent.com/97599832/228607392-e28b2975-56e6-447d-b462-b67d69c34987.png)
+
 
 #### 2. Gamepage.html - Fact Sheet Bootstrap Modal not working when clicked.
 ![image](https://user-images.githubusercontent.com/97599832/226176595-0372a075-a69a-4d5c-b5b2-dd49d57a3e51.png)
