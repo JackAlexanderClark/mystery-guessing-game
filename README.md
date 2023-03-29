@@ -1,12 +1,24 @@
 # README DOCUMENTATION
 
 # **Milestone Project 2 - Interactive Frontend Development**
+
 # Author: Jack Clark (Contact Me - jackalexanderclark@protonmail.com)
 
 # Project website link (GitHub Pages): https://jackalexanderclark.github.io/mystery-guessing-game/index.html
 
 ## Website Device Mockup
 ![3-devices-black](https://user-images.githubusercontent.com/97599832/216617427-a2814925-0c9e-4459-a972-7d0ab0215c42.png)
+
+## Contents:
+<ol>
+  <li>Project Goals and Planning</li>
+  <li>(UX) User Experience</li>
+  <li>Development and Features</li>
+  <li>Testing and Bugs</li>
+  <li>Deployment</li>
+  <li>Credits</li>
+</ol>
+<hr>
 
 # I) Project Goals and Planning
 
@@ -90,7 +102,7 @@
 </ul>
 
 
-# IV) Testing and User Experience Stories
+# IV) Testing and Bugs
 1. To help develop and test the app, I used the javaScript testing framework - jest.
 ![image](https://user-images.githubusercontent.com/97599832/216416741-59a3ed6b-326c-4751-a633-384082398b9c.png)
 
