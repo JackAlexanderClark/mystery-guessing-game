@@ -24,7 +24,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
     <script src="assets/js/effects.js" defer></script>
     <script src="assets/js/game.js" defer></script>
-    
+
+    <script>
+      window.onload = function(){
+
+        cleanCharacters(document.getElementById('guess-input'));
+        
+        function cleanCharacters(element) {
+            element.onkeydown = function(event) {
+                if (event === null) {
+                    return true;
+                }
+                // only let number inputs
+                if (event.key >= '1' && event.key <= '9') {
+                    console.log("working");
+                    return true;
+                } else {
+                    console.log("not working");
+                    event.preventDefault();
+                    return false;
+                }
+            };
+          }
+        }
+    </script>
+
     <style>
 
       /* Credit and Source to GetBootstrap: https://getbootstrap.com/docs/4.6/examples/product/" */
@@ -105,12 +129,15 @@
       </div>
     </div>
   </div>
+    <script>
+
+    </script>
 
 
       <div class="container" style="display:grid; place-items: center; align-content: center; ">
             <h2 class="featurette-heading" >Submit Your Guess <i class="fa-solid fa-check"></i></h2>          
             <p class="lead" style="text-align:center;">Once you are satisfied with your investigation, choose your character and submit below.</p>
-            <input type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Enter your answer here." style="text-align:center;">
+            <input onkeydown="cleanCharacters()" type="number" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Enter your answer here." style="text-align:center;" min="1" max="9">
             <button onclick="checkGuess()" id="submitButton" class="btn btn-light" style="text-align:center; padding-top: 10px;">Submit</button>
       </div>
 
@@ -119,7 +146,7 @@
           <p id="result"></p>
           <p id="guesses"></p>
           <!-- empty divs to be populated -->
-          <div id="failed-tag"><h2>Game Over!!!</h2></div>
+          <div id="failed-tag"><h2 style="color: red;">Game Over!!!</h2></div>
           <div id="display"></div>
           <div id="usernameDiv"></div>
           <div id="gameOver"></div>
@@ -171,6 +198,7 @@
           navbar.classList.add("sticky");
         }
       }
+      
       </script>
   </body>
 </html>
