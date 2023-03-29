@@ -78,23 +78,6 @@ function addGuessToLeaderboard(guess) {
     cell3.innerHTML = "This was " + correct + "&nbsp;";
 }
 
-cleanCharacters(document.getElementById('buttonSubmit'));
-
-function cleanCharacters(element) {
-    element.onkeydown = function(event) {
-        // only let number inputs
-        if (event.key >= '1' && event.key <= '9') {
-            console.log("working");
-            return true;
-        } else {
-            console.log("not working");
-            event.preventDefault();
-            return false;
-        }
-    };
-  }
-
-
 function checkGuess() {
 
     let correctNumber = 4;      // character 4
@@ -106,8 +89,6 @@ function checkGuess() {
         // input is empty, alert user
         alert('Empty answer please enter a number 1-9 corresponding to the characters.');
     }
-
-
 
     if (guess == correctNumber) {
         Guesses();

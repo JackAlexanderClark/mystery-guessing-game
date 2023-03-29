@@ -46,6 +46,10 @@ table, th, td {
   font-style: italic;
 }
 
+#guess-input {
+  width: 50px;
+}
+
 /* 
 * Responsive Nav Bar Credited to : https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 */
