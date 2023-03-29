@@ -160,6 +160,7 @@
 This is an example of using Jest to test some of the interactive elements such as a HTML checkbox. The test explains the process and expect is where we state the outcome we intend, if this fails we can then identify there is an issue with the code.
 ![image](https://user-images.githubusercontent.com/97599832/226964695-b11f1435-c3b6-46bb-8042-264617d603ff.png)
 
+
 ### Bugs
 #### 1. Effects.js - Toggle Clues not Working
 ![image](https://user-images.githubusercontent.com/97599832/226174732-e9f1803f-e8db-4c28-91a6-ab320a2b904f.png)
@@ -179,6 +180,8 @@ After Fix:
 
 #### 3. Index.html - Text Paragraphs overlapping when collapsing for smaller view port widths
 ![image](https://user-images.githubusercontent.com/97599832/226184422-938c4a21-7b22-4722-ac07-0fef3c922b8a.png)
+
+- To fix this I decided to use a Bootstrap template for the homepage rather than custom HTML and CSS styling to make sure it was responsive.
 
 ## VI) Deployment
 <ul>
