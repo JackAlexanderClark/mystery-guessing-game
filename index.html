@@ -25,30 +25,6 @@
     <script src="assets/js/effects.js" defer></script>
     <script src="assets/js/game.js" defer></script>
 
-    <script>
-      window.onload = function(){
-
-        cleanCharacters(document.getElementById('guess-input'));
-        
-        function cleanCharacters(element) {
-            element.onkeydown = function(event) {
-                if (event === null) {
-                    return true;
-                }
-                // only let number inputs
-                if (event.key >= '1' && event.key <= '9') {
-                    console.log("working");
-                    return true;
-                } else {
-                    console.log("not working");
-                    event.preventDefault();
-                    return false;
-                }
-            };
-          }
-        }
-    </script>
-
     <style>
 
       /* Credit and Source to GetBootstrap: https://getbootstrap.com/docs/4.6/examples/product/" */
@@ -137,7 +113,7 @@
       <div class="container" style="display:grid; place-items: center; align-content: center; ">
             <h2 class="featurette-heading" >Submit Your Guess <i class="fa-solid fa-check"></i></h2>          
             <p class="lead" style="text-align:center;">Once you are satisfied with your investigation, choose your character and submit below.</p>
-            <input onkeydown="cleanCharacters()" type="number" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Enter your answer here." style="text-align:center;" min="1" max="9">
+            <input onkeydown="cleanCharacters()" type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Only numbers between 1 and 9 allowed." style="text-align:center;">
             <button onclick="checkGuess()" id="submitButton" class="btn btn-light" style="text-align:center; padding-top: 10px;">Submit</button>
       </div>
 
@@ -151,7 +127,7 @@
           <div id="usernameDiv"></div>
           <div id="gameOver"></div>
           <div id="explanation"></div>
-          <div id="hint" class="ajaxStyling"></div>
+          <div id="hint"></div>
           <div id="solution"></div>
           <div id="restart"></div>
           <div class="container-fluid col-md-8" style="text-align:center;">
@@ -169,11 +145,9 @@
         </div>
       </div>
 
-  </div>  
-</div>
       
       <footer class="container" style="text-align:center;">
-        <a href="#header-anchor"><button style="text-align:center;" class="btn btn-light"> Click here to return to top of the page <i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
+        <button style="text-align:center;" class="btn btn-light"><a href="#header-anchor">Click here to return to top of the page </a><i class="fa-sharp fa-solid fa-arrow-up"></i></button></a>
       </footer>
 
     <!-- Bootstrap core JavaScript
@@ -199,6 +173,28 @@
         }
       }
       
+      window.addEventListener('DOMContentLoaded', function(){        
+
+        cleanCharacters(document.getElementById('guess-input'));
+        
+        // prevent letters being inputted
+        function cleanCharacters(element) {
+            element.onkeydown = function(event) {
+                if (event === null) {
+                    return true;
+                }
+                // i removed quotes around numbers does that change anything?
+                // only let number inputs
+                if (event.key >= 1 && event.key <= 9) {
+                    console.log("working");
+                    return true;
+                } else {
+                    console.log("not working");
+                    event.preventDefault();
+                    return false;
+                }
+            };
+          }})
       </script>
   </body>
 </html>

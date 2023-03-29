@@ -47,7 +47,7 @@ table, th, td {
 }
 
 #guess-input {
-  width: 50px;
+  width: 175px;
 }
 
 /* 
@@ -85,13 +85,6 @@ table, th, td {
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
-}
-
-li, ol {
-  font-style: italic;
-  text-align: left;
-  font-family:'Times New Roman', Times, serif;
-  color:rgb(194, 191, 191);
 }
 
 /* https://www.w3schools.com/howto/howto_js_navbar_sticky.asp   */
@@ -211,33 +204,6 @@ font-style: italic;
   .display-4 {
     font-size: 3rem;
   }
-}
-
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
-}
-
-.nav-scroller .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.nav-scroller .nav-link {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: .875rem;
 }
 
 .card-img-right {

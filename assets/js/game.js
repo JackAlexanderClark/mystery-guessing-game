@@ -14,13 +14,16 @@ function disableSubmit() {
     StopSubmit.disabled = true;
 }
 
-function createLinks() {
+function createLink() {
 
     document.getElementById("solution").innerHTML = `
         <a href="solution.html" style="color: red;">
-          Click here for the solution breakdown and story conclusion.
+        Click here for the solution breakdown and story conclusion.
         </a>
     `;
+}
+
+function createButton() {
 
     document.getElementById("restart").innerHTML = "<br><button class='btn btn-outline-secondary' onclick='Restart();'>Want to try again?</button>";
 
@@ -45,23 +48,22 @@ function Guesses() {
         gameOverDiv.innerHTML = "You have used up 3 guesses and have lost the game as you have not correctly identified the suspect.";
         disableSubmit();
         $('#failed-tag').show();
+        createButton();
     } else if (count === 2) {
         hint.innerHTML = "Make sure to look carefully at all clues, evidence and read all pieces of information if you're stuck.";
     } else {
         hint.innerHTML = "";
     }
 
-    return (count);
-
 }
 
-// let attempts = 0;
+var attempts = 0;
 
 function addGuessToLeaderboard(guess) {
 
     let leaderboard = document.getElementById("leaderboard");
 
-    let attempts = Guesses(count);
+    attempts++;
     
     // create a html table
     let row = leaderboard.insertRow(-1);
@@ -88,6 +90,7 @@ function checkGuess() {
     if (guess == " " || guess.trim() === '') {
         // input is empty, alert user
         alert('Empty answer please enter a number 1-9 corresponding to the characters.');
+        guess.preventDefault();
     }
 
     if (guess == correctNumber) {
@@ -95,7 +98,8 @@ function checkGuess() {
         disableSubmit();
         result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
         explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson.</em>\n" + "<em>To solve it took you: </em>" + (count) + " <em>guess(es)</em>";
-        createLinks();
+        createLink();
+        createButton();
         addGuessToLeaderboard(guess);
     } else {
         result.innerHTML = "Sorry, that's not the correct number. Please try again.";
