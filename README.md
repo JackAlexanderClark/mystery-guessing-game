@@ -211,6 +211,10 @@ The html textbox is shown by default when it needs to be hidden, then clicking t
 
 ![image](https://user-images.githubusercontent.com/97599832/226174779-e99c09ee-0a9b-4bfb-a2fb-544a085d6c23.png)
 
+Solution: 
+![image](https://user-images.githubusercontent.com/97599832/228607392-e28b2975-56e6-447d-b462-b67d69c34987.png)
+
+
 #### 2. Gamepage.html - Fact Sheet Bootstrap Modal not working when clicked.
 ![image](https://user-images.githubusercontent.com/97599832/226176595-0372a075-a69a-4d5c-b5b2-dd49d57a3e51.png)
 Investigating this bug I checked Chome Developer Tools and saw an error for bootstrap missing a jQuery CDN link.
