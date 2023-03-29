@@ -211,7 +211,9 @@ The html textbox is shown by default when it needs to be hidden, then clicking t
 
 ![image](https://user-images.githubusercontent.com/97599832/226174779-e99c09ee-0a9b-4bfb-a2fb-544a085d6c23.png)
 
-Solution: 
+-Solution: 
+<br>
+- The solution was to use a document ready function so the textbox is hidden only once the other elements have been hidden.
 ![image](https://user-images.githubusercontent.com/97599832/228607392-e28b2975-56e6-447d-b462-b67d69c34987.png)
 
 
