@@ -90,7 +90,7 @@ function checkGuess() {
     if (guess == " " || guess.trim() === '') {
         // input is empty, alert user
         alert('Empty answer please enter a number 1-9 corresponding to the characters.');
-        guess.preventDefault();
+        return false;
     }
 
     if (guess == correctNumber) {
