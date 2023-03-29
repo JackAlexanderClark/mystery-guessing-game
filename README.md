@@ -154,7 +154,8 @@
     <li>Stray tags that need removing</li>
 </ul>
 
-
+- After fixes:
+![image](https://user-images.githubusercontent.com/97599832/228617432-0044fa43-e1a3-4680-a66d-79db44007f55.png)
 
 ### Page 3 - Clues.html
 #### Nu HTML W3Schools Validator: https://validator.w3.org/nu/
