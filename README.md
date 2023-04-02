@@ -52,26 +52,22 @@
 
 ![image](https://user-images.githubusercontent.com/97599832/214308690-cb8c9eec-51de-425d-9d3e-dbaa3266a2d5.png)
 
-3. Thirdly, I included a checkbox for the user to choose how many guesses they want, to expand upon user interaction. Checking easy will give the User 3 guesses while normal will only contain 1 guess.
-
 ![image](https://user-images.githubusercontent.com/97599832/226474497-86996bae-8c89-42a8-a7da-2c7ff0f2e26e.png)
-
-4. Fourthly, I utilised some ajax functionality in which the user can click a html button which will return html data as a response from the ajax call. This was done to allow large text files to be stored neatly away in different folders rather than using large html files with hidden text. It helped to organise and maintain this project through out its development and helped add another element of interactivity to the game.
 
 ![image](https://user-images.githubusercontent.com/97599832/214308934-2e2cc5f3-5ba2-4fb0-8359-e2f02304f197.png)
 
-5. I originally wanted to design a question and answer section within "clues.html" as seen below. It would utilise AJAX however, I later removed it as I found it to be scruffy and not particularly aesthetically pleasing.
+3. I originally wanted to design a question and answer section within "clues.html" as seen below. It would utilise AJAX however, I later removed it as I found it to be scruffy and not particularly aesthetically pleasing.
 
 ![image](https://user-images.githubusercontent.com/97599832/220933440-1cde1ac4-cfa7-4d6c-b0ba-e79ecd241db3.png)
 
-6. To add to the interactive elements, I have used BootStrap modals which bring up a fact sheet and allow the user to click outisde of the modal pop up to close it.
+4. To add to the interactive elements, I have used BootStrap modals which bring up a fact sheet and allow the user to click outisde of the modal pop up to close it.
 
 ![image](https://user-images.githubusercontent.com/97599832/226204335-89deab70-9957-4d4d-856f-937046f73935.png)
 
-7. Users can input an integer answer to the HTML submit box, this will then be evaluated in the javaScript game logic. A div is then populated with information such as what guess and whether the user is correct or not.
+5. Users can input an integer answer to the HTML submit box, this will then be evaluated in the javaScript game logic. A div is then populated with information such as what guess and whether the user is correct or not.
 ![image](https://user-images.githubusercontent.com/97599832/226471550-0550ce89-d2af-4e3d-9517-defe0f87ebc1.png)
 
-8. Furthermore, a HTML table will be generated with each guess, recording which character you chose and the outcome.
+6. Furthermore, a HTML table will be generated with each guess, recording which character you chose and the outcome.
 ![image](https://user-images.githubusercontent.com/97599832/226471914-9579d0ce-5c4c-49e3-847b-b7a7c1a7127b.png)
 
 <ul>
