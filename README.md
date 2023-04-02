@@ -52,10 +52,6 @@
 
 ![image](https://user-images.githubusercontent.com/97599832/214308690-cb8c9eec-51de-425d-9d3e-dbaa3266a2d5.png)
 
-![image](https://user-images.githubusercontent.com/97599832/226474497-86996bae-8c89-42a8-a7da-2c7ff0f2e26e.png)
-
-![image](https://user-images.githubusercontent.com/97599832/214308934-2e2cc5f3-5ba2-4fb0-8359-e2f02304f197.png)
-
 3. I originally wanted to design a question and answer section within "clues.html" as seen below. It would utilise AJAX however, I later removed it as I found it to be scruffy and not particularly aesthetically pleasing.
 
 ![image](https://user-images.githubusercontent.com/97599832/220933440-1cde1ac4-cfa7-4d6c-b0ba-e79ecd241db3.png)
