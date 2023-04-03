@@ -73,21 +73,21 @@
 <ul>
 <li>(Main Page) Rules and Game page</li>
     
-    ![image](https://user-images.githubusercontent.com/97599832/216768559-0b54d65d-9750-42fc-a0a4-ab4f307bf9d0.png)
+    <img src="https://user-images.githubusercontent.com/97599832/216768559-0b54d65d-9750-42fc-a0a4-ab4f307bf9d0.png" height="300" width="300">
     
     <li>The function of this page is to introduce the guessing game and ruleset.</li>
     <li>Playes can choose a number between 1 to 9 that will represent the character and press submit to use guess and choose to see if they were correct or not.</li>
 
 <li>Character Card Page</li>
     
-    ![image](https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png)
+    <img src="https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png" height="300" width="300">
     
     <li>Here there are nine character cards that have a fact sheet button, when the user presses it will create a bootstrap modal popup.</li>
     <li>
 
 <li>Clues Page</li>
     
-![image](https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png)
+<img src="https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png" height="300" width="300">
     
     <li>Each clue has a button that will toggle to reveal information that can be shown or hidden whenever the user wishes to interact with it.</li>
 </ul>
