@@ -71,31 +71,30 @@
 ![image](https://user-images.githubusercontent.com/97599832/226471914-9579d0ce-5c4c-49e3-847b-b7a7c1a7127b.png)
 
 
-(Main Page) Rules and Game page
-    
-    <img src="https://user-images.githubusercontent.com/97599832/216768559-0b54d65d-9750-42fc-a0a4-ab4f307bf9d0.png" height="300" width="300">
-    
-    The function of this page is to introduce the guessing game and ruleset.
-    Players can choose a number between 1 to 9 that will represent the character and press submit to use guess and choose to see if they were correct or not.
-
-Character Card Page
-    
-    <img src="https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png" height="300" width="300">
-    
-    Here there are nine character cards that have a fact sheet button, when the user presses it will create a bootstrap modal popup.
-    
-
-Clues Page
-    
-<img src="https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png" height="300" width="300">
-    
-    Each clue has a button that will toggle to reveal information that can be shown or hidden whenever the user wishes to interact with it.
-
-
 <ul>Stylings:
     <li>I used "Bookman Old Style" as the primary font family. </li>
     <li>Colours: Black/Grey to resemble a chalkboard.</li>
 </ul>
+
+## (Main Page) Rules and Game page
+    
+    <img src="https://user-images.githubusercontent.com/97599832/216768559-0b54d65d-9750-42fc-a0a4-ab4f307bf9d0.png" height="300" width="300">
+    
+    - The function of this page is to introduce the guessing game and ruleset.
+    - Players can choose a number between 1 to 9 that will represent the character and press submit to use guess and choose to see if they were correct or not.
+
+## Character Card Page
+    
+    <img src="https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png" height="300" width="300">
+    
+    - Here there are nine character cards that have a fact sheet button, when the user presses it will create a bootstrap modal popup.
+    
+
+## Clues Page
+    
+<img src="https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png" height="300" width="300">
+    
+    - Each clue has a button that will toggle to reveal information that can be shown or hidden whenever the user wishes to interact with it.
 
 
 # IV) Testing and Bugs
