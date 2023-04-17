@@ -11,7 +11,7 @@
 
 
 ## Website Device Mock-up
-![3-devices-black](https://user-images.githubusercontent.com/97599832/216617427-a2814925-0c9e-4459-a972-7d0ab0215c42.png)
+![all-devices-black (1)](https://user-images.githubusercontent.com/97599832/232594010-179db261-b22a-46ce-a1d9-798232dcc306.png)
 
 ## Contents:
 <ol>
