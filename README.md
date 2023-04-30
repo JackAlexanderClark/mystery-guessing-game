@@ -95,6 +95,14 @@
 <ul>Stylings:
     <li>I used "Bookman Old Style" as the primary font family. </li>
     <li>Colours: Black/Grey to resemble a chalkboard.</li>
+    
+    Improved UI feedback:
+    
+    Source: https://colorhunt.co/palette/f1f6f9394867212a3e9ba4b5
+    
+    Make theme more homogenous
+    ![image](https://user-images.githubusercontent.com/97599832/235372913-32951c09-fda9-4605-b9f0-3c06f6593aff.png)
+
 </ul>
 
 
