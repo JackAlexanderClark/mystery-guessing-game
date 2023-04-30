@@ -14,13 +14,11 @@ function disableSubmit() {
     StopSubmit.disabled = true;
 }
 
-function createLink() {
-
-    document.getElementById("solution").innerHTML = `
-        <a href="solution.html" style="color: red;">
-        Click here for the solution breakdown and story conclusion.
-        </a>
-    `;
+function createWinModal() {
+    // game won explanation
+    console.log("second modal");
+    var winModal = new bootstrap.Modal(document.getElementById('winModal'));
+    winModal.show();
 }
 
 function createButton() {
@@ -98,7 +96,7 @@ function checkGuess() {
         disableSubmit();
         result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
         explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson.</em>\n" + "<em>To solve it took you: </em>" + (count) + " <em>guess(es)</em>";
-        createLink();
+        createWinModal();
         createButton();
         addGuessToLeaderboard(guess);
     } else {
