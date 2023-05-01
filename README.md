@@ -253,6 +253,12 @@ After Fix:
 All ticked.
 ![image](https://user-images.githubusercontent.com/97599832/235524526-76427d6c-1494-41a3-9254-d53fde115401.png)
 
+2. New pop up modal in the footer for a guide and to give hints and links to the different tasks.
+![image](https://user-images.githubusercontent.com/97599832/235524634-05885894-bc17-403c-9700-3feffb360c29.png)
+
+The help modal.
+![image](https://user-images.githubusercontent.com/97599832/235524745-6fd101fd-6657-452b-8049-54e3356a59d9.png)
+
 
 
 ## VIII) Credits
