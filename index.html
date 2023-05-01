@@ -57,6 +57,32 @@
         width: 100%;
       }
 
+      .body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+
+      .main-container {
+        background-image: url('../images/background.jpg');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+
     </style>
 
   </head>
@@ -77,6 +103,7 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
+    
   </header>
 
   <hr>
@@ -87,72 +114,99 @@
   </div>
 </div>
     
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" style="max-width: 100%; height: auto;">
-    <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="background-color:#deddd9">
-      <div class="my-3 py-3">
-        <h2 class="display-5 heading-style">Story <i class="fa-solid fa-book"></i></h2>
-        <p class="lead italic">                    
-          Waterhope is a quiet and idyllic town in the English countryside.
-          Nick Draper is the home-owner, he is a 43 year old ex-Head Teacher at Water Hope High School.
-          In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.
-          He was a local figure of much ire from the community.</p>
-          <br>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;padding-bottom: 5px;"> 
-        <img src="assets/images/houseonfire.jpg" loading="lazy" alt="The House on Fire" height="200" width="200" style='height: 100%; width: 100%; object-fit: contain;'>
-      </div>
+<div class="d-flex flex-md-equal w-100 my-md-3 pl-md-3" style="max-width: 100%; height: auto;">
+  <div class="col mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="background-color:#deddd9">
+    <div class="my-3 py-3">
+      <h2 class="display-5 heading-style" style="text-decoration: underline;">Story <i class="fa-solid fa-book"></i></h2>
+      <p class="lead">   
+        <ul>           
+          <li>Waterhope is a quiet and idyllic town in the English countryside.</li>
+          <li>Nick Draper is the home-owner, he is a 43 year old ex-Head Teacher at Water Hope High School.</li>
+          <li>In the last few years, Nick has left teaching and have become a property investor for local developments in Waterhope.</li>
+          <li>He was a local figure of much ire from the community.</li>
+        </ul>      
+      </p>
+      <br>
     </div>
-
-    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5 heading-style">How to Play <i class="fa-solid fa-dice"></i></h2>
-        <p class="lead italic">                    
-          Read the case files on each characters and assess the evidence.
-          There are nine suspects for you to chose from.
-          You are a police detective, investigating an arson attack.
-          At 2:35am a phone call reported a loud explosion.
-          You have 3 guesses available.
-          Each guess will be displayed in the leaderboard, for reference.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;padding-bottom: 5px;"> 
-        <img src="assets/images/detective.jpg" alt="Detective looking at Clue" style='height: 100%; width: 100%; object-fit: contain;' loading="lazy"> 
-      </div>
+    <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;padding-bottom: 5px;"> 
+      <img src="assets/images/houseonfire.jpg" loading="lazy" alt="The House on Fire" height="200" width="200" style='height: 100%; width: 100%; object-fit: contain;'>
     </div>
   </div>
 
-      <div class="container" style="display:grid; place-items: center; align-content: center; ">
-            <h2 class="featurette-heading" >Submit Your Guess <i class="fa-solid fa-check"></i></h2>          
-            <p class="lead" style="text-align:center;">Once you are satisfied with your investigation, choose your character and submit below.</p>
-            <input onkeydown="cleanCharacters()" type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Only numbers between 1 and 9 allowed." style="text-align:center;">
-            <button onclick="checkGuess()" id="submitButton" class="btn btn-light" style="text-align:center; padding-top: 10px;">Submit</button>
+  <div class="col bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5 heading-style" style="text-decoration: underline;">How to Play <i class="fa-solid fa-dice"></i></h2>
+      <p class="lead">       
+        <ul>           
+          <li>Read the case files on each characters and assess the evidence.</li>
+          <li>There are nine suspects for you to chose from.</li>
+          <li>You are a police detective, investigating an arson attack.</li>
+          <li>At 2:35am a phone call reported a loud explosion.</li>
+          <li>You have 3 guesses available.</li>
+          <li>Each guess will be displayed in the leaderboard, for reference.</li>
+        </ul>  
+      </p>
+    </div>
+    <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"> 
+      <img src="assets/images/detective.jpg" alt="Detective looking at Clue" style='height: 100%; width: 100%; object-fit: contain;' loading="lazy"> 
+    </div>
+  </div>
+</div>
+
+    <!-- checklist for user reminder -->
+    <div class="container body background">
+      <h2 class="text-center">Objective Todo List <i class="fa-solid fa-list"></i></h2>
+      <small>Complete all the tasks in your detective notebook to reveal the answer submission.</small>
+      <br>
+      <form id="todo-form">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="task1" onchange="saveCheckedState('task1')">
+          <label class="form-check-label" for="task1">1. Have you read the story?</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="task2" onchange="saveCheckedState('task2')">
+          <label class="form-check-label" for="task2">2. Have you viewed every suspect casefiles?</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="task3" onchange="saveCheckedState('task3')">
+          <label class="form-check-label" for="task3">3. Have you viewed all the clues?</label>
+        </div>
+      </form>
+    </div>
+    <hr>
+
+    <!-- checklist for user reminder -->
+    <div id="submit-content" style="display: none;">
+      <div class="container" style="display:grid; place-items: center; align-content: center;">
+        <h2 class="featurette-heading">Submit Your Guess <i class="fa-solid fa-check"></i></h2>
+        <p class="lead" style="text-align:center;">Once you are satisfied with your investigation, choose your character and submit below.</p>
+        <input onkeydown="cleanCharacters()" type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Only numbers between 1 and 9 allowed." style="text-align:center;">
+        <button onclick="checkGuess()" id="submitButton" class="btn btn-light" style="text-align:center; padding-top: 10px;">Submit</button>
       </div>
-
+  
       <div class="container-sm" style="text-align: center;">
-
-          <p id="result"></p>
-          <p id="guesses"></p>
-          <!-- empty divs to be populated -->
-          <div id="failed-tag"><h2 style="color: red;">Game Over!!!</h2></div>
-          <div id="display"></div>
-          <div id="usernameDiv"></div>
-          <div id="gameOver"></div>
-          <div id="explanation"></div>
-          <div id="hint"></div>
-          <div id="restart"></div>
-          <div class="container-fluid col-md-8" style="text-align:center;">
-
-            <hr>
-
-            <h2>Leaderboard <i class="fa-solid fa-bars"></i></h2>
-                <table id="leaderboard" style="text-align:center; display: inline-block; margin:auto;">
-                  <tr style="text-align:center;">
-                    <th style="text-align:center;">Attempt</th>
-                    <th style="text-align:center;">Guess</th>
-                    <th style="text-align:center;">Outcome</th>
-                  </tr>
-                </table>
+        <p id="result"></p>
+        <p id="guesses"></p>
+        <div id="failed-tag"><h2 style="color: red;">Game Over!!!</h2></div>
+        <div id="display"></div>
+        <div id="usernameDiv"></div>
+        <div id="gameOver"></div>
+        <div id="explanation"></div>
+        <div id="hint"></div>
+        <div id="restart"></div>
+        <div class="container-fluid col-md-8" style="text-align:center;">
+          <hr>
+          <h2>Leaderboard <i class="fa-solid fa-bars"></i></h2>
+          <table id="leaderboard" style="text-align:center; display: inline-block; margin:auto;">
+            <tr style="text-align:center;">
+              <th style="text-align:center;">Attempt</th>
+              <th style="text-align:center;">Guess</th>
+              <th style="text-align:center;">Outcome</th>
+            </tr>
+          </table>
         </div>
       </div>
+   </div>
 
       <!-- help modal -->
       <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
@@ -264,6 +318,44 @@
           helpModal();
       });
     });
+
+    /* 
+    *     javaScript to remember if user has ticket off a task on the to do list
+    */
+    function saveCheckedState(taskId) {
+  const checkbox = document.getElementById(taskId);
+  if (checkbox) {
+    localStorage.setItem(taskId, checkbox.checked);
+  }
+  checkAllCheckboxes();
+}
+
+  function loadCheckedState() {
+    const taskIds = ['task1', 'task2', 'task3'];
+    taskIds.forEach(taskId => {
+      const checkbox = document.getElementById(taskId);
+      if (checkbox) {
+        const isChecked = localStorage.getItem(taskId) === 'true';
+        checkbox.checked = isChecked;
+      }
+    });
+    checkAllCheckboxes();
+  }
+
+  function checkAllCheckboxes() {
+    const taskIds = ['task1', 'task2', 'task3'];
+    const allChecked = taskIds.every(taskId => {
+      const checkbox = document.getElementById(taskId);
+      return checkbox && checkbox.checked;
+    });
+
+    const submitContent = document.getElementById('submit-content');
+    if (submitContent) {
+      submitContent.style.display = allChecked ? 'block' : 'none';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadCheckedState);
 
       // FIX REDIRECT 
     // Check if the current page has a 404 error status code, redirect the user to the main page

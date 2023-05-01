@@ -41,10 +41,6 @@ table, th, td {
   border-collapse: collapse;
 }
 
-.italic {
-  font-style: italic;
-}
-
 #guess-input {
   width: 175px;
 }
@@ -104,8 +100,8 @@ table, th, td {
 }
 
 .heading-style {
-font-weight: bold;
-font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .navbar {
