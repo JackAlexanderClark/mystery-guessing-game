@@ -27,7 +27,6 @@ small {
 
 /* style for clue information */
 li, ol {
-  font-style: italic;
   text-align: left;
   font-family:"Bookman Old Style", Georgia, serif;
   color: black;
@@ -51,73 +50,40 @@ table, th, td {
 }
 
 /* 
-* Responsive Nav Bar Credited to : https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+*  Sticky Nav Bar Credited to : https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 */
-
-.topnav {
-  background-color:gainsboro;
+/* Style the navbar */
+#navbar {
   overflow: hidden;
+  background-color: #333;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+/* Navbar links */
+#navbar a {
   float: left;
   display: block;
-  color: #b0b0b0;
+  color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px;
   text-decoration: none;
-  font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: yellow;
+/* Page content */
+.content {
+  padding: 16px;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #fcc603;
-  color: white;
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
-
-/* https://www.w3schools.com/howto/howto_js_navbar_sticky.asp   */
-/* Style the navbar */
-.navbar {
-    overflow: hidden;
-  }
-
-  /* Navbar links */
-  .navbar a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-  }
-
-  /* Page content */
-  .content {
-    padding: 16px;
-  }
-
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 60px;
-  }
 
   /* end of w3schools code */
 

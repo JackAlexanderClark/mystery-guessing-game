@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#3266a8">
 
     <title>Home Page</title>
+    
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="assets/images/goldenquestionmarklogo.jpg">
@@ -87,7 +88,7 @@
 </div>
     
   <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" style="max-width: 100%; height: auto;">
-    <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="background-color:grey">
+    <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="background-color:#deddd9">
       <div class="my-3 py-3">
         <h2 class="display-5 heading-style">Story <i class="fa-solid fa-book"></i></h2>
         <p class="lead italic">                    
@@ -118,10 +119,6 @@
       </div>
     </div>
   </div>
-
-      <div class="centered-container">
-        <button type="button" class="btn btn-warning" id="helpButton">Need Help?</button>
-      </div>
 
       <div class="container" style="display:grid; place-items: center; align-content: center; ">
             <h2 class="featurette-heading" >Submit Your Guess <i class="fa-solid fa-check"></i></h2>          
@@ -168,8 +165,11 @@
               </button>
             </div>
             <div class="modal-body">
-              <b>Hint:</b> Please look at the numbers corresponding to the <a href="gamepage.html">characters</a> on the other page.
-              Read the information and then enter your guess in the box below.
+              <ul>
+                <li><b>Hint:</b> Please look at the numbers corresponding to the <a href="gamepage.html">characters</a> on the other page.</li>
+                <li>Also you can view the <a href="clues.html">clues</a> and inspect them to learn more about the story.</li>
+                <li>You can enter your answer in the submit answer box on the <a href="index.html">rules</a> page.</li>
+              </ul>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -213,6 +213,9 @@
       
       <footer class="container" style="text-align:center;">
         <div class="container">
+          <div class="centered-container">
+            <button type="button" class="btn btn-warning" id="helpButton">Need Help?</button>
+          </div>
           <div style="text-align:center; font-family: 'Times New Roman', Times, serif;">
               <div class="centered">
                   <!-- css anchor tag to return to top of page for easier navigation -->
@@ -230,7 +233,7 @@
     <script src="https://kit.fontawesome.com/df070f2a43.js" crossorigin="anonymous" defer></script>
 
     <script>
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
   // Prevent letters being inputted
   function cleanCharacters(element) {
     element.onkeydown = function(event) {
@@ -246,25 +249,29 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
   
-  cleanCharacters(document.getElementById('guess-input'));
-  
-  function showHelpModal() {
-    var helpModal = new bootstrap.Modal(document.getElementById('helpModal'));
-    helpModal.show();
-  }
+      cleanCharacters(document.getElementById('guess-input'));
+      
+      function showHelpModal() {
+        var helpModal = new bootstrap.Modal(document.getElementById('helpModal'));
+        helpModal.show();
+      }
 
-  function someFunction() {
-    // Perform some task here
-    // ...
-    
-    // Call the showHelpModal function when this function returns
-    showHelpModal();
-  }
-  
-  document.getElementById('helpButton').addEventListener('click', function() {
-    someFunction();
-  });
-});
+      function helpModal() {
+          showHelpModal();
+      }
+      
+      document.getElementById('helpButton').addEventListener('click', function() {
+          helpModal();
+      });
+    });
+
+      // FIX REDIRECT 
+    // Check if the current page has a 404 error status code, redirect the user to the main page
+    document.addEventListener('DOMContentLoaded', function() {
+          if (document.querySelector('body').getAttribute('data-status-code') === '404') {
+            window.location.replace('/');
+          }
+        });
       </script>
   </body>
 </html>
