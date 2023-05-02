@@ -246,7 +246,22 @@ After Fix:
     <li>You can clone a copy of the repository using Git Clone.</li>
 </ul>
 
-## VII) Credits
+## VII) New Feature and Feedback after Tutor Feedback
+1. New feature - checkbox to do list to guide users on what to do in the game, once all 3 tasks have been completed on the checkboxes have been ticket, the answer submission box is revealed - otherwise, it is hidden.
+![image](https://user-images.githubusercontent.com/97599832/235524386-ef24d305-7b7f-44b0-b28f-b4f7a4883847.png)
+
+All ticked.
+![image](https://user-images.githubusercontent.com/97599832/235524526-76427d6c-1494-41a3-9254-d53fde115401.png)
+
+2. New pop up modal in the footer for a guide and to give hints and links to the different tasks.
+![image](https://user-images.githubusercontent.com/97599832/235524634-05885894-bc17-403c-9700-3feffb360c29.png)
+
+The help modal.
+![image](https://user-images.githubusercontent.com/97599832/235524745-6fd101fd-6657-452b-8049-54e3356a59d9.png)
+
+
+
+## VIII) Credits
 1. Jack Clark - Code 
 2. Jamie Preston - Commissioned art work of the nine suspects drawings.
 3. DALLE-2 - Artwork
