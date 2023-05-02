@@ -64,6 +64,11 @@ table, th, td {
   text-decoration: none;
 }
 
+.active {
+  background-color: rgb(245, 238, 238);
+  color: white;
+}
+
 /* Page content */
 .content {
   padding: 16px;

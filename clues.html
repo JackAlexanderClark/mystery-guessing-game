@@ -49,6 +49,13 @@
     <script src="assets/js/effects.js" defer></script>
 
   </head>
+    <style>
+          #clues-div {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+          }
+    </style>
 <body>
 
       <!-- top anchor head for navigation -->
@@ -60,7 +67,7 @@
   <header>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div class="topnav" id="myTopnav" style="text-align: center; justify-content: center; display: flex; position: sticky;">
+    <div class="topnav site-header sticky-top py-1 navbar" id="myTopnav" style="text-align: center; justify-content: center; display: flex; position: sticky;">
       <a href="index.html">Rules <i class="fas fa-book"></i></a>
       <a href="gamepage.html">Characters <i class="fas fa-person"></i></a>
       <a href="clues.html" class="active">Clues <i class="fas fa-magnifying-glass"></i></a>
@@ -77,6 +84,10 @@
     <!-- Evidence cards that can reveal more information -->
     <div class="container">
       <h1 style="text-align:center;" id="clues" class="headings"><strong>Evidence</strong></h1>
+      
+      <!-- COUNT FIX??? -->
+      <div id="clues-div"><strong>Evidence</strong> (0)</div>
+
       <div class="row">
         <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
@@ -84,7 +95,7 @@
                     <div class="card-body">
                         <p class="card-text" id="torch">Clue&nbsp;<i class="fa-solid fa-1"></i></p>
                         <div><div class="img-text">Torch</div></div>
-                        <button id="buttonToggle-1" class="btn btn-light" onclick="toggleTextboxes(1)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                        <button id="buttonToggle-1" class="btn btn-light" onclick="toggleTextboxes(1); countClues(1);">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                         <hr>
                         <div id="infoToggle-1">
                             <ol>
@@ -103,7 +114,7 @@
                     <div class="card-body">
                         <p class="card-text">Clue&nbsp;<i class="fa-solid fa-2"></i></p>
                         <div><p class="img-text">Fingerprint</p></div>
-                        <button type="button" id="buttonToggle-2" class="btn btn-light" onclick="toggleTextboxes(2)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                        <button type="button" id="buttonToggle-2" class="btn btn-light" onclick="toggleTextboxes(2); countClues(2);">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                         <hr>
                         <div id="infoToggle-2">
                             <ol>
@@ -123,7 +134,7 @@
                     <div class="card-body">
                       <p class="card-text">Clue&nbsp;<i class="fa-solid fa-3"></i></p>
                       <div><div class="img-text">Receipt from Garden Centre</div></div>
-                      <button type="button" class="btn btn-light" id="buttonToggle-3" onclick="toggleTextboxes(3)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                      <button type="button" class="btn btn-light" id="buttonToggle-3" onclick="toggleTextboxes(3); countClues(3);">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                       <hr>
                       <div id="infoToggle-3">
                         <ol>
@@ -142,7 +153,7 @@
                   <div class="card-body">
                     <p class="card-text">Clue&nbsp;<i class="fa-solid fa-4"></i></p>
                     <div><div class="img-text">Box of Matches</div></div>
-                    <button type="button" class="btn btn-light" id="buttonToggle-4" onclick="toggleTextboxes(4)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                    <button type="button" class="btn btn-light" id="buttonToggle-4" onclick="toggleTextboxes(4); countClues(4);">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                     <hr>
                     <div id="infoToggle-4">
                       <ol>
@@ -160,7 +171,7 @@
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-5"></i></p>
                   <div><div class="img-text">Letter Ransom Threat</div></div>
-                  <button type="button" class="btn btn-light" id="buttonToggle-5" onclick="toggleTextboxes(5)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                  <button type="button" class="btn btn-light" id="buttonToggle-5" onclick="toggleTextboxes(5); countClues(5);">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                   <hr>
                   <div id="infoToggle-5">
                     <ol>
@@ -178,7 +189,7 @@
                 <div class="card-body">
                   <p class="card-text">Clue&nbsp;<i class="fa-solid fa-6"></i></p>
                   <div><div class="img-text">Mysterious Phone Call</div></div>
-                  <button type="button" class="btn btn-light" id="buttonToggle-6" onclick="toggleTextboxes(6)">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
+                  <button type="button" class="btn btn-light" id="buttonToggle-6" onclick="toggleTextboxes(6); countClues(6);">Click me to reveal more information <i class="fa-solid fa-angle-down"></i></button>
                   <hr>
                   <div id="infoToggle-6">
                     <ol>
@@ -249,20 +260,37 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
+
+
+      // IS THIS WORKING?
     // Prevent letters being inputted
-    function cleanCharacters(element) {
-      element.onkeydown = function(event) {
-        if (event === null) {
-          return true;
-        }
-        
-        if (event.key >= 1 && event.key <= 9) {
-          return true;
-        } else {
-          return false;
-        }
-      };
-    }
+              function countClues(id) {
+            var storageKey = 'clue-' + id;
+            if (!localStorage.getItem(storageKey)) {
+              localStorage.setItem(storageKey, true);
+
+              var cluesCount = 0;
+              for (var i = 1; i <= 6; i++) {
+                if (localStorage.getItem('clue-' + i)) {
+                  cluesCount++;
+                }
+              }
+
+              document.getElementById('clues-div').innerHTML = '<strong>Evidence</strong> (' + cluesCount + ')';
+            }
+          }
+
+          // Initialize clues count on page load
+          document.addEventListener('DOMContentLoaded', function() {
+            var cluesCount = 0;
+            for (var i = 1; i <= 6; i++) {
+              if (localStorage.getItem('clue-' + i)) {
+                cluesCount++;
+              }
+            }
+
+            document.getElementById('clues-div').innerHTML = '<strong>Evidence</strong> (' + cluesCount + ')';
+          });
   
       function showHelpModal() {
         var helpModal = new bootstrap.Modal(document.getElementById('helpModal'));
@@ -277,6 +305,8 @@
           helpModal();
       });
     }) 
+
+
 
   </script>
   
