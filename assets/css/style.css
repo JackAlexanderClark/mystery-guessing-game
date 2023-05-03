@@ -51,7 +51,7 @@ table, th, td {
 /* Style the navbar */
 #navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #bababa;
 }
 
 /* Navbar links */
@@ -64,8 +64,13 @@ table, th, td {
   text-decoration: none;
 }
 
+/* white icons */
+.white {
+  color: white;
+}
+
 .active {
-  background-color: rgb(245, 238, 238);
+  background-color: rgb(182, 122, 122);
   color: white;
 }
 

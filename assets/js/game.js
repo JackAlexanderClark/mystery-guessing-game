@@ -15,10 +15,10 @@ function disableSubmit() {
 }
 
 function createWinModal() {
-    // game won explanation
-    console.log("second modal");
+    
     var winModal = new bootstrap.Modal(document.getElementById('winModal'));
     winModal.show();
+
 }
 
 function createButton() {
@@ -96,7 +96,6 @@ function checkGuess() {
         disableSubmit();
         result.innerHTML = "Congratulations! You guessed the correct character and have solved the case!!!";
         explanation.innerHTML = "<strong>Suspect: </strong><em>Mark Henderson.</em>\n" + "<em>To solve it took you: </em>" + (count) + " <em>guess(es)</em>";
-        console.log("i am here");
         createWinModal();
         createButton();
         addGuessToLeaderboard(guess);

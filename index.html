@@ -90,6 +90,11 @@
       .image-container {
         margin-top: auto;
       }
+
+      #trophy {
+        color: gold;
+        float: right;
+      }
       
     </style>
 
@@ -103,12 +108,9 @@
   <header>
 
     <div class="topnav site-header sticky-top py-1 navbar" id="myTopnav" style="text-align: center; justify-content: center; display: flex;">
-      <a href="index.html" class="active">Rules <i class="fas fa-book"></i></a>
-      <a href="gamepage.html">Characters <i class="fas fa-person"></i></a>
-      <a href="clues.html">Clues <i class="fas fa-magnifying-glass"></i></a>
-      <a href="javascript:void(0);" class="icon" onclick="toggleNavBar()">
-        <i class="fa fa-bars"></i>
-      </a>
+      <a href="index.html" class="active">Rules <i class="fas fa-book white"></i></a>
+      <a href="gamepage.html">Characters <i class="fas fa-person white"></i></a>
+      <a href="clues.html">Clues <i class="fas fa-magnifying-glass white"></i></a>
     </div>
     
   </header>
@@ -149,7 +151,6 @@
           <li>There are nine suspects for you to chose from.</li>
           <li>You are a police detective, investigating an arson attack.</li>
           <li>You have 3 guesses available. Complete the to do list below to start.</li>
-          <li>Each guess will be displayed in the leaderboard.</li>
         </ul>  
       </p>
     </div>
@@ -185,10 +186,14 @@
     <div id="submit-content" style="display: none;">
       <div class="container" style="display:grid; place-items: center; align-content: center;">
         <h2 class="featurette-heading">Submit Your Guess <i class="fa-solid fa-check"></i></h2>
-        <p class="lead" style="text-align:center;">Once you are satisfied with your investigation, choose your character and submit below.</p>
-        <input onkeydown="cleanCharacters()" type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Only numbers between 1 and 9 allowed." style="text-align:center;">
-        <button onclick="checkGuess()" id="submitButton" class="btn btn-light" style="text-align:center; padding-top: 10px;">Submit</button>
-      </div>
+        <p class="lead" style="text-align:center;">Once you are satisfied with your investigation, choose your character and submit below, click arrow to remove input.</p>
+        <div style="display: inline-flex; position: relative;">
+            <input onkeydown="cleanCharacters()" type="text" id="guess-input" placeholder="Enter your guess" maxlength="1" data-toggle="tooltip" data-placement="right" title="Only numbers between 1 and 9 allowed." style="text-align:center;">
+            <button onclick="clearInput()" id="clearButton" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="right" title="Remove current answer" style="position: absolute; right: -30px;"><i class="fas fa-arrow-left"></i></button>
+        </div>
+        <button onclick="checkGuess()" id="submitButton" class="btn btn-outline-primary" style="text-align:center; padding: 15px; margin-top: 10px;">Submit</button>        
+    </div>
+    
   
       <div class="container-sm" style="text-align: center;">
         <p id="result"></p>
@@ -199,7 +204,6 @@
         <div id="gameOver"></div>
         <div id="explanation"></div>
         <div id="hint"></div>
-        <div id="restart"></div>
         <div class="container-fluid col-md-8" style="text-align:center;">
           <hr>
           <h2>Leaderboard <i class="fa-solid fa-bars"></i></h2>
@@ -239,38 +243,40 @@
       </div>
 
       <!-- win modal -->
-      <div class="modal fade" id="secondModal" tabindex="-1" role="dialog" aria-labelledby="secondModalLabel" aria-hidden="true">
+      <div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="secondModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="secondModalLabel">Second WINNER Modal</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <!-- contents -->
-              <div class="col-md-12" style="color:black; text-align: center; text-decoration: underline;">
-                <div class="row">
-                    <h1>Full Solution:</h1>
-                    <p>Nick owed Mark tens of thounsands of pounds and had not made any attempt to pay him back.</p>
-                    <p>He had tried unsuccessfully to sue him and Mark was outraged over this and wanted to destroy his life in retribution.</p>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="secondModalLabel">Congratulations!!!</h3><i class="fa-solid fa-trophy" id="trophy"></i>
                 </div>
-                <a href="index.html"><button class="btn btn-info">Return to game?</button></a>
-                <div class="row">
-                    <div class="col-md-12" style="padding-top: 20px">
-                        <img src="assets/images/Police station.jpg" class="img-fluid img-thumbnail" alt="Police Station" style="max-width: 50%; max-height: 50%;">
+                <div class="modal-body">
+                    <!-- contents -->
+                    <div class="col-md-12" style="color:black; text-align: center;">
+                        <div class="row">
+                            <h1>Full Solution:</h1>
+                            <p>Nick owed Mark tens of thounsands of pounds and had not made any attempt to pay him back.</p>
+                            <p>He had tried unsuccessfully to sue him and Mark was outraged over this and wanted to destroy his life in retribution.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="assets/images/Police station.jpg" class="img-fluid img-thumbnail" alt="Police Station" style="max-width: 50%; max-height: 50%;" alt="police station">
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                              <p>Click finish to continue and restart the game.</p>
+                          </div>
+                      </div>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button class="btn btn-info" id="reload-btn" onclick="Restart();">Finish</button></a>
+                </div>
             </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
-      
+    </div>
+    
+
       <footer class="container" style="text-align:center;">
         <div class="container">
           <div class="centered-container">
@@ -325,34 +331,40 @@
       });
     });
 
+    // if user wants to clear a number accidentally inputted before submitting
+    function clearInput() {
+        document.getElementById("guess-input").value = "";
+    }
+
+
     /* 
     *     javaScript to remember if user has ticket off a task on the to do list
     */
     function saveCheckedState(taskId) {
-  const checkbox = document.getElementById(taskId);
-  if (checkbox) {
-    localStorage.setItem(taskId, checkbox.checked);
-  }
-  checkAllCheckboxes();
-}
-
-  function loadCheckedState() {
-    const taskIds = ['task1', 'task2', 'task3'];
-    taskIds.forEach(taskId => {
       const checkbox = document.getElementById(taskId);
       if (checkbox) {
-        const isChecked = localStorage.getItem(taskId) === 'true';
-        checkbox.checked = isChecked;
+        localStorage.setItem(taskId, checkbox.checked);
       }
-    });
-    checkAllCheckboxes();
+      checkAllCheckboxes();
+    }
+
+  function loadCheckedState() {
+      const taskIds = ['task1', 'task2', 'task3'];
+      taskIds.forEach(taskId => {
+        const checkbox = document.getElementById(taskId);
+        if (checkbox) {
+          const isChecked = localStorage.getItem(taskId) === 'true';
+          checkbox.checked = isChecked;
+        }
+      });
+      checkAllCheckboxes();
   }
 
   function checkAllCheckboxes() {
-    const taskIds = ['task1', 'task2', 'task3'];
-    const allChecked = taskIds.every(taskId => {
-      const checkbox = document.getElementById(taskId);
-      return checkbox && checkbox.checked;
+      const taskIds = ['task1', 'task2', 'task3'];
+      const allChecked = taskIds.every(taskId => {
+        const checkbox = document.getElementById(taskId);
+        return checkbox && checkbox.checked;
     });
 
     const submitContent = document.getElementById('submit-content');
