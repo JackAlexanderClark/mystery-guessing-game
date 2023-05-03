@@ -260,6 +260,11 @@ The help modal.
 ![image](https://user-images.githubusercontent.com/97599832/235524745-6fd101fd-6657-452b-8049-54e3356a59d9.png)
 
 
+3. New remove current answer button 
+- A bug would prevent users from cancelling or changing their answer once it was inputted, now this button will clear the input.
+![image](https://user-images.githubusercontent.com/97599832/235957863-68074c28-30df-44eb-88e1-e4a9ef1a75b6.png)
+
+
 
 ## VIII) Credits
 1. Jack Clark - Code 
