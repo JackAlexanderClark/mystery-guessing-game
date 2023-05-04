@@ -41,4 +41,27 @@ window.addEventListener('load', function() {
   window.addEventListener('scroll', myFunction);
 });
 
+// code credited to stack overflow
+// redirect users to index.html if redirect to non existent resource or page
+async function resourceExists(url) {
+  try {
+      const response = await fetch(url, { method: 'HEAD' });
+      return response.ok;
+  } catch (error) {
+      return false;
+  }
+}
+
+// Function to handle redirection
+async function redirectToMainPage() {
+  const currentPage = window.location.pathname;
+  const mainPage = '/index.html';
+
+  if (currentPage !== mainPage && !(await resourceExists(currentPage))) {
+      window.location.replace(mainPage);
+  }
+}
+
+redirectToMainPage();
+
 
