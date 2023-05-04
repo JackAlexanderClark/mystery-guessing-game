@@ -293,17 +293,20 @@ The help modal.
 ![image](https://user-images.githubusercontent.com/97599832/235957863-68074c28-30df-44eb-88e1-e4a9ef1a75b6.png)
 
 4. Wireframes of designs
-
+<br>
 ![image](https://user-images.githubusercontent.com/97599832/236244174-80d5b33c-5359-49a3-b27f-3732c3431925.png)
 
 Implementation:
+<br>
 ![image](https://user-images.githubusercontent.com/97599832/236244438-fce36e3b-fd44-4c96-ae48-55c29ad50ed4.png)
+<br>
 Pop up
 ![image](https://user-images.githubusercontent.com/97599832/236244601-49bb1a50-1c78-4a9d-a51b-b5486a167ce3.png)
 
 Checkbox to do list:
+<br>
 ![image](https://user-images.githubusercontent.com/97599832/236247214-609bae94-500b-4f10-8cb7-2d56e8a059d4.png)
-
+<br>
 ![image](https://user-images.githubusercontent.com/97599832/236247267-bac4976d-21f9-47ed-9c06-c41b9f560864.png)
 
 
