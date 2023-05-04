@@ -13,6 +13,7 @@
 ## Website Device Mock-up
 ![all-devices-black (1)](https://user-images.githubusercontent.com/97599832/232594010-179db261-b22a-46ce-a1d9-798232dcc306.png)
 
+
 ## Contents:
 <ol>
   <li>Project Goals and Planning</li>
@@ -23,6 +24,8 @@
   <li>Credits</li>
 </ol>
 <hr>
+
+
 
 # I) Project Goals and Planning
 
@@ -37,6 +40,7 @@
 ![image](https://user-images.githubusercontent.com/97599832/214305597-e1ce96c0-da73-454e-98bb-a566f293bab5.png)
 
 
+
 # II) (UX) User Experience
 <ol>Goals</ol>
 <ul>
@@ -47,9 +51,13 @@
     <li>To receive immediate feedback whether you were correct or incorrect and to see how many guesses you've used.</li>
 </ul>
 
+
+
 # III) Development and Features
 
 <img src="https://user-images.githubusercontent.com/97599832/216768559-0b54d65d-9750-42fc-a0a4-ab4f307bf9d0.png" height="300" width="300">
+
+
 
 ## (Main Page) Rules and Game page
     
@@ -58,11 +66,15 @@
 
  <img src="https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png" height="300" width="300">
 
+
+
 ## Character Card Page
         
 - Here there are nine character cards that have a fact sheet button, when the user presses it will create a bootstrap modal popup.
     
 <img src="https://user-images.githubusercontent.com/97599832/216768807-02456a64-1286-4534-86e6-bac77d8fbd45.png" height="300" width="300">
+
+
 
 ## Clues Page
     
@@ -144,6 +156,7 @@
 
 </ul>
 
+
 ### Page 2 - Gamepage.html
 #### Nu HTML W3Schools Validator: https://validator.w3.org/nu/
 <ul>
@@ -159,8 +172,11 @@
     <li>Stray tags that need removing</li>
 </ul>
 
+
 - After fixes:
 ![image](https://user-images.githubusercontent.com/97599832/228617432-0044fa43-e1a3-4680-a66d-79db44007f55.png)
+
+
 
 ### Page 3 - Clues.html
 #### Nu HTML W3Schools Validator: https://validator.w3.org/nu/
@@ -169,12 +185,15 @@
     <li>Fatal Error: Duplicate body tags.</li>
 </ul>
 
+
 - After fixes:
 ![image](https://user-images.githubusercontent.com/97599832/228587247-43c35715-ddcb-496f-909c-fc36b771144d.png)
 
 
+
 ### CSS Validator - Jigsaw Validator: https://jigsaw.w3.org/css-validator/validator
 ![image](https://user-images.githubusercontent.com/97599832/228544227-a161e20d-772c-49ba-b7f4-98bcba5643e5.png)
+
 
 
 ### JavaScript Validator: JSHint: https://jshint.com/
@@ -189,11 +208,13 @@
     <li>Need to rework the use of ES6 syntax.</li>
 </ul>
 
+
 #### File 2: effects.js
 ![image](https://user-images.githubusercontent.com/97599832/228542467-0694ea44-e65d-411a-90a6-a0b30bc440c7.png)
 
 - No JavaScript Errors in console: 
 ![image](https://user-images.githubusercontent.com/97599832/228579340-f9c204d1-0adf-4b70-b670-46ed65a8c103.png)
+
 
 
 #### Lighthouse Performance Testing.
@@ -208,6 +229,8 @@
 ### Manual Testing Examples using Jest: https://jestjs.io/
 This is an example of using Jest to test some of the interactive elements such as a HTML checkbox. The test explains the process and expect is where we state the outcome we intend, if this fails we can then identify there is an issue with the code.
 ![image](https://user-images.githubusercontent.com/97599832/226964695-b11f1435-c3b6-46bb-8042-264617d603ff.png)
+
+
 
 
 ### Bugs
@@ -238,6 +261,8 @@ After Fix:
 
 - To fix this I decided to use a Bootstrap template for the homepage rather than custom HTML and CSS styling to make sure it was responsive.
 
+
+
 ## VI) Deployment
 <ul>
     <li>This project was built using the GitPod IDE.</li>
@@ -245,6 +270,9 @@ After Fix:
     <li>It was deployed as a static application on GitHub pages.</li>
     <li>You can clone a copy of the repository using Git Clone.</li>
 </ul>
+
+
+
 
 ## VII) New Feature and Feedback after Tutor Feedback
 1. New feature - checkbox to do list to guide users on what to do in the game, once all 3 tasks have been completed on the checkboxes have been ticket, the answer submission box is revealed - otherwise, it is hidden.
@@ -272,6 +300,11 @@ Implementation:
 ![image](https://user-images.githubusercontent.com/97599832/236244438-fce36e3b-fd44-4c96-ae48-55c29ad50ed4.png)
 Pop up
 ![image](https://user-images.githubusercontent.com/97599832/236244601-49bb1a50-1c78-4a9d-a51b-b5486a167ce3.png)
+
+Checkbox to do list:
+![image](https://user-images.githubusercontent.com/97599832/236247214-609bae94-500b-4f10-8cb7-2d56e8a059d4.png)
+
+![image](https://user-images.githubusercontent.com/97599832/236247267-bac4976d-21f9-47ed-9c06-c41b9f560864.png)
 
 
 
