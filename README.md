@@ -264,6 +264,8 @@ The help modal.
 - A bug would prevent users from cancelling or changing their answer once it was inputted, now this button will clear the input.
 ![image](https://user-images.githubusercontent.com/97599832/235957863-68074c28-30df-44eb-88e1-e4a9ef1a75b6.png)
 
+4. Wireframes of designs and their implementation
+
 
 
 ## VIII) Credits
